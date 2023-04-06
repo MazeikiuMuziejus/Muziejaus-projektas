@@ -1,11 +1,13 @@
 import {useEffect, useRef, useState} from 'react';
-import {Animated, Text, View, Easing, Dimensions} from 'react-native';
+import {Animated, Text, View, Easing, Dimensions, Pressable} from 'react-native';
 
 import { ScrollView } from 'react-native-gesture-handler';
 
 import Carousel from 'react-native-reanimated-carousel';
 
-import ImageModal from 'react-native-image-modal';
+import FastImage from 'react-native-fast-image';
+
+import ImageView from "react-native-image-viewing";
 
 export const Drawer = ({
   open,
@@ -21,7 +23,8 @@ export const Drawer = ({
   const openAnim = useRef(new Animated.Value(0)).current;
   const w = Dimensions.get('window').width;
   const carouselMode = images.length > 1 ? 'parallax' : undefined
-  const [selected, setSelected] = useState<number | null>(null)
+  const [visible, setVisible] = useState<boolean>(false)
+  const [imageSource, setImageSource] = useState(null);
 
   useEffect(() => {
     Animated.timing(openAnim, {
@@ -106,20 +109,23 @@ export const Drawer = ({
               data={images}
               mode={carouselMode}
               renderItem={({item}) =>(
-                <ImageModal
-                  resizeMode="cover"
-                  modalImageResizeMode='contain'
-                  modalImageStyle={{
-                    width: '100%',
-                  }}
-                  style={{
-                    width: '100%',
-                    aspectRatio: 16/9,
-                    borderRadius: 5
-                  }}
-                  onClose={() => setSelected(null)}
-                  source={item}
-                />)}
+                <Pressable
+                  onPress={() => {
+                    setVisible(true);
+                    setImageSource(item);
+                  }}>
+                  <FastImage
+                    source={item}
+                    style={{
+                      width: '100%',
+                      height: '100%',
+                      borderRadius: 5
+                    }}
+                    resizeMode={'cover'}
+                  />
+                </Pressable>
+                )
+                }
             />
           </View>
       </ScrollView>
