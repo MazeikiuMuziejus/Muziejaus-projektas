@@ -1,4 +1,4 @@
-package com.muziejus;
+package com.mazeikiu_muziejus;
 
 import com.facebook.react.ReactActivity;
 import com.facebook.react.ReactActivityDelegate;

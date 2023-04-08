@@ -1,4 +1,4 @@
-package com.muziejus;
+package com.mazeikiu_muziejus;
 
 import android.app.Application;
 import com.facebook.react.PackageList;
