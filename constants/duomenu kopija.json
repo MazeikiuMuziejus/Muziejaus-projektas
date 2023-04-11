@@ -1,0 +1,594 @@
+{
+  "mazeikiai": [
+    {
+      "gatve": "Laisvės",
+      "data": [
+        {
+          "nr": "6",
+          "tekstas":
+            "Pračkausko namas. Prek. Juozo Laureckio kolonialinių prekių parduotuvė; Igno Galmino siuvykla.",
+          "coords": {
+            "long": 22.34927331942612,
+            "lat": 56.31124961831251
+          }
+        },
+        {
+          "nr": "5",
+          "tekstas": "Lietūkis. 1939 m. jau buvo pastatytas.",
+          "coords": {
+            "lat": 56.31069255140454,
+            "long": 22.347898298127145
+          }
+        },
+        {
+          "nr": "8",
+          "tekstas":
+            "Savivaldybė, Konkursas eskiziniam projektui paskelbtas 1938 m. kurį laimėjo architektūros studentas Jurgis Okunis ( 1910-1989). Savivaldybė, tęsiantis darbams atidaryta 1940-jų vasario 16- ąją. 1944-1953 m. pastato rūsyje buvo įkurtas kalėjimas, kuriame iki teismo kalėjo ginkluoto ir taikaus pasipriešinimo dalyviai. 1960-1961 m. prasidėjo pastato rekonstrukcija. Buvo pristatytas trečias aukštas, pristatytas priestatas.",
+          "coords": {
+            "lat": 56.310940291100664,
+            "long": 22.34883396916483
+          }
+        },
+        {
+          "nr": "12",
+          "tekstas":
+            "A. Baužinsko namas Mažeikių apskrities karo komendantūra 1927-1935 m., manufaktūros ir apavų parduotuvė (Š: Tel. kn. 1935; Vakarai 1937 Nr. 102) Sovietmečiu šiame pastate buvo vaikų biblioteka, rajoninio laikraščio „Pergalės vėliava“ redakcija. Apie 1974 m. pastatas perstatomas sunaikinant buvusį eksterjerą.",
+          "coords": {
+            "lat": 56.31212202550623,
+            "long": 22.346833965243604
+          }
+        },
+        {
+          "nr": "9",
+          "tekstas":
+            "Bankas seniau (la) Pastatytas 1938 m. projekto autorius Mykolas Songaila (1874-1941); per karą 1944-1945 šiame name buvo įkurta Mažeikių ligoninė.",
+          "coords": {
+            "lat": 56.311718987727495,
+            "long": 22.346620747971773
+          }
+        },
+        {
+          "nr": "23",
+          "tekstas":
+            "H.Lichtenšteino namas. Galanterijos ir kolonialinių prekių parduotuvė",
+          "coords": {
+            "lat": 56.31337313020708,
+            "long": 22.3442713017535
+          }
+        },
+        {
+          "nr": "38",
+          "tekstas":
+            "Paštas. 1919 m. įkurta Šiaulių sr. vartotojų bendrovių sąjunga. Brangiai nuomavo salę, vakarui- 150 Lt ( Š: Švietimo darbas 1925 Nr.l). 1927m. pastatą išsimokėtinai įsigijo Mažeikių apskrities savivaldybė, kuri pastatą nuomavo ir taip dengė paskolą. Salė naudota visuomenės reikmėms, vyko koncertai, buvo demonstruojami filmai. Sovietmečiu , 1946 m. šiame pastate įkurti kultūros namai, buvo Mažeikių vaistinė, biblioteka, 1967 m. pastato eksterjeras buvo sunaikintas užstatant trečią aukštą.",
+          "coords": {
+            "lat": 56.314691920962645,
+            "long": 22.343091426152856
+          }
+        },
+        {
+          "nr": "33",
+          "tekstas":
+            "Dakinevičiaus namas. Pastatytas 1939-1940 m. Pirmame aukšte buvo parduotuvės, kituose butai. Karo metu - apskrities viršininko priimamasisPo karo čia įsikūrė faktinė rajono valdžia - KP komitetas, vėliau - rajoninio laikraščio redakcija,Mažeikių kraštotyros muziejus, Žemės ūkio valdyba. Po 1990-jų namas gražintas sąvininkui.",
+          "coords": {
+            "lat": 56.314490065555056,
+            "long": 22.342335801233425
+          }
+        },
+        {
+          "nr": "10",
+          "tekstas": "",
+          "coords":{
+            "lat": 56.31189710937745, 
+            "long": 22.347611749802812
+          }
+        },
+        {
+          "nr": "31",
+          "tekstas": "",
+          "coords":{
+            "lat": 56.31437688912896, 
+            "long": 22.34270355373757
+          }
+        }
+      ],
+      "initialCoords": {
+        "long": 22.34540691338092,
+        "lat": 56.313069947682585
+      },
+      "images":{
+        "button": "https://firebasestorage.googleapis.com/v0/b/mazeikiu-muziejaus-aplikacija.appspot.com/o/Laisv%C4%97s%2FLaisv%C4%97s_8_3.jpg?alt=media&token=e1c4fbd2-8f00-4c58-93d5-3673a1907747",
+        "streets":{
+          "5": ["https://firebasestorage.googleapis.com/v0/b/mazeikiu-muziejaus-aplikacija.appspot.com/o/placeholder.jpg?alt=media&token=2ba598df-1bfd-41cb-a02e-ce64c8c0e2ae"],
+          "6": ["https://firebasestorage.googleapis.com/v0/b/mazeikiu-muziejaus-aplikacija.appspot.com/o/Laisv%C4%97s%2FLaisv%C4%97s_6.jpg?alt=media&token=0e8977e3-08b2-4271-86ba-fd825dc5b3e5", "https://firebasestorage.googleapis.com/v0/b/mazeikiu-muziejaus-aplikacija.appspot.com/o/Laisv%C4%97s%2FLaisv%C4%97s_6_3.jpg?alt=media&token=09d226b1-2566-4b15-a92b-1fc868e7d1fc", "https://firebasestorage.googleapis.com/v0/b/mazeikiu-muziejaus-aplikacija.appspot.com/o/Laisv%C4%97s%2FLaisv%C4%97s_6_Sena.jpg?alt=media&token=c0d4f17c-083d-49b5-ba2e-21931d65c67f"],
+          "8": ["https://firebasestorage.googleapis.com/v0/b/mazeikiu-muziejaus-aplikacija.appspot.com/o/Laisv%C4%97s%2FLaisv%C4%97s_8_3.jpg?alt=media&token=e1c4fbd2-8f00-4c58-93d5-3673a1907747", "https://firebasestorage.googleapis.com/v0/b/mazeikiu-muziejaus-aplikacija.appspot.com/o/Laisv%C4%97s%2FLaisv%C4%97s_8_Sena.jpg?alt=media&token=c23f43ce-e295-4591-a886-fe394cd8c22c"],
+          "9": ["https://firebasestorage.googleapis.com/v0/b/mazeikiu-muziejaus-aplikacija.appspot.com/o/Laisv%C4%97s%2FLaisv%C4%97s_9.jpg?alt=media&token=e499f276-ebd7-492c-af68-5fa224641308", "https://firebasestorage.googleapis.com/v0/b/mazeikiu-muziejaus-aplikacija.appspot.com/o/Laisv%C4%97s%2FLaisv%C4%97s_9_Sena.jpg?alt=media&token=c856ad33-712a-46f4-978e-baea3c85dfdc"],
+          "10": ["https://firebasestorage.googleapis.com/v0/b/mazeikiu-muziejaus-aplikacija.appspot.com/o/Laisv%C4%97s%2FLaisv%C4%97s_10_Sena.jpg?alt=media&token=cf5bc709-dcc2-44c3-b62b-71adb47b9cce", "https://firebasestorage.googleapis.com/v0/b/mazeikiu-muziejaus-aplikacija.appspot.com/o/Laisv%C4%97s%2FLaisv%C4%97s_10_Sena_2.jpg?alt=media&token=c8d12b27-1579-4c74-9b2b-c985a3cb921b"],
+          "12": ["https://firebasestorage.googleapis.com/v0/b/mazeikiu-muziejaus-aplikacija.appspot.com/o/Laisv%C4%97s%2FLaisv%C4%97s_12.jpg?alt=media&token=3290a1da-b5b6-440a-9709-4f2d34c34289", "https://firebasestorage.googleapis.com/v0/b/mazeikiu-muziejaus-aplikacija.appspot.com/o/Laisv%C4%97s%2FLaisv%C4%97s_12_Sena.jpg?alt=media&token=0029a128-d00b-45e6-b61a-17afa0105c27"],
+          "23": ["https://firebasestorage.googleapis.com/v0/b/mazeikiu-muziejaus-aplikacija.appspot.com/o/Laisv%C4%97s%2FLaisv%C4%97s_23.jpg?alt=media&token=e9d0653e-786d-47ec-826b-b5471e964c3f", "https://firebasestorage.googleapis.com/v0/b/mazeikiu-muziejaus-aplikacija.appspot.com/o/Laisv%C4%97s%2FLaisv%C4%97s_23_3.jpg?alt=media&token=4ebe9918-abc3-45b6-a4e7-c9a830f5d783"],
+          "31": ["https://firebasestorage.googleapis.com/v0/b/mazeikiu-muziejaus-aplikacija.appspot.com/o/Laisv%C4%97s%2FLaisv%C4%97s_31.jpg?alt=media&token=6f0a1a30-d7f3-491b-b67f-ff8879fe31d7", "https://firebasestorage.googleapis.com/v0/b/mazeikiu-muziejaus-aplikacija.appspot.com/o/Laisv%C4%97s%2FLaisv%C4%97s_31_Sena.jpg?alt=media&token=d44f962d-26ec-4e01-9129-559172b962b2"],
+          "38": ["https://firebasestorage.googleapis.com/v0/b/mazeikiu-muziejaus-aplikacija.appspot.com/o/Laisv%C4%97s%2FLaisv%C4%97s_38.jpg?alt=media&token=db8f299b-a54f-4b08-9221-276bbf7f9c36", "https://firebasestorage.googleapis.com/v0/b/mazeikiu-muziejaus-aplikacija.appspot.com/o/Laisv%C4%97s%2FLaisv%C4%97s_38_Sena.jpg?alt=media&token=1823d59b-c6f8-4c78-9efa-2b012f202c50"],
+          "33": ["https://firebasestorage.googleapis.com/v0/b/mazeikiu-muziejaus-aplikacija.appspot.com/o/placeholder.jpg?alt=media&token=2ba598df-1bfd-41cb-a02e-ce64c8c0e2ae"]
+        }
+      }
+    },
+    {
+      "gatve": "Vasario 16-osios",
+      "data": [
+        {
+          "nr": "11",
+          "tekstas":
+            "(Seniau 7) H.Groso namas Pastatytas 1907 m. Pirmame aukšte parduotuvės antrame nuomojama salė. 1915 m gegužės 14 d. rusų kareiviai dalį pastato padegė, ko pasėkoje sudegė visas miesto centras, 4 deš. pabaigoje H. Grosas namą ir šalia buvusį sklypą pardavė gydytojui Dakinevičiui. 1940 m. buvo nacionalizuotas ir antras aukštas perduotas gimnazijai, kaip salė, kurioje 1943 m. įvyko gimnazijos M.K.Čiurlionio dailės būrelio narių paroda. Pirmame aukšte buvo įv. Įstaigos- 1944 m. darbo inspekcija, sveikatos priežiūros tarnyba, apskrities viršininko priimamasis 1955 m. pastatas perduotas Mažeikių kultūros namams, kurie čia išbuvo iki 1996 m.",
+          "coords": {
+            "lat": 56.31444384077919,
+            "long": 22.342113240367503
+          }
+        },
+        {
+          "nr": "9",
+          "tekstas":
+            "(Seniau 5) Šaulių XIII rinktinės štabas. Lietuvos bankas, 1934 m. iš Lietuvos banko išsimokėtinai įsigijo už 45 tūkst. Lt. (Š: Vakarai 1937, T. K. 1934).",
+          "coords": {
+            "lat": 56.31431909049051,
+            "long": 22.34193255570983
+          }
+        }
+      ],
+      "initialCoords": {
+        "long": 22.340451976408627,
+        "lat": 56.3126231307136
+      },
+      "images":{
+        "button": "https://firebasestorage.googleapis.com/v0/b/mazeikiu-muziejaus-aplikacija.appspot.com/o/Vasario%2016-osios%2FVasario-16osios_9_2.jpg?alt=media&token=4713b527-c835-42fc-b5b5-6c31fab449eb",
+        "streets":{
+          "9": ["https://firebasestorage.googleapis.com/v0/b/mazeikiu-muziejaus-aplikacija.appspot.com/o/Vasario%2016-osios%2FVasario-16osios_9.jpg?alt=media&token=43749a6f-916d-4861-b7e4-1315a52ab52d", "https://firebasestorage.googleapis.com/v0/b/mazeikiu-muziejaus-aplikacija.appspot.com/o/Vasario%2016-osios%2FVasario-16osios_9_2.jpg?alt=media&token=4713b527-c835-42fc-b5b5-6c31fab449eb", "https://firebasestorage.googleapis.com/v0/b/mazeikiu-muziejaus-aplikacija.appspot.com/o/Vasario%2016-osios%2FVasario_16osios_9_11.jpg?alt=media&token=38729cb6-76b5-4948-8ff5-37613780e481"],
+          "11": ["https://firebasestorage.googleapis.com/v0/b/mazeikiu-muziejaus-aplikacija.appspot.com/o/Vasario%2016-osios%2FVasario-16osios%2011.jpg?alt=media&token=1507479f-f51d-42ba-9eb6-9fd06671d6a1"]
+        }
+      }
+    },
+    {
+      "gatve": "Stoties",
+      "data": [
+        {
+          "nr": "14",
+          "tekstas":
+            "Gimnazijos pastatas. 1903m. pastatyta kaip geležinkeliečių vaikų pradinė mokykla. Nepriklausomybės kovų metu čia buvo bermontininkų kareivinės. 1919 m. įkurta vidurinė mokykla. Po II-o pasaulinio karo šiame name įkurtas Geležinkeliečių kultūros ir sporto klubas mažeikiškių vadintas „Džiunglėmis“.",
+          "coords": {
+            "lat": 56.311886251555215,
+            "long": 22.34326695570968
+          }
+        },
+        {
+          "nr": "16",
+          "tekstas": "Geležinkeliečių namas",
+          "coords": {
+            "lat": 56.312087296053654,
+            "long": 22.342457471052075
+          }
+        },
+        {
+          "nr": "22",
+          "tekstas":
+            "Konduktorių namas. 1919?- 1923 ir 1935- 1940 m. Mažeikių apskrities komendantūra",
+          "coords": {
+            "lat": 56.31318654890256,
+            "long": 22.339761284545386
+          }
+        },
+        {
+          "nr": "24 a",
+          "tekstas": "Geležinkeliečių kultūros klubas.",
+          "coords": {
+            "lat": 56.31333749293732,
+            "long": 22.33913124221656
+          }
+        },
+        {
+          "nr": "26",
+          "tekstas": "Muitinė Pirtis",
+          "coords": {
+            "lat": 56.31355779386462,
+            "long": 22.338992313380988
+          }
+        },
+        {
+          "nr": "32",
+          "tekstas": "Geležinkeliečių namas.",
+          "coords": {
+            "lat": 56.3139865433352,
+            "long": 22.337327298038677
+          }
+        },
+        {
+          "nr": "20",
+          "tekstas": "Geležinkelio stotis.",
+          "coords": {
+            "lat": 56.3126231307136,
+            "long": 22.340451976408627
+          }
+        }
+      ],
+      "initialCoords": {
+        "long": 22.338937,
+        "lat": 56.313124
+      },
+      "images":{
+        "button": "https://firebasestorage.googleapis.com/v0/b/mazeikiu-muziejaus-aplikacija.appspot.com/o/Stoties%2FStoties_20_2.jpg?alt=media&token=3d4c7980-d5b7-459c-a5f0-13fe063696e1",
+        "streets":{
+          "14": ["https://firebasestorage.googleapis.com/v0/b/mazeikiu-muziejaus-aplikacija.appspot.com/o/Stoties%2FStoties_14.jpg?alt=media&token=48bad4e2-81f5-40cb-8321-877b22611a4d", "https://firebasestorage.googleapis.com/v0/b/mazeikiu-muziejaus-aplikacija.appspot.com/o/Stoties%2FStoties_14_Sena.jpg?alt=media&token=025d4c39-5a3a-4a03-ba3c-6b9f95455d80"],
+          "16": ["https://firebasestorage.googleapis.com/v0/b/mazeikiu-muziejaus-aplikacija.appspot.com/o/Stoties%2FStoties_16.jpg?alt=media&token=32c7beed-2eed-4545-8d21-5f74c073f21b"],
+          "20": ["https://firebasestorage.googleapis.com/v0/b/mazeikiu-muziejaus-aplikacija.appspot.com/o/Stoties%2FStoties_20_2.jpg?alt=media&token=3d4c7980-d5b7-459c-a5f0-13fe063696e1", "https://firebasestorage.googleapis.com/v0/b/mazeikiu-muziejaus-aplikacija.appspot.com/o/Stoties%2FStoties_20_3_sena.jpg?alt=media&token=47842b74-e2a3-4882-8301-6b74bce325c5", "https://firebasestorage.googleapis.com/v0/b/mazeikiu-muziejaus-aplikacija.appspot.com/o/Stoties%2FStoties_20_K.Eidimtas_Sena.jpg?alt=media&token=6ff5fef1-e0ec-493e-9873-c0218ba755d0", "https://firebasestorage.googleapis.com/v0/b/mazeikiu-muziejaus-aplikacija.appspot.com/o/Stoties%2FStoties_20_Sena.jpg?alt=media&token=58a6a5a1-220b-477e-9555-a4dd1458fc50"],
+          "22": ["https://firebasestorage.googleapis.com/v0/b/mazeikiu-muziejaus-aplikacija.appspot.com/o/Stoties%2FStoties_22.jpg?alt=media&token=e70e5934-a78b-4350-afa9-0b84d99361d4"],
+          "24 a": ["https://firebasestorage.googleapis.com/v0/b/mazeikiu-muziejaus-aplikacija.appspot.com/o/Stoties%2FStoties_24_(2).jpg?alt=media&token=f7d8f508-0513-4159-b14b-cb692c2e553b"],
+          "26": ["https://firebasestorage.googleapis.com/v0/b/mazeikiu-muziejaus-aplikacija.appspot.com/o/Stoties%2FStoties_26_(2).jpg?alt=media&token=41cac50e-e0ac-455a-823c-aebd3abf3601"],
+          "32": ["https://firebasestorage.googleapis.com/v0/b/mazeikiu-muziejaus-aplikacija.appspot.com/o/Stoties%2FStoties_32_(2).jpg?alt=media&token=7aa890df-6f1e-496e-9aa7-6a911d23b84b"]
+        }
+      }
+    },
+    {
+      "gatve": "Laižuvos",
+      "data": [
+        {
+          "nr": "4",
+          "tekstas":
+            "Avalynės fabrikas (Martyno Stipeikio dirbtuvės Š: Kalendorius, adresų knyga K. 1933).",
+          "coords": {
+            "lat": 56.310809301572235,
+            "long": 22.349415898038565
+          }
+        },
+        {
+          "nr": "8",
+          "tekstas": "Vilko restoranas.",
+          "coords": {
+            "lat": 56.31114790062269,
+            "long": 22.35013091338088
+          }
+        },
+        {
+          "nr": "14",
+          "tekstas": "Restoranas.",
+          "coords": {
+            "lat": 56.31146040401772,
+            "long": 22.35073312687413
+          }
+        },
+        {
+          "nr": "18",
+          "tekstas": "savivaldybė (Tada buvo 16)",
+          "coords": {
+            "lat": 56.311553503698605,
+            "long": 22.351128784545324
+          }
+        }
+      ],
+      "initialCoords": {
+        "long": 22.350216629056323,
+        "lat": 56.31125603861619
+      },
+      "images":{
+        "button": "https://firebasestorage.googleapis.com/v0/b/mazeikiu-muziejaus-aplikacija.appspot.com/o/Lai%C5%BEuvos%2FLai%C5%BEuvos_8_2.jpg?alt=media&token=a25e0cc7-2e0f-4f74-9827-d29c95b39d97",
+        "streets":{
+          "4": ["https://firebasestorage.googleapis.com/v0/b/mazeikiu-muziejaus-aplikacija.appspot.com/o/Lai%C5%BEuvos%2FLai%C5%BEuvos_4.jpg?alt=media&token=8e3097a2-e5e5-45c7-83f5-7dc8326abb39"],
+          "8": ["https://firebasestorage.googleapis.com/v0/b/mazeikiu-muziejaus-aplikacija.appspot.com/o/Lai%C5%BEuvos%2FLai%C5%BEuvos_8_2.jpg?alt=media&token=a25e0cc7-2e0f-4f74-9827-d29c95b39d97"],
+          "14": ["https://firebasestorage.googleapis.com/v0/b/mazeikiu-muziejaus-aplikacija.appspot.com/o/Lai%C5%BEuvos%2FLai%C5%BEuvos_14_2.jpg?alt=media&token=b4487311-8c23-49c5-9fef-f92ba932126a"],
+          "18": ["https://firebasestorage.googleapis.com/v0/b/mazeikiu-muziejaus-aplikacija.appspot.com/o/Lai%C5%BEuvos%2FLai%C5%BEuvos_18.jpg?alt=media&token=1f5f2249-4070-4c4d-b66a-074f395642d6", "https://firebasestorage.googleapis.com/v0/b/mazeikiu-muziejaus-aplikacija.appspot.com/o/Lai%C5%BEuvos%2FLai%C5%BEuvos_18_Sena.jpg?alt=media&token=78fb33a4-4d8b-468c-a431-1dc84841d453"]
+        }
+      }
+    },
+    {
+      "gatve": "Birutės",
+      "data": [
+        {
+          "nr": "4",
+          "tekstas":
+            "A. Čijunsko vaisvandeniš dirbtuvė gamina aukščiausios rūšies vaisių vandenį, Turgaus aikštėje randasi A. Čijunsko dirbtuvė, kuri savo gaminiais aptarnauja visą Žemaitiją. Gaminamas Sitro ir zeleris( gazuotas vanduo) (Š: Reklama Vakarai 1937; Verslas 1939 Nr. 20).",
+          "coords": {
+            "lat": 56.3122485994243,
+            "long": 22.351994128723252
+          }
+        },
+        {
+          "nr": "8",
+          "tekstas": "Varno arbatinė.",
+          "coords": {
+            "lat": 56.3125239003725,
+            "long": 22.35183648454529
+          }
+        },
+        {
+          "nr": "28",
+          "tekstas":
+            "(Seniau 24)Gydytojo Osiejaus Krongoldo namas, karo metu advokato Jono Sidabro namas ir kontora (Š: T.K. 1935).",
+          "coords": {
+            "lat": 56.314220494557404,
+            "long": 22.349358742216594
+          }
+        },
+        {
+          "nr": "32",
+          "tekstas": "Kankinių kryžius",
+          "coords": {
+            "lat": 56.31483969352318,
+            "long": 22.348344255709865
+          }
+        }
+      ],
+      "initialCoords": {
+        "long": 22.350307726874217,
+        "lat": 56.313363848267215
+      },
+      "images":{
+        "button": "https://firebasestorage.googleapis.com/v0/b/mazeikiu-muziejaus-aplikacija.appspot.com/o/Birut%C4%97s%2FBirutes_32.jpg?alt=media&token=1aee1fb8-4f42-4620-b693-a5cd95969094",
+        "streets":{
+          "4": ["https://firebasestorage.googleapis.com/v0/b/mazeikiu-muziejaus-aplikacija.appspot.com/o/placeholder.jpg?alt=media&token=2ba598df-1bfd-41cb-a02e-ce64c8c0e2ae"],
+          "8": ["https://firebasestorage.googleapis.com/v0/b/mazeikiu-muziejaus-aplikacija.appspot.com/o/Birut%C4%97s%2FBirutes_8.jpg?alt=media&token=c15ad618-4093-4fd1-b1cf-b48f5510ce99"],
+          "28": ["https://firebasestorage.googleapis.com/v0/b/mazeikiu-muziejaus-aplikacija.appspot.com/o/Birut%C4%97s%2FBirutes_28.jpg?alt=media&token=c0194411-5656-4840-a31e-edbbc7bafdbb"],
+          "32": ["https://firebasestorage.googleapis.com/v0/b/mazeikiu-muziejaus-aplikacija.appspot.com/o/Birut%C4%97s%2FBirutes_32.jpg?alt=media&token=1aee1fb8-4f42-4620-b693-a5cd95969094"]
+        }
+      }
+    },
+    {
+      "gatve": "Burbos",
+      "data": [
+        {
+          "nr": "6",
+          "tekstas":
+            "(ankstesnis adresas Sodo g. 4) Pastatė Petras Bimba vidurinės mokyklos steigėjas ir direktorius, nupirko Leibavičius Moisiejus javų ir linų pirklys; Prezidento A. Smetonos alėja 4 G. Gelmanas; 1944 m. apsaugos policija (Š: T. K. 1935; 1944).",
+          "coords": {
+            "lat": 56.31491103848895,
+            "long": 22.345429142216677
+          }
+        },
+        {
+          "nr": "8",
+          "tekstas": "",
+          "coords": {
+            "lat": 56.31507554011157,
+            "long": 22.34625716920313
+          }
+        },
+        {
+          "nr": "9",
+          "tekstas":
+            "Muzikos mokykla, pradžios mokykla. Pradėta statyti 1933 m. kada mirė rašytojas, kunigas, klebonavęs Laižuvoje Tumas Vaižgantas, todėl pamatuose įmūrijant kertinio akmens pašventinimo aktas užrašyta, kad ši mokykla vadinsis Tumo- Vaižganto vardu. 1934 m. rugsėjo 1-ą mokykla atidaroma. Tai pirmoji mokykla kur buvo vandentiekis, centrinis šildymas ir 10 klasių. ( Š: Vakarai 1937) iki 1955 m. gaisro šio pastato pastogėje buvo Mažeikių muziejus. 1944 m. čia buvo įkurta vokiečių karo lauko ligoninė. 1941 m. mokykloje buvo apgyvendinti NKVD kareiviai dalyvavę tremiant Mažeikių krašto žmones.",
+          "coords": {
+            "lat": 56.31613238868946,
+            "long": 22.34659151338106
+          }
+        }
+      ],
+      "initialCoords": {
+        "long": 22.345453984879907,
+        "lat": 56.31519802756508
+      },
+      "images":{
+        "button": "https://firebasestorage.googleapis.com/v0/b/mazeikiu-muziejaus-aplikacija.appspot.com/o/Burbos%2FBurbos_6.jpg?alt=media&token=d3b372e3-28f6-42d0-aa9d-ac8340cc48b3",
+        "streets":{
+          "6": ["https://firebasestorage.googleapis.com/v0/b/mazeikiu-muziejaus-aplikacija.appspot.com/o/Burbos%2FBurbos_6.jpg?alt=media&token=d3b372e3-28f6-42d0-aa9d-ac8340cc48b3", "https://firebasestorage.googleapis.com/v0/b/mazeikiu-muziejaus-aplikacija.appspot.com/o/Burbos%2FBurbos_6_Sena.jpg?alt=media&token=fba3d25d-e9cd-446b-ba43-445ec53a669d"],
+          "8": ["https://firebasestorage.googleapis.com/v0/b/mazeikiu-muziejaus-aplikacija.appspot.com/o/Burbos%2FBurbos_8.jpg?alt=media&token=74581afb-a0ef-4b6f-9c65-4e73cc61c2f5"],
+          "9": ["https://firebasestorage.googleapis.com/v0/b/mazeikiu-muziejaus-aplikacija.appspot.com/o/Burbos%2FBurbos_9.jpg?alt=media&token=a2c0077a-cf3a-4134-9d1a-f08e724a0f89", "https://firebasestorage.googleapis.com/v0/b/mazeikiu-muziejaus-aplikacija.appspot.com/o/Burbos%2FBurbos_9_(2).jpg?alt=media&token=62d48ebc-a08d-4533-9a25-f0e6fd70f3ad", "https://firebasestorage.googleapis.com/v0/b/mazeikiu-muziejaus-aplikacija.appspot.com/o/Burbos%2FBurbos_9_(3).jpg?alt=media&token=501f0ad5-8b64-4f04-9779-2ad124898406", "https://firebasestorage.googleapis.com/v0/b/mazeikiu-muziejaus-aplikacija.appspot.com/o/Burbos%2FBurbos_9_4.jpg?alt=media&token=776e8053-b4d1-40a8-9297-c176f2f1372d", "https://firebasestorage.googleapis.com/v0/b/mazeikiu-muziejaus-aplikacija.appspot.com/o/Burbos%2FBurbos_9_5.jpg?alt=media&token=b5f0c6b9-7835-467d-a756-8ac066f55910"]
+        }
+      }
+    },
+    {
+      "gatve": "M.K Čiurlionio",
+      "data": [
+        {
+          "nr": "7",
+          "tekstas":
+            "Šapiro Abraomas, Baldų dirbtuvė ( Š: telefono knyga 1935 m.) savanorių žydų gaisrininkų draugija (Š: TK 1939).",
+          "coords": {
+            "lat": 56.31206405097363,
+            "long": 22.348685469203033
+          }
+        }
+      ],
+      "initialCoords": {
+        "long": 22.348685469203033,
+        "lat": 56.31206405097363
+      },
+      "images":{
+        "button": "https://firebasestorage.googleapis.com/v0/b/mazeikiu-muziejaus-aplikacija.appspot.com/o/M.K.%20%C4%8Ciurlionio%2FM.K._%C4%8Ciurlionio_7.jpg?alt=media&token=ed0ca255-70a4-4888-a00a-23dbd15f3d24",
+        "streets":{
+          "7": ["https://firebasestorage.googleapis.com/v0/b/mazeikiu-muziejaus-aplikacija.appspot.com/o/M.K.%20%C4%8Ciurlionio%2FM.K._%C4%8Ciurlionio_7.jpg?alt=media&token=ed0ca255-70a4-4888-a00a-23dbd15f3d24", "https://firebasestorage.googleapis.com/v0/b/mazeikiu-muziejaus-aplikacija.appspot.com/o/M.K.%20%C4%8Ciurlionio%2FM.K._%C4%8Ciurlionio_7_(2).jpg?alt=media&token=d5f2b20b-15aa-4f12-9d61-52a190ece168"]
+        }
+      }
+    },
+    {
+      "gatve": "Basanavičiaus",
+      "data": [
+        {
+          "nr": "1",
+          "tekstas":
+            "Adolfas Janulis (geležies, indų, įvairių dažų ir elektrotechnikos, motociklų, dviračių prekyba ir skardos dirbinių dirbtuvė, namas. 1941 m. namas nacionalizuotas. Šeima ištremta į Sibirą ( Š: Verslas 1939 Nr. 20; Kur Venta banguoja, kur Ursulas šniokščia. V.2002).",
+          "coords": {
+            "lat": 56.31247069509799,
+            "long": 22.34924242687419
+          }
+        },
+        {
+          "nr": "13A",
+          "tekstas":
+            "Lukštaraupio namas pradėtas statyti 1937 m., kaip pastatas skirtas nuomai, 1938 m. čia įkurta „Žiemos žemės ūkio mokykla.",
+          "coords": {
+            "lat": 56.31435714470787,
+            "long": 22.346297998038736
+          }
+        },
+        {
+          "nr": "12",
+          "tekstas": "",
+          "coords":{
+            "lat": 56.313607656911046,
+            "long": 22.348499544252135
+          }
+        },
+        {
+          "nr": "18",
+          "tekstas": "Švč. Jėzaus širdies bažnyčia.",
+          "coords": {
+            "lat": 56.31472479059202,
+            "long": 22.347346869203072
+          }
+        },
+        {
+          "nr": "22",
+          "tekstas": "Ligoninė.",
+          "coords": {
+            "lat": 56.31581149712427,
+            "long": 22.3454903998878
+          }
+        }
+      ],
+      "initialCoords": {
+        "long": 22.346751353860732,
+        "lat": 56.3143137461172
+      },
+      "images":{
+        "button": "https://firebasestorage.googleapis.com/v0/b/mazeikiu-muziejaus-aplikacija.appspot.com/o/Basanavi%C4%8Diaus%2FBasanaviciaus_1.jpg?alt=media&token=8dddf0f8-b972-400f-8b4f-feeb410254cd",
+        "streets":{
+          "1": ["https://firebasestorage.googleapis.com/v0/b/mazeikiu-muziejaus-aplikacija.appspot.com/o/Basanavi%C4%8Diaus%2FBasanaviciaus_1.jpg?alt=media&token=8dddf0f8-b972-400f-8b4f-feeb410254cd", "https://firebasestorage.googleapis.com/v0/b/mazeikiu-muziejaus-aplikacija.appspot.com/o/Basanavi%C4%8Diaus%2FBasanavi%C4%8Diaus_1_2.jpg?alt=media&token=702049d6-6874-43c9-9591-968ffdd3c983"],
+          "12": ["https://firebasestorage.googleapis.com/v0/b/mazeikiu-muziejaus-aplikacija.appspot.com/o/Basanavi%C4%8Diaus%2FBasanaviciaus_12_Dakineviciaus.jpg?alt=media&token=e0ef1f31-da47-41da-b9e0-5ee45d568264"],
+          "13A": ["https://firebasestorage.googleapis.com/v0/b/mazeikiu-muziejaus-aplikacija.appspot.com/o/Basanavi%C4%8Diaus%2FBasanaviciaus_13.jpg?alt=media&token=b25d6665-3333-487c-bc11-2906d95f569f", "https://firebasestorage.googleapis.com/v0/b/mazeikiu-muziejaus-aplikacija.appspot.com/o/Basanavi%C4%8Diaus%2FBasanaviciaus_13_(2).jpg?alt=media&token=9e09078b-5eb5-4453-b449-3ec8acea821e"],
+          "18": ["https://firebasestorage.googleapis.com/v0/b/mazeikiu-muziejaus-aplikacija.appspot.com/o/Basanavi%C4%8Diaus%2FBasanaviciaus_18.jpg?alt=media&token=a58e1cf9-9d3e-41f4-bca9-4506ec2f102e", "https://firebasestorage.googleapis.com/v0/b/mazeikiu-muziejaus-aplikacija.appspot.com/o/Basanavi%C4%8Diaus%2FBasanaviciaus_18_(3).jpg?alt=media&token=628f7ad7-d9e5-460d-ad11-087fabee21f4", "https://firebasestorage.googleapis.com/v0/b/mazeikiu-muziejaus-aplikacija.appspot.com/o/Basanavi%C4%8Diaus%2FBasanavi%C4%8Diaus_18_4.jpg?alt=media&token=4749b27e-0cf6-4f18-9bd0-c13bb05eb7d2", "https://firebasestorage.googleapis.com/v0/b/mazeikiu-muziejaus-aplikacija.appspot.com/o/Basanavi%C4%8Diaus%2FBasanavi%C4%8Diaus_18_5.jpg?alt=media&token=300c0763-eb7d-4d5c-8f04-05010f43c3f9"],
+          "22": ["https://firebasestorage.googleapis.com/v0/b/mazeikiu-muziejaus-aplikacija.appspot.com/o/Basanavi%C4%8Diaus%2FBasanaviciaus_22_(2).jpg?alt=media&token=e59af7e0-4c76-4686-8961-40c8dd1af6fc", "https://firebasestorage.googleapis.com/v0/b/mazeikiu-muziejaus-aplikacija.appspot.com/o/Basanavi%C4%8Diaus%2FBasanavi%C4%8Diaus_22_4.jpg?alt=media&token=4fc1ba84-81cb-40f2-adb1-c74d9e72f58a"]
+        }
+      }
+    },
+    {
+      "gatve": "Bažnyčios",
+      "data": [
+        {
+          "nr": "2",
+          "tekstas":
+            "Seniausias Mažeikių namas. Vienintelis Mažeikiuose 19 a. viduryje Žemaitijoje vyravusios kaimiškos architektūros pavyzdys, pastatytas dar iki nutiesiant geležinkelį.",
+          "coords": {
+            "lat": 56.31122640703387,
+            "long": 22.34106562687412
+          }
+        },
+        {
+          "nr": "1",
+          "tekstas":
+            "Talat Kelpšos namas (Šį namą pasistatė Stanislovas Šeirys, vėliau perdavė kaip kraitį dukrai, kuri ištekėjo už pasienio policijos karininko Vlado Tallat-Kelpšos. Šis namą perstatė, perorentavo statmenai Bažnyčios gatvei, pristatė antrą aukštą, įvedė vandentiekį, kanalizaciją ir įrengė keturis butus, viename išjų gyveno ir turėjo patalpas Mažeikių apskrities gydytojas Povilas Tautvaišas. V. Tallat-Kelpša paskyrus Mažeikių apskrities policijos vadu, viename iš būtų apsigyveno su šeima pats. 1940-1941 m. namas buvo nacionalizuotas, o V. Tallat-Kelpša su šeima iškraustytas į gatvę, netrukus buvo ištremtas su šeima į Sibirą, atsidūrė lageryje. ( Š: Vytauto Tallat-Kelpšos atsiminimai; T. K. 1935; Kur Venta banguoja, kur Ursulas šniokščia. V.2002).",
+          "coords": {
+            "lat": 56.310844057296435,
+            "long": 22.34154445570971
+          }
+        },
+        {
+          "nr": "22",
+          "tekstas": "",
+          "coords":{
+            "lat": 56.308811967546355, 
+            "long": 22.34041932674948
+          }
+        }
+      ],
+      "initialCoords": {
+        "long": 22.341357708801624,
+        "lat": 56.311097205253404
+      },
+      "images":{
+        "button": "https://firebasestorage.googleapis.com/v0/b/mazeikiu-muziejaus-aplikacija.appspot.com/o/Ba%C5%BEny%C4%8Dios%2FBa%C5%BEny%C4%8DiosG_pabaiga_3.jpg?alt=media&token=602a1b5e-32c8-401a-b0c6-7719557919d5",
+        "streets":{
+          "2": ["https://firebasestorage.googleapis.com/v0/b/mazeikiu-muziejaus-aplikacija.appspot.com/o/placeholder.jpg?alt=media&token=2ba598df-1bfd-41cb-a02e-ce64c8c0e2ae"],
+          "1": ["https://firebasestorage.googleapis.com/v0/b/mazeikiu-muziejaus-aplikacija.appspot.com/o/placeholder.jpg?alt=media&token=2ba598df-1bfd-41cb-a02e-ce64c8c0e2ae"],
+          "22": ["https://firebasestorage.googleapis.com/v0/b/mazeikiu-muziejaus-aplikacija.appspot.com/o/Ba%C5%BEny%C4%8Dios%2FBa%C5%BEny%C4%8Dios_22.jpg?alt=media&token=5eb388c8-27db-4ea5-a198-3550ff5c4682"]
+        }
+      }
+    },
+    {
+      "gatve": "Pramonės",
+      "data": [
+        {
+          "nr": "27 b",
+          "tekstas": "",
+          "coords":{
+            "lat": 56.31117649983903,
+            "long": 22.358633384514764
+          }
+        }
+      ],
+      "images":{
+        "button": "https://firebasestorage.googleapis.com/v0/b/mazeikiu-muziejaus-aplikacija.appspot.com/o/Pramon%C4%97s%2FPramon%C4%97s_27_b%20Laimes%20savininkas%20Leibovicius%20su%20seima%20GEK%20MM10738%20X.jpg?alt=media&token=bd9812d4-00aa-4fb3-8810-7aabab34b299",
+        "streets": {
+          "27 b": ["https://firebasestorage.googleapis.com/v0/b/mazeikiu-muziejaus-aplikacija.appspot.com/o/Pramon%C4%97s%2FPramon%C4%97s_27_b%20Laimes%20savininkas%20Leibovicius%20su%20seima%20GEK%20MM10738%20X.jpg?alt=media&token=bd9812d4-00aa-4fb3-8810-7aabab34b299"]
+        }
+      },
+      "initialCoords":{
+        "lat": 56.31085190610348, 
+        "long": 22.356100997914172
+      }
+    },
+    {
+      "gatve": "Respublikos",
+      "data":[
+        {
+          "nr": "50",
+          "tekstas": "",
+          "coords":{
+            "lat": 56.31767522873509, 
+            "long": 22.334878071998453
+          }
+        }
+      ],
+      "images":{
+        "button": "https://firebasestorage.googleapis.com/v0/b/mazeikiu-muziejaus-aplikacija.appspot.com/o/Respublikos%2FRespublikos_50_Sena.jpg?alt=media&token=1ae231e6-b56a-475e-93ea-2f6ea1e02e43",
+        "streets":{
+          "50": ["https://firebasestorage.googleapis.com/v0/b/mazeikiu-muziejaus-aplikacija.appspot.com/o/Respublikos%2FRespublikos_50_Sena.jpg?alt=media&token=1ae231e6-b56a-475e-93ea-2f6ea1e02e43"]
+        }
+      },
+      "initialCoords":{
+        "lat": 56.31767522873509,
+        "long": 22.334878071998453
+      }
+    },
+    {
+      "gatve": "Tirkšlių",
+      "data": [
+        {
+          "nr": "1",
+          "tekstas": "",
+          "coords":{
+            "lat": 56.30724656328581, 
+            "long": 22.352969326749307
+          }
+        }
+      ],
+      "images":{
+        "button": "https://firebasestorage.googleapis.com/v0/b/mazeikiu-muziejaus-aplikacija.appspot.com/o/Tirk%C5%A1li%C5%B3%2FTirk%C5%A1li%C5%B3_1_2_Sena.jpg?alt=media&token=7dab3b57-204a-4ec7-b8c2-79aa47d737cf",
+        "streets":{
+          "1": ["https://firebasestorage.googleapis.com/v0/b/mazeikiu-muziejaus-aplikacija.appspot.com/o/Tirk%C5%A1li%C5%B3%2FTirk%C5%A1li%C5%B3_1_Sena.jpg?alt=media&token=f2442907-323a-4bce-b631-9575043dfcf1", "https://firebasestorage.googleapis.com/v0/b/mazeikiu-muziejaus-aplikacija.appspot.com/o/Tirk%C5%A1li%C5%B3%2FTirk%C5%A1li%C5%B3_1_2_Sena.jpg?alt=media&token=7dab3b57-204a-4ec7-b8c2-79aa47d737cf"]
+        }
+      },
+      "initialCoords":{
+        "lat": 56.30724656328581,
+        "long": 22.352969326749307
+      }
+    },
+    {
+      "gatve": "Vydūno",
+      "data":[
+        {
+          "nr": "1",
+          "tekstas": "",
+          "coords":{
+            "lat": 56.31587808660441, 
+            "long": 22.340397026749745
+          }
+        }
+      ],
+      "images":{
+        "button": "https://firebasestorage.googleapis.com/v0/b/mazeikiu-muziejaus-aplikacija.appspot.com/o/Vyd%C5%ABno%2FVyd%C5%ABno_1_Sena.jpg?alt=media&token=c06beb29-2866-4386-8fd2-0f47c8c5520e",
+        "streets":{
+          "1": ["https://firebasestorage.googleapis.com/v0/b/mazeikiu-muziejaus-aplikacija.appspot.com/o/Vyd%C5%ABno%2FVyd%C5%ABno_1.jpg?alt=media&token=b8acec26-d14a-4f0d-8c3e-a09be9c16134", "https://firebasestorage.googleapis.com/v0/b/mazeikiu-muziejaus-aplikacija.appspot.com/o/Vyd%C5%ABno%2FVyd%C5%ABno_1_Sena.jpg?alt=media&token=c06beb29-2866-4386-8fd2-0f47c8c5520e"]
+        }
+      },
+      "initialCoords":{
+        "lat": 56.31587808660441,
+        "long": 22.340397026749745
+      }
+    }
+  ]
+}

@@ -1,19 +1,55 @@
+import {useState, useEffect, useReducer} from 'react';
+
 import StreetList from './screens/StreetList';
 import GatvesVaizdas from './screens/GatvesVaizdas';
 import Main from './screens/Main';
+import Loading from './screens/Loading';
 
 import {createStackNavigator} from '@react-navigation/stack';
 import {NavigationContainer} from '@react-navigation/native';
 
+import Header from './components/Header';
+
+import { streetData } from './types/streetData';
+
+import { getData } from './Firebase/getData';
+import ErrorConnecting from './screens/ErrorConnecting';
+
 const Stack = createStackNavigator();
 
+/*
+  fix drawer number text !!!!!!!!!
+*/
+
 function App() {
+  const [data, setData] = useState<streetData | null>(null);
+  const [loading, setLoading] = useState<boolean>(true);
+
+  const [up, forceUpdate] = useState(0);
+  
+  const update =() => {
+    forceUpdate(up + 1);
+  }
+
+  useEffect(() => {
+    setLoading(true);
+    getData()
+    .then((data) => {
+      if (data) setData(data)
+      else setData(null);
+      setLoading(false);
+    });
+  }, [up])
+
+  if (loading) return <Loading />;
+  if (!data) return <ErrorConnecting forceUpdate={update} />;
+
   return (
     <NavigationContainer>
       <Stack.Navigator
         initialRouteName="Main"
         screenOptions={{
-          animationEnabled: false,
+          animationEnabled: true,
           headerShown: false,
         }}>
           <Stack.Screen
@@ -22,20 +58,13 @@ function App() {
           />
         <Stack.Screen
           options={{
-            headerShown: true,
-            headerTitle: 'Mažeikių miesto gatvės',
-            headerTitleStyle: {
-              fontSize: 20,
-              fontWeight: 'bold',
-              color: 'black',
-            },
-            headerStyle: {
-              borderBottomColor: 'black',
-              borderBottomWidth: 0.5,
+            headerShown: true, 
+            header(props) {
+              return (<Header navigation={props.navigation} data={data} text={'Mažeikių miesto gatvės'} />);
             },
           }}
           name="StreetList"
-          component={StreetList}
+          children={(props) => <StreetList navigation={props.navigation} data={data} />}
         />
         <Stack.Screen name="Gatve" component={GatvesVaizdas} />
       </Stack.Navigator>

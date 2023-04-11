@@ -1,10 +1,10 @@
-import {View, Text, Pressable, Image, BackHandler} from 'react-native';
+import {View, Text, Image, BackHandler} from 'react-native';
 
 import { useNavigation } from '@react-navigation/native';
 
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 
-import { TouchableOpacity } from 'react-native-gesture-handler';
+import { Button } from '../components/Button';
 
 export default function Main() {
     const navigation = useNavigation();
@@ -35,45 +35,10 @@ export default function Main() {
                 />
             </View>
             <View>
-                <TouchableOpacity activeOpacity={0.6}>
-                    <Pressable
-                        style={{
-                            padding: 20,
-                            backgroundColor: 'rgba(0, 0, 0, 0.1)',
-                            borderRadius: 5,
-                            marginBottom: 20
-                        }}
-                        onPress={() => navigation.navigate("StreetList" as never)}
-                    >
-                        <Text
-                            style={{
-                                color: 'black',
-                                fontSize: 20,
-                                textAlign: 'center'
-                            }}
-                        >Mažeikių miesto gatvės</Text>
-                    </Pressable>
-                </TouchableOpacity>
-                <TouchableOpacity activeOpacity={0.6}>
-                    <Pressable
-                        style={{
-                            padding: 20,
-                            backgroundColor: 'rgba(0, 0, 0, 0.1)',
-                            borderRadius: 5
-                        }}
-                        onPress={() => BackHandler.exitApp()}
-                    >
-                        <Text
-                            style={{
-                                color: 'black',
-                                fontSize: 20,
-                                textAlign: 'center'
-                            }}
-                        >
-                            Iseiti
-                        </Text>
-                    </Pressable>
-                </TouchableOpacity>
+                <Button buttonStyle={{
+                    marginBottom: 20
+                }} text='Mažeikių miesto gatvės' onPress={() => navigation.navigate("StreetList" as never)}/>
+                <Button text='Iseiti' onPress={() => BackHandler.exitApp()}/>
             </View>
             <View
                 style={{

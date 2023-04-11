@@ -8,30 +8,48 @@ import {
   Pressable,
 } from 'react-native';
 
-import {ScrollView} from 'react-native-gesture-handler';
+import {ScrollView, Gesture, GestureDetector} from 'react-native-gesture-handler';
 
 import Carousel from 'react-native-reanimated-carousel';
-
 import FastImage from 'react-native-fast-image';
-
 import ImageView from 'react-native-image-viewing';
+
+import { runOnJS } from 'react-native-reanimated';
 
 export const Drawer = ({
   open,
   style,
+  setOpen,
   data,
   images,
 }: {
   open: boolean;
   style?: any;
+  setOpen: (open: boolean) => void;
   data: any;
-  images: any[];
+  images: string[];
 }) => {
   const openAnim = useRef(new Animated.Value(0)).current;
   const w = Dimensions.get('window').width;
-  const carouselMode = images.length > 1 ? 'parallax' : undefined;
-  const [visible, setVisible] = useState<boolean>(false);
+
+  const [imageViewVisible, setImageViewVisible] = useState(false);
   const [imageSource, setImageSource] = useState(images[0]);
+
+  const animateClose = () => {
+    Animated.timing(openAnim, {
+      toValue: 0,
+      duration: 450,
+      useNativeDriver: false,
+      easing: Easing.inOut(Easing.ease),
+    }).start();
+    setOpen(false);
+  }
+
+  const onSwipeDown = Gesture.Pan()
+    .onEnd((e) => {
+      if (e.velocityY > 0)
+        runOnJS(animateClose)();
+    })
 
   useEffect(() => {
     Animated.timing(openAnim, {
@@ -40,115 +58,147 @@ export const Drawer = ({
       useNativeDriver: false,
       easing: Easing.inOut(Easing.ease),
     }).start();
-  }, [openAnim, open]);
+  }, [open]);
 
-  if (visible) {
+  if (imageViewVisible && imageSource) {
     return (
       <ImageView
-        images={[imageSource]}
+        images={[{uri: imageSource}]}
         imageIndex={0}
-        visible={visible}
-        onRequestClose={() => setVisible(false)}
+        visible={imageViewVisible}
+        onRequestClose={() => setImageViewVisible(false)}
       />
     );
   }
 
   return (
-    <Animated.View
-      style={{
-        position: 'absolute',
-        backgroundColor: 'white',
-        zIndex: 100,
-        bottom: 0,
-        width: '100%',
-        height: openAnim,
-        borderTopRightRadius: 20,
-        borderTopLeftRadius: 20,
-        ...style,
-      }}>
-      <View
+    <GestureDetector gesture={onSwipeDown}>
+      <Animated.View
         style={{
+          position: 'absolute',
+          backgroundColor: 'white',
+          zIndex: 100,
+          bottom: 0,
           width: '100%',
+          height: 400,
+          transform:[
+            {
+              translateY: openAnim.interpolate({
+                inputRange: [0, 400],
+                outputRange: [400, 0],
+                extrapolate: 'clamp',
+              })
+            }
+          ],
+          borderTopRightRadius: 15,
+          borderTopLeftRadius: 15,
+          ...style,
         }}>
-        <Text
-          style={{
-            color: 'black',
-            textAlign: 'center',
-            fontSize: 30,
-          }}>
-          Nr. {data.nr}
-        </Text>
-      </View>
-      <View
-        style={{
-          width: '100%',
-          justifyContent: 'center',
-          alignItems: 'center',
-          marginVertical: 10,
-        }}>
-        <View
-          style={{
-            backgroundColor: '#3b3b3b',
-            width: '90%',
-            height: 1,
-          }}
-        />
-      </View>
-      <ScrollView
-        style={{
-          flex: 1,
-        }}>
-        <View
-          style={{
-            width: '100%',
-            paddingHorizontal: 20,
-          }}>
-          <Text
+          <View
             style={{
-              color: 'black',
-              textAlign: 'justify',
-            }}>
-            {data.tekstas}
-          </Text>
-        </View>
-        <View
+              width: '100%',
+              height: 50,
+              flexDirection: 'column',
+            }}
+          >
+            <View
+              style={{
+                height: 50,
+                borderBottomWidth: 1,
+                borderBottomColor: 'black',
+                justifyContent: 'center',
+                alignItems: 'center',
+                position: 'absolute',
+                bottom: 15,
+                left: 0,
+                right: 0,
+                marginHorizontal: '5%',
+              }}
+            />
+            <Text
+              allowFontScaling={false}
+              style={{
+                color: 'black',
+                backgroundColor:'white',
+                textAlign: 'center',
+                fontSize: 30,
+                marginTop: 10,
+                position: 'absolute',
+                left: w / 2 - 50,
+                right: 0,
+                width: 120
+              }}>
+              Nr. {data.nr}
+            </Text>
+          </View>
+        <ScrollView
+          showsVerticalScrollIndicator={false}
+          showsHorizontalScrollIndicator={false}
           style={{
             flex: 1,
-            marginBottom: 20,
-            marginTop: 20,
           }}>
-          <Carousel
-            loop
-            width={w}
-            height={w / 2}
-            autoPlay={false}
-            data={images}
-            mode={carouselMode}
-            renderItem={({item}) => (
-              <Pressable
-                onPress={() => {
-                  setVisible(true);
-                  setImageSource(item);
-                }}
-                style={{
-                  width: '100%',
-                  height: '100%',
-                  borderRadius: 5,
-                }}>
-                <FastImage
-                  source={item}
+            {images.length > 0 && (
+              <Carousel
+              width={w}
+              height={w / 2}
+              autoPlay={false}
+              style={{
+                marginVertical: 10,
+                borderRadius: 5,
+              }}
+              data={images}
+              enabled={images.length > 1}
+              renderItem={({item}) => (
+                <Pressable
+                  onPress={() => {
+                    setImageViewVisible(true);
+                    setImageSource(item);
+                  }}
                   style={{
                     width: '100%',
                     height: '100%',
-                    borderRadius: 5,
-                  }}
-                  resizeMode={'cover'}
-                />
-              </Pressable>
+                    borderRadius: 10,
+                  }}>
+                    <FastImage
+                      defaultSource={require('../static/placeholder.jpg')}
+                      source={{uri: item}}
+                      style={{
+                        width: '100%',
+                        height: '100%',
+                      }}
+                      resizeMode={'cover'}
+                    />
+                </Pressable>
+              )}
+            />
             )}
-          />
-        </View>
-      </ScrollView>
-    </Animated.View>
+            <Text
+              allowFontScaling={false}
+              style={{
+                color: 'black',
+                textAlign: 'left',
+                fontSize: 20,
+                paddingHorizontal: 10,
+                marginVertical: 10,
+                fontStyle: 'italic',
+                fontWeight: 'bold',
+              }}
+            >
+              Aprašymas:
+            </Text>
+            <Text
+              allowFontScaling={false}
+              style={{
+                color: 'black',
+                textAlign: 'justify',
+                width: '100%',
+                paddingHorizontal: 10,
+                fontSize: 15,
+              }}>
+              {data.tekstas}
+            </Text>
+        </ScrollView>
+      </Animated.View>
+    </GestureDetector>
   );
 };

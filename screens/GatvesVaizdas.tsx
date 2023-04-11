@@ -1,12 +1,11 @@
 import {useRef, useState} from 'react';
 
-import {View, Text, TouchableHighlight} from 'react-native';
-
 import MapView, {Marker} from 'react-native-maps-osmdroid';
 
 import {Drawer} from '../components/Drawer';
 
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
+import Header from '../components/Header';
 
 export default function GatvesVaizdas({route, navigation}: any) {
   const {data, initialCoords, gatve, images} = route.params;
@@ -15,6 +14,14 @@ export default function GatvesVaizdas({route, navigation}: any) {
   const [drawerDataIndex, setDrawerDataIndex] = useState<number>(0);
 
   const mapView = useRef(null);
+
+  const onMarkerOpen = (index: number) => {
+      if (drawerOpen) setDrawerDataIndex(index);
+      else {
+        setDrawerOpen(true);
+        setDrawerDataIndex(index);
+      }
+  }
 
   const markers = data.map((marker: any, index: number) => {
     return {
@@ -28,35 +35,8 @@ export default function GatvesVaizdas({route, navigation}: any) {
 
   return (
     <>
-      <Drawer open={drawerOpen} data={data[drawerDataIndex]} images={images[data[drawerDataIndex].nr]}/>
-      <View
-        style={{
-          flexDirection: 'row',
-          justifyContent: 'flex-start',
-          alignItems: 'center',
-          padding: 15,
-          backgroundColor: 'white',
-          zIndex: 100,
-        }}>
-        <TouchableHighlight
-          underlayColor={'rgba(0,0,0,0.1)'}
-          style={{
-            borderRadius: 100,
-          }}
-          onPress={() => navigation.goBack()}>
-          <Icon name={'chevron-left'} size={30} color={'black'} />
-        </TouchableHighlight>
-        <Text
-          style={{
-            fontSize: 20,
-            fontWeight: 'bold',
-            color: 'black',
-            marginLeft: 10,
-          }}>
-          {gatve} g.
-        </Text>
-        <Icon name={'chevron-left'} size={30} color={'transparent'} />
-      </View>
+      <Header navigation={navigation} text={`${gatve} g.`} />
+      <Drawer setOpen={setDrawerOpen} open={drawerOpen} data={data[drawerDataIndex]} images={images[data[drawerDataIndex].nr]}/>
       <MapView
         ref={mapView}
         onPress={() => setDrawerOpen(false)}
@@ -77,14 +57,11 @@ export default function GatvesVaizdas({route, navigation}: any) {
           <Marker
             accessibilityRole="button"
             accessibilityLabel={`${gatve} g. ${data[index].nr}`}
-            id={marker.id}
-            onPress={() => {
-              if (drawerOpen) setDrawerDataIndex(index);
-              else {
-                setDrawerOpen(true);
-                setDrawerDataIndex(index);
-              }
+            style={{
+              elevation: 5
             }}
+            id={marker.id}
+            onPress={() => onMarkerOpen(index)}
             coordinate={{
               ...marker.coordinate,
             }}

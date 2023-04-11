@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "367503005048",
+    "project_id": "mazeikiu-muziejaus-aplikacija",
+    "storage_bucket": "mazeikiu-muziejaus-aplikacija.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:367503005048:android:785f3ab70e33316a71248d",
+        "android_client_info": {
+          "package_name": "com.mazeikiu_muziejus"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "367503005048-sigt0linpfrf4am345ppi1frakn01u42.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCVFP8WPdp4912ot5-9bD0nY3HxkAS-uW8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "367503005048-sigt0linpfrf4am345ppi1frakn01u42.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
