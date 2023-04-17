@@ -36,7 +36,7 @@ export default function GatvesVaizdas({route, navigation}: any) {
   return (
     <>
       <Header navigation={navigation} text={`${gatve} g.`} />
-      <Drawer setOpen={setDrawerOpen} open={drawerOpen} data={data[drawerDataIndex]} images={images[data[drawerDataIndex].nr]}/>
+      <Drawer setOpen={setDrawerOpen} open={drawerOpen} data={data[drawerDataIndex]} images={images ? images[data[drawerDataIndex].nr] : []}/>
       <MapView
         ref={mapView}
         onPress={() => setDrawerOpen(false)}
@@ -53,7 +53,7 @@ export default function GatvesVaizdas({route, navigation}: any) {
           latitudeDelta: 0.022,
           longitudeDelta: 0.022,
         }}>
-        {markers.map((marker: any, index: number) => (
+        {markers?.map((marker: any, index: number) => (
           <Marker
             accessibilityRole="button"
             accessibilityLabel={`${gatve} g. ${data[index].nr}`}

@@ -17,10 +17,6 @@ import ErrorConnecting from './screens/ErrorConnecting';
 
 const Stack = createStackNavigator();
 
-/*
-  fix drawer number text !!!!!!!!!
-*/
-
 function App() {
   const [data, setData] = useState<streetData | null>(null);
   const [loading, setLoading] = useState<boolean>(true);
@@ -36,7 +32,6 @@ function App() {
     getData()
     .then((data) => {
       if (data) setData(data)
-      else setData(null);
       setLoading(false);
     });
   }, [up])

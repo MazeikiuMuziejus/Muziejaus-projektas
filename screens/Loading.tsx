@@ -9,22 +9,27 @@ export default function Loading(){
             style={{
                 alignItems: 'center',
                 justifyContent: 'center',
-                backgroundColor: 'rgb(255,255,255)',
+                backgroundColor: '#C3D3A4',
                 flex: 1
             }}
         >
             <View
                 style={{
-                    width: '100%',
-                    height: '40%',
                     alignItems: 'center',
+                    borderWidth: 2,
+                    borderRadius: 100,
+                    borderStyle: 'dashed',
+                    marginBottom: 40,
                 }}
             >
                 <FastImage
-                    source={require('../static/Logo.png')}
+                    source={require('../assets/Logo.png')}
                     style={{
                         width: 150,
                         height: 150,
+                        borderColor: '#574031',
+                        backgroundColor: '#E8DCCA',
+                        borderRadius: 100,
                     }}
                     resizeMode={FastImage.resizeMode.cover}
                 />

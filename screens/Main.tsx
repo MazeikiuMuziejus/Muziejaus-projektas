@@ -1,65 +1,55 @@
-import {View, Text, Image, BackHandler} from 'react-native';
+import {View, Image, BackHandler} from 'react-native';
 
 import { useNavigation } from '@react-navigation/native';
-
-import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 
 import { Button } from '../components/Button';
 
 export default function Main() {
     const navigation = useNavigation();
 
-    const year = new Date().getFullYear();
-
     return (
         <View
             style={{
                 flex: 1,
-                alignItems: 'center'
+                alignItems: 'center',
+                backgroundColor: '#C3D3A4',
+                justifyContent: 'center',
             }}
         >
-            <View
-                style={{ 
-                    height: '40%', 
-                    padding: 70,
-                    justifyContent: 'center',
-                    alignItems: 'center'
-                }}
-            >
-                <Image 
-                    source={require('../static/Logo.png')}
-                    style={{
-                        width: 150,
-                        height: 150,
+            <View style={{justifyContent: 'center'}}>
+                <View
+                    style={{ 
+                        justifyContent: 'center',
+                        alignItems: 'center',
+                        borderWidth: 2,
+                        borderRadius: 100,
+                        borderStyle: 'dashed'
                     }}
-                />
-            </View>
-            <View>
-                <Button buttonStyle={{
-                    marginBottom: 20
-                }} text='Mažeikių miesto gatvės' onPress={() => navigation.navigate("StreetList" as never)}/>
-                <Button text='Iseiti' onPress={() => BackHandler.exitApp()}/>
+                >
+                    <Image 
+                        source={require('../assets/Logo.png')}
+                        style={{
+                            width: 150,
+                            height: 150,
+                            borderColor: '#574031',
+                            backgroundColor: '#E8DCCA',
+                            borderRadius: 100,
+                        }}
+                    />
+                </View>
             </View>
             <View
                 style={{
-                    position: 'absolute',
-                    bottom: 0,
-                    flexDirection: 'row'
+                    flexDirection: 'column',
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                    height: 200,
+                    width: '100%',
+                    marginTop: 20,
                 }}
             >
-                <Icon 
-                    name={'copyright'}
-                    size={15}
-                    color={'black'}
-                />
-                <Text 
-                    style={{
-                        color: 'black',
-                        fontStyle: 'italic'
-                    }}
-                >
-                    {' '}Mažeikių muziejus - {year}
-                </Text>
+                <Button left text='Mažeikių miesto gatvės' onPress={() => navigation.navigate("StreetList" as never)}/>
+                <Button text='Iseiti' onPress={() => BackHandler.exitApp()}/>
             </View>
         </View>
     );

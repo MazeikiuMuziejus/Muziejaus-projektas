@@ -1,18 +1,22 @@
-import {Text, View, TouchableHighlight} from 'react-native';
+import {Text, TouchableHighlight} from 'react-native';
 
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 
+import LinearGradient from "react-native-linear-gradient";
+
 export default function Header({navigation, text}: any){
     return (
-    <View
+    <LinearGradient
+        colors={['#FCFAF9', '#E8DCCA']}
         style={{
           flexDirection: 'row',
           justifyContent: 'flex-start',
           alignItems: 'center',
           padding: 15,
-          backgroundColor: 'white',
-          borderBottomWidth: 1,
-            borderBottomColor: 'rgba(0,0,0,0.1)',
+          borderBottomWidth: 2,
+          borderBottomColor: '#574031',
+          backgroundColor: '#E8DCCA',
+          borderStyle: 'dashed',
           zIndex: 100,
         }}>
         <TouchableHighlight
@@ -33,7 +37,6 @@ export default function Header({navigation, text}: any){
           }}>
           {text} 
         </Text>
-        <Icon name={'chevron-left'} size={30} color={'transparent'} />
-      </View>
+      </LinearGradient>
     );
 }

@@ -16,7 +16,7 @@ export default function MainScreen({navigation, data}: {navigation?: any; data: 
       style={{
         alignItems: 'center',
         justifyContent: 'center',
-        backgroundColor: 'rgb(255,255,255)',
+        backgroundColor: '#C3D3A4',
       }}>
       <ScrollView
         style={{

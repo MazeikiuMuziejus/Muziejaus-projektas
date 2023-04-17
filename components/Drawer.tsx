@@ -2,7 +2,6 @@ import {useEffect, useRef, useState} from 'react';
 import {
   Animated,
   Text,
-  View,
   Easing,
   Dimensions,
   Pressable,
@@ -15,6 +14,7 @@ import FastImage from 'react-native-fast-image';
 import ImageView from 'react-native-image-viewing';
 
 import { runOnJS } from 'react-native-reanimated';
+import { Separator } from './Separator';
 
 export const Drawer = ({
   open,
@@ -33,7 +33,7 @@ export const Drawer = ({
   const w = Dimensions.get('window').width;
 
   const [imageViewVisible, setImageViewVisible] = useState(false);
-  const [imageSource, setImageSource] = useState(images[0]);
+  const [imageSource, setImageSource] = useState<string>();
 
   const animateClose = () => {
     Animated.timing(openAnim, {
@@ -76,7 +76,7 @@ export const Drawer = ({
       <Animated.View
         style={{
           position: 'absolute',
-          backgroundColor: 'white',
+          backgroundColor: '#E8DCCA',
           zIndex: 100,
           bottom: 0,
           width: '100%',
@@ -94,83 +94,48 @@ export const Drawer = ({
           borderTopLeftRadius: 15,
           ...style,
         }}>
-          <View
-            style={{
-              width: '100%',
-              height: 50,
-              flexDirection: 'column',
-            }}
-          >
-            <View
-              style={{
-                height: 50,
-                borderBottomWidth: 1,
-                borderBottomColor: 'black',
-                justifyContent: 'center',
-                alignItems: 'center',
-                position: 'absolute',
-                bottom: 15,
-                left: 0,
-                right: 0,
-                marginHorizontal: '5%',
-              }}
-            />
-            <Text
-              allowFontScaling={false}
-              style={{
-                color: 'black',
-                backgroundColor:'white',
-                textAlign: 'center',
-                fontSize: 30,
-                marginTop: 10,
-                position: 'absolute',
-                left: w / 2 - 50,
-                right: 0,
-                width: 120
-              }}>
-              Nr. {data.nr}
-            </Text>
-          </View>
+        <Separator text={data.nr} w={w}/>
         <ScrollView
           showsVerticalScrollIndicator={false}
           showsHorizontalScrollIndicator={false}
           style={{
             flex: 1,
           }}>
-            {images.length > 0 && (
+            {images?.length > 0 && (
               <Carousel
-              width={w}
-              height={w / 2}
-              autoPlay={false}
-              style={{
-                marginVertical: 10,
-                borderRadius: 5,
-              }}
-              data={images}
-              enabled={images.length > 1}
-              renderItem={({item}) => (
-                <Pressable
-                  onPress={() => {
-                    setImageViewVisible(true);
-                    setImageSource(item);
-                  }}
-                  style={{
-                    width: '100%',
-                    height: '100%',
-                    borderRadius: 10,
-                  }}>
-                    <FastImage
-                      defaultSource={require('../static/placeholder.jpg')}
-                      source={{uri: item}}
-                      style={{
-                        width: '100%',
-                        height: '100%',
-                      }}
-                      resizeMode={'cover'}
-                    />
-                </Pressable>
-              )}
-            />
+                width={w}
+                height={w / 2}
+                autoPlay={false}
+                style={{
+                  marginVertical: 10,
+                  borderRadius: 5,
+                  elevation: 5,
+                }}
+                data={images}
+                enabled={images.length > 1}
+                renderItem={({item}) => (
+                  <Pressable
+                    onPress={() => {
+                      setImageViewVisible(true);
+                      setImageSource(item);
+                    }}
+                    style={{
+                      width: '100%',
+                      height: '100%',
+                      borderRadius: 10,
+                    }}>
+                      <FastImage
+                        defaultSource={require('../static/placeholder.jpg')}
+                        source={{uri: item}}
+                        style={{
+                          width: '100%',
+                          height: '100%',
+                        }}
+                        resizeMode={'cover'}
+                      />
+                  </Pressable>
+                )}
+              />
             )}
             <Text
               allowFontScaling={false}
@@ -193,8 +158,11 @@ export const Drawer = ({
                 textAlign: 'justify',
                 width: '100%',
                 paddingHorizontal: 10,
+                paddingBottom: 15,
                 fontSize: 15,
-              }}>
+
+              }}
+            >
               {data.tekstas}
             </Text>
         </ScrollView>

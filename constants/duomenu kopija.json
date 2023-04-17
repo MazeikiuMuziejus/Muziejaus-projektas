@@ -254,10 +254,18 @@
         },
         {
           "nr": "18",
-          "tekstas": "savivaldybė (Tada buvo 16)",
+          "tekstas": "Savivaldybė, nuomojamos patalpos antrame aukšte (Tada buvo Nr.16)",
           "coords": {
             "lat": 56.311553503698605,
             "long": 22.351128784545324
+          }
+        },
+        {
+          "nr": "20",
+          "tekstas": "Juozo Kiaušo namas (tada Nr. 18) (Kosto Bužoko (1914-1996) atsiminimai)",
+          "coords":{
+            "lat": 56.31166889797098,
+            "long": 22.35159943983413
           }
         }
       ],
@@ -271,13 +279,22 @@
           "4": ["https://firebasestorage.googleapis.com/v0/b/mazeikiu-muziejaus-aplikacija.appspot.com/o/Lai%C5%BEuvos%2FLai%C5%BEuvos_4.jpg?alt=media&token=8e3097a2-e5e5-45c7-83f5-7dc8326abb39"],
           "8": ["https://firebasestorage.googleapis.com/v0/b/mazeikiu-muziejaus-aplikacija.appspot.com/o/Lai%C5%BEuvos%2FLai%C5%BEuvos_8_2.jpg?alt=media&token=a25e0cc7-2e0f-4f74-9827-d29c95b39d97"],
           "14": ["https://firebasestorage.googleapis.com/v0/b/mazeikiu-muziejaus-aplikacija.appspot.com/o/Lai%C5%BEuvos%2FLai%C5%BEuvos_14_2.jpg?alt=media&token=b4487311-8c23-49c5-9fef-f92ba932126a"],
-          "18": ["https://firebasestorage.googleapis.com/v0/b/mazeikiu-muziejaus-aplikacija.appspot.com/o/Lai%C5%BEuvos%2FLai%C5%BEuvos_18.jpg?alt=media&token=1f5f2249-4070-4c4d-b66a-074f395642d6", "https://firebasestorage.googleapis.com/v0/b/mazeikiu-muziejaus-aplikacija.appspot.com/o/Lai%C5%BEuvos%2FLai%C5%BEuvos_18_Sena.jpg?alt=media&token=78fb33a4-4d8b-468c-a431-1dc84841d453"]
+          "18": ["https://firebasestorage.googleapis.com/v0/b/mazeikiu-muziejaus-aplikacija.appspot.com/o/Lai%C5%BEuvos%2FLai%C5%BEuvos_18.jpg?alt=media&token=1f5f2249-4070-4c4d-b66a-074f395642d6", "https://firebasestorage.googleapis.com/v0/b/mazeikiu-muziejaus-aplikacija.appspot.com/o/Lai%C5%BEuvos%2FLai%C5%BEuvos_18_Sena.jpg?alt=media&token=78fb33a4-4d8b-468c-a431-1dc84841d453"],
+          "20":[]
         }
       }
     },
     {
       "gatve": "Birutės",
       "data": [
+        {
+          "nr": "2",
+          "tekstas": "Mažeikių apylinkės Teismas (Š. Tel. knyga 1935 m.)",
+          "coords":{
+            "lat": 56.31178602343081, 
+            "long": 22.352747996079707
+          }
+        },
         {
           "nr": "4",
           "tekstas":
@@ -289,7 +306,7 @@
         },
         {
           "nr": "8",
-          "tekstas": "Varno arbatinė.",
+          "tekstas": "Varno arbatinė. Traktierius, Varnas Juozas, turgavietė (Š: Kalendorius, adresų knyga K. 1933)",
           "coords": {
             "lat": 56.3125239003725,
             "long": 22.35183648454529
@@ -320,6 +337,7 @@
       "images":{
         "button": "https://firebasestorage.googleapis.com/v0/b/mazeikiu-muziejaus-aplikacija.appspot.com/o/Birut%C4%97s%2FBirutes_32.jpg?alt=media&token=1aee1fb8-4f42-4620-b693-a5cd95969094",
         "streets":{
+          "2": [],
           "4": ["https://firebasestorage.googleapis.com/v0/b/mazeikiu-muziejaus-aplikacija.appspot.com/o/placeholder.jpg?alt=media&token=2ba598df-1bfd-41cb-a02e-ce64c8c0e2ae"],
           "8": ["https://firebasestorage.googleapis.com/v0/b/mazeikiu-muziejaus-aplikacija.appspot.com/o/Birut%C4%97s%2FBirutes_8.jpg?alt=media&token=c15ad618-4093-4fd1-b1cf-b48f5510ce99"],
           "28": ["https://firebasestorage.googleapis.com/v0/b/mazeikiu-muziejaus-aplikacija.appspot.com/o/Birut%C4%97s%2FBirutes_28.jpg?alt=media&token=c0194411-5656-4840-a31e-edbbc7bafdbb"],
@@ -417,7 +435,7 @@
         },
         {
           "nr": "12",
-          "tekstas": "",
+          "tekstas": "Gydytojo Stasio Dakinevičiaus gyvenamasis namas statytas 1936 m.",
           "coords":{
             "lat": 56.313607656911046,
             "long": 22.348499544252135
@@ -503,17 +521,26 @@
       "data": [
         {
           "nr": "27 b",
-          "tekstas": "",
+          "tekstas": "(seniau 25) Malūnas „Laimė“; kieme tuo pačiu numeriu linų ir pakulų išdirbimo fabrikas Leibovičiaus Abelio (Š:Tel kn. 1939)",
           "coords":{
             "lat": 56.31117649983903,
             "long": 22.358633384514764
+          }
+        },
+        {
+          "nr": "9",
+          "tekstas": "Pieno centras (Š: T.L 1944)",
+          "coords":{
+            "lat": 56.31076940126618, 
+            "long": 22.353076893253416
           }
         }
       ],
       "images":{
         "button": "https://firebasestorage.googleapis.com/v0/b/mazeikiu-muziejaus-aplikacija.appspot.com/o/Pramon%C4%97s%2FPramon%C4%97s_27_b%20Laimes%20savininkas%20Leibovicius%20su%20seima%20GEK%20MM10738%20X.jpg?alt=media&token=bd9812d4-00aa-4fb3-8810-7aabab34b299",
         "streets": {
-          "27 b": ["https://firebasestorage.googleapis.com/v0/b/mazeikiu-muziejaus-aplikacija.appspot.com/o/Pramon%C4%97s%2FPramon%C4%97s_27_b%20Laimes%20savininkas%20Leibovicius%20su%20seima%20GEK%20MM10738%20X.jpg?alt=media&token=bd9812d4-00aa-4fb3-8810-7aabab34b299"]
+          "27 b": ["https://firebasestorage.googleapis.com/v0/b/mazeikiu-muziejaus-aplikacija.appspot.com/o/Pramon%C4%97s%2FPramon%C4%97s_27_b%20Laimes%20savininkas%20Leibovicius%20su%20seima%20GEK%20MM10738%20X.jpg?alt=media&token=bd9812d4-00aa-4fb3-8810-7aabab34b299"],
+          "9": []
         }
       },
       "initialCoords":{
@@ -549,17 +576,35 @@
       "data": [
         {
           "nr": "1",
-          "tekstas": "",
+          "tekstas": "Mecas Faivelis atvyko iš Viekšnių 1889m. 1890m. įsitaisė girnas ir pradėjo malti kavos produktus, kuriuos pats išnešiodavo po aplinkinius kaimus. Vėliau pradėjo samdyti žmones, plėsti verslą. 1898 atidarytas ir degtukų šipuliukų fabrikėlis, kuris išaugo į didžiausią Mažeikių įmonę. 1930m. Lietuvos vyriausybei įvedus degtukų gamybos monopolį švedams, įmonė uždaryta. Pastatą įsigijo broliai Šadauskai. 1932m. buvo įkurtas brolių Šadauskų alaus bravoras „Lokys“.",
           "coords":{
             "lat": 56.30724656328581, 
             "long": 22.352969326749307
+          }
+        },
+        {
+          "nr": "2",
+          "tekstas": "Pieno perdirbimo bendrovė (vėliau sviesto gamykla)",
+          "coords":{
+            "lat": 56.30782005996846, 
+            "long": 22.352325164417806
+          }
+        },
+        {
+          "nr": "3",
+          "tekstas": "Otto Ilteris dešrų dirbtuvė.",
+          "coords":{
+            "lat": 56.30668177468057, 
+            "long": 22.352730299810574
           }
         }
       ],
       "images":{
         "button": "https://firebasestorage.googleapis.com/v0/b/mazeikiu-muziejaus-aplikacija.appspot.com/o/Tirk%C5%A1li%C5%B3%2FTirk%C5%A1li%C5%B3_1_2_Sena.jpg?alt=media&token=7dab3b57-204a-4ec7-b8c2-79aa47d737cf",
         "streets":{
-          "1": ["https://firebasestorage.googleapis.com/v0/b/mazeikiu-muziejaus-aplikacija.appspot.com/o/Tirk%C5%A1li%C5%B3%2FTirk%C5%A1li%C5%B3_1_Sena.jpg?alt=media&token=f2442907-323a-4bce-b631-9575043dfcf1", "https://firebasestorage.googleapis.com/v0/b/mazeikiu-muziejaus-aplikacija.appspot.com/o/Tirk%C5%A1li%C5%B3%2FTirk%C5%A1li%C5%B3_1_2_Sena.jpg?alt=media&token=7dab3b57-204a-4ec7-b8c2-79aa47d737cf"]
+          "1": ["https://firebasestorage.googleapis.com/v0/b/mazeikiu-muziejaus-aplikacija.appspot.com/o/Tirk%C5%A1li%C5%B3%2FTirk%C5%A1li%C5%B3_1_Sena.jpg?alt=media&token=f2442907-323a-4bce-b631-9575043dfcf1", "https://firebasestorage.googleapis.com/v0/b/mazeikiu-muziejaus-aplikacija.appspot.com/o/Tirk%C5%A1li%C5%B3%2FTirk%C5%A1li%C5%B3_1_2_Sena.jpg?alt=media&token=7dab3b57-204a-4ec7-b8c2-79aa47d737cf"],
+          "2": [],
+          "3": []
         }
       },
       "initialCoords":{
@@ -588,6 +633,29 @@
       "initialCoords":{
         "lat": 56.31587808660441,
         "long": 22.340397026749745
+      }
+    },
+    {
+      "gatve": "Viekšnių",
+      "data":[
+        {
+          "nr": "20",
+          "tekstas": "Isaako Avracho koklių dirbtuvė. (Seniau Nr. 14)",
+          "coords":{
+            "lat": 56.30486611357742, 
+            "long": 22.358246350832655
+          }
+        }
+      ],
+      "initialCoords":{
+        "lat": 56.30486611357742,
+        "long": 22.358246350832655
+      },
+      "images":{
+        "button": "",
+        "streets":{
+          "20": []
+        }
       }
     }
   ]
