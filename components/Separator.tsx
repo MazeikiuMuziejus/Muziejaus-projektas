@@ -1,6 +1,6 @@
 import {View, Text} from 'react-native';
 
-export function Separator({ style, text, w }: { style?: any, text?: string, w: number}){
+export function Separator({text}: { style?: any, text?: string, w: number}){
     return (
       <View
         style={{

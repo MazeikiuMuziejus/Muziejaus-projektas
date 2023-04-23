@@ -98,7 +98,7 @@
       "images":{
         "button": "https://firebasestorage.googleapis.com/v0/b/mazeikiu-muziejaus-aplikacija.appspot.com/o/Laisv%C4%97s%2FLaisv%C4%97s_8_3.jpg?alt=media&token=e1c4fbd2-8f00-4c58-93d5-3673a1907747",
         "streets":{
-          "5": ["https://firebasestorage.googleapis.com/v0/b/mazeikiu-muziejaus-aplikacija.appspot.com/o/placeholder.jpg?alt=media&token=2ba598df-1bfd-41cb-a02e-ce64c8c0e2ae"],
+          "5": [],
           "6": ["https://firebasestorage.googleapis.com/v0/b/mazeikiu-muziejaus-aplikacija.appspot.com/o/Laisv%C4%97s%2FLaisv%C4%97s_6.jpg?alt=media&token=0e8977e3-08b2-4271-86ba-fd825dc5b3e5", "https://firebasestorage.googleapis.com/v0/b/mazeikiu-muziejaus-aplikacija.appspot.com/o/Laisv%C4%97s%2FLaisv%C4%97s_6_3.jpg?alt=media&token=09d226b1-2566-4b15-a92b-1fc868e7d1fc", "https://firebasestorage.googleapis.com/v0/b/mazeikiu-muziejaus-aplikacija.appspot.com/o/Laisv%C4%97s%2FLaisv%C4%97s_6_Sena.jpg?alt=media&token=c0d4f17c-083d-49b5-ba2e-21931d65c67f"],
           "8": ["https://firebasestorage.googleapis.com/v0/b/mazeikiu-muziejaus-aplikacija.appspot.com/o/Laisv%C4%97s%2FLaisv%C4%97s_8_3.jpg?alt=media&token=e1c4fbd2-8f00-4c58-93d5-3673a1907747", "https://firebasestorage.googleapis.com/v0/b/mazeikiu-muziejaus-aplikacija.appspot.com/o/Laisv%C4%97s%2FLaisv%C4%97s_8_Sena.jpg?alt=media&token=c23f43ce-e295-4591-a886-fe394cd8c22c"],
           "9": ["https://firebasestorage.googleapis.com/v0/b/mazeikiu-muziejaus-aplikacija.appspot.com/o/Laisv%C4%97s%2FLaisv%C4%97s_9.jpg?alt=media&token=e499f276-ebd7-492c-af68-5fa224641308", "https://firebasestorage.googleapis.com/v0/b/mazeikiu-muziejaus-aplikacija.appspot.com/o/Laisv%C4%97s%2FLaisv%C4%97s_9_Sena.jpg?alt=media&token=c856ad33-712a-46f4-978e-baea3c85dfdc"],
@@ -107,7 +107,7 @@
           "23": ["https://firebasestorage.googleapis.com/v0/b/mazeikiu-muziejaus-aplikacija.appspot.com/o/Laisv%C4%97s%2FLaisv%C4%97s_23.jpg?alt=media&token=e9d0653e-786d-47ec-826b-b5471e964c3f", "https://firebasestorage.googleapis.com/v0/b/mazeikiu-muziejaus-aplikacija.appspot.com/o/Laisv%C4%97s%2FLaisv%C4%97s_23_3.jpg?alt=media&token=4ebe9918-abc3-45b6-a4e7-c9a830f5d783"],
           "31": ["https://firebasestorage.googleapis.com/v0/b/mazeikiu-muziejaus-aplikacija.appspot.com/o/Laisv%C4%97s%2FLaisv%C4%97s_31.jpg?alt=media&token=6f0a1a30-d7f3-491b-b67f-ff8879fe31d7", "https://firebasestorage.googleapis.com/v0/b/mazeikiu-muziejaus-aplikacija.appspot.com/o/Laisv%C4%97s%2FLaisv%C4%97s_31_Sena.jpg?alt=media&token=d44f962d-26ec-4e01-9129-559172b962b2"],
           "38": ["https://firebasestorage.googleapis.com/v0/b/mazeikiu-muziejaus-aplikacija.appspot.com/o/Laisv%C4%97s%2FLaisv%C4%97s_38.jpg?alt=media&token=db8f299b-a54f-4b08-9221-276bbf7f9c36", "https://firebasestorage.googleapis.com/v0/b/mazeikiu-muziejaus-aplikacija.appspot.com/o/Laisv%C4%97s%2FLaisv%C4%97s_38_Sena.jpg?alt=media&token=1823d59b-c6f8-4c78-9efa-2b012f202c50"],
-          "33": ["https://firebasestorage.googleapis.com/v0/b/mazeikiu-muziejaus-aplikacija.appspot.com/o/placeholder.jpg?alt=media&token=2ba598df-1bfd-41cb-a02e-ce64c8c0e2ae"]
+          "33": []
         }
       }
     },
@@ -338,7 +338,7 @@
         "button": "https://firebasestorage.googleapis.com/v0/b/mazeikiu-muziejaus-aplikacija.appspot.com/o/Birut%C4%97s%2FBirutes_32.jpg?alt=media&token=1aee1fb8-4f42-4620-b693-a5cd95969094",
         "streets":{
           "2": [],
-          "4": ["https://firebasestorage.googleapis.com/v0/b/mazeikiu-muziejaus-aplikacija.appspot.com/o/placeholder.jpg?alt=media&token=2ba598df-1bfd-41cb-a02e-ce64c8c0e2ae"],
+          "4": [],
           "8": ["https://firebasestorage.googleapis.com/v0/b/mazeikiu-muziejaus-aplikacija.appspot.com/o/Birut%C4%97s%2FBirutes_8.jpg?alt=media&token=c15ad618-4093-4fd1-b1cf-b48f5510ce99"],
           "28": ["https://firebasestorage.googleapis.com/v0/b/mazeikiu-muziejaus-aplikacija.appspot.com/o/Birut%C4%97s%2FBirutes_28.jpg?alt=media&token=c0194411-5656-4840-a31e-edbbc7bafdbb"],
           "32": ["https://firebasestorage.googleapis.com/v0/b/mazeikiu-muziejaus-aplikacija.appspot.com/o/Birut%C4%97s%2FBirutes_32.jpg?alt=media&token=1aee1fb8-4f42-4620-b693-a5cd95969094"]
@@ -510,8 +510,8 @@
       "images":{
         "button": "https://firebasestorage.googleapis.com/v0/b/mazeikiu-muziejaus-aplikacija.appspot.com/o/Ba%C5%BEny%C4%8Dios%2FBa%C5%BEny%C4%8DiosG_pabaiga_3.jpg?alt=media&token=602a1b5e-32c8-401a-b0c6-7719557919d5",
         "streets":{
-          "2": ["https://firebasestorage.googleapis.com/v0/b/mazeikiu-muziejaus-aplikacija.appspot.com/o/placeholder.jpg?alt=media&token=2ba598df-1bfd-41cb-a02e-ce64c8c0e2ae"],
-          "1": ["https://firebasestorage.googleapis.com/v0/b/mazeikiu-muziejaus-aplikacija.appspot.com/o/placeholder.jpg?alt=media&token=2ba598df-1bfd-41cb-a02e-ce64c8c0e2ae"],
+          "2": [],
+          "1": [],
           "22": ["https://firebasestorage.googleapis.com/v0/b/mazeikiu-muziejaus-aplikacija.appspot.com/o/Ba%C5%BEny%C4%8Dios%2FBa%C5%BEny%C4%8Dios_22.jpg?alt=media&token=5eb388c8-27db-4ea5-a198-3550ff5c4682"]
         }
       }
