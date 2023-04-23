@@ -33,7 +33,7 @@ export const Drawer = ({
   const w = Dimensions.get('window').width;
 
   const [imageViewVisible, setImageViewVisible] = useState(false);
-  const [imageSource, setImageSource] = useState<string>();
+  const [imageIndex, setImageIndex] = useState<number>(0);
 
   const animateClose = () => {
     Animated.timing(openAnim, {
@@ -60,12 +60,14 @@ export const Drawer = ({
     }).start();
   }, [open]);
 
-  if (imageViewVisible && imageSource) {
+  if (imageViewVisible && images) {
+    console.log(images);
     return (
       <ImageView
-        images={[{uri: imageSource}]}
-        imageIndex={0}
+        images={images.map((i) => ({uri: i}))}
+        imageIndex={imageIndex}
         visible={imageViewVisible}
+        animationType='fade'
         onRequestClose={() => setImageViewVisible(false)}
       />
     );
@@ -113,11 +115,11 @@ export const Drawer = ({
                 }}
                 data={images}
                 enabled={images.length > 1}
-                renderItem={({item}) => (
+                renderItem={({item, index}) => (
                   <Pressable
                     onPress={() => {
                       setImageViewVisible(true);
-                      setImageSource(item);
+                      setImageIndex(index);
                     }}
                     style={{
                       width: '100%',
@@ -125,7 +127,7 @@ export const Drawer = ({
                       borderRadius: 10,
                     }}>
                       <FastImage
-                        defaultSource={require('../static/placeholder.jpg')}
+                        defaultSource={require('../assets/placeholder.jpg')}
                         source={{uri: item}}
                         style={{
                           width: '100%',

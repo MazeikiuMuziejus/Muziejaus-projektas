@@ -12,7 +12,7 @@ import Header from './components/Header';
 
 import { streetData } from './types/streetData';
 
-import { getData } from './Firebase/getData';
+import { getData } from './API/getData';
 import ErrorConnecting from './screens/ErrorConnecting';
 
 const Stack = createStackNavigator();

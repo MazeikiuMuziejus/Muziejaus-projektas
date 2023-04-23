@@ -73,7 +73,7 @@ export default function MainScreen({navigation, data}: {navigation?: any; data: 
                   />
                     <FastImage
                       source={{uri: item.images.button}}
-                      defaultSource={require('../static/placeholder.jpg')}
+                      defaultSource={require('../assets/placeholder.jpg')}
                       style={{
                         width: '100%',
                         height: '100%',
