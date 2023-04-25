@@ -18,13 +18,11 @@ import { Separator } from './Separator';
 
 export const Drawer = ({
   open,
-  style,
   setOpen,
   data,
   images,
 }: {
   open: boolean;
-  style?: any;
   setOpen: (open: boolean) => void;
   data: any;
   images: string[];
@@ -94,7 +92,6 @@ export const Drawer = ({
           ],
           borderTopRightRadius: 15,
           borderTopLeftRadius: 15,
-          ...style,
         }}>
         <Separator text={data.nr} w={w}/>
         <ScrollView
@@ -167,6 +164,58 @@ export const Drawer = ({
             >
               {data.tekstas}
             </Text>
+              {data.zmones && <>
+                <Text
+                  allowFontScaling={false}
+                  style={{
+                    color: 'black',
+                    textAlign: 'left',
+                    fontSize: 20,
+                    paddingHorizontal: 10,
+                    marginVertical: 10,
+                    fontStyle: 'italic',
+                    fontWeight: 'bold',
+                  }}
+                >
+                  Žymūs žmonės:
+                </Text>
+                {
+                  data.zmones.map((person: any, index: number) => (
+                    <>
+                      <Text 
+                        allowFontScaling={false}
+                        style={{
+                          color: 'black',
+                          textAlign: 'justify',
+                          width: '100%',
+                          paddingHorizontal: 10,
+                          paddingBottom: 8,
+                          fontSize: 17,
+                          fontWeight: "500"
+
+                        }}
+                      >
+                        {person.vardas}
+                      </Text>
+                      <Text
+                        allowFontScaling={false}
+                        style={{
+                          color: 'black',
+                          textAlign: 'justify',
+                          width: '100%',
+                          paddingHorizontal: 10,
+                          paddingBottom: 15,
+                          fontSize: 15,
+          
+                        }}
+                      >
+                        {person.tekstas}
+                      </Text>
+                   </>
+                  ))
+                }
+                </>
+              }
         </ScrollView>
       </Animated.View>
     </GestureDetector>

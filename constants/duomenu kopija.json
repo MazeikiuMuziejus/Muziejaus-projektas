@@ -159,11 +159,21 @@
         },
         {
           "nr": "16",
-          "tekstas": "Geležinkeliečių namas",
+          "tekstas": "Geležinkeliečių namas.",
           "coords": {
             "lat": 56.312087296053654,
             "long": 22.342457471052075
-          }
+          },
+          "zmones":[
+            {
+              "vardas": "Henrikas Nagys",
+              "tekstas": "Poetas, literatūros ir dailės kritikas. Gimė 1920 m. spalio 12 d. Mažeikiuose, mieste lankė pradžios mokyklą, vasaras leisdavo Buknaičių kaime. 1944 m. rudenį pasitraukė į Vakarus, vėliau persikėlė gyventi į Kanadą."
+            },
+            {
+              "vardas": "Liūnė Sutema (Zinaida Nagytė-Katiliškienė)",
+              "tekstas": "Poetė. Gimė 1927 m. liepos 5 d. Mažeikiuose."
+            }
+          ]
         },
         {
           "nr": "22",
@@ -204,7 +214,13 @@
           "coords": {
             "lat": 56.3126231307136,
             "long": 22.340451976408627
-          }
+          },
+          "zmones":[
+            {
+              "vardas": "Vladas Gricius",
+              "tekstas": "gimė 1887 01 28 Gruzdžių dvare, Šiaulių aps. 1907 baigė Liepojos g-jos 6 klases. Nuo 1912 dirbo Jūrų ministerijos Liepojos uosto valdyboje. 1914 mobilizuotas į Rusijos kariuomenę, tarnavo 115 pėst. pulke, 77 atsargos pulke eiliniu. 1917 02 01 baigė Aleksejaus karo m-lą Maskvoje, suteiktas praporščiko laipsnis. 1917 10 01 pakeltas į paporučikius, buvo pulko adjutantas, kovėsi Austrų-vokiečių fronte. 1919 03 22 mobilizuotas į Lietuvos kariuomenę, paskirtas į 2 pést. pulką 7 kuopos jaun. karininku. Nuo 1919 06 28 pulko adjutantas. 1919 10 18 suteiktas vyr. leitenanto laipsnis. Pasižymėjo kovose su bolševikais Daugpilio fronte, kovėsi su bermontininkais Meškuičių apylinkėse. 1920 03 19 perkeltas į Generalinio kariuomenės štabo Susisiekimo dalį, 1920 07 12 - Vilniaus komendantūrą ūkio vedėju. 1921 10 02 pakeltas į kapitonus.1921 02 25 perkeltas į Mažeikių stoties komendantūrą, paskirtas komendanto padėjėju. 1921 09 30 perkeltas į Karo technikos valdybą Ryšių skyriaus v-ko pavaduotoju, o 192205 18 paskirtas Susisiekimo skyriaus v-ku. 1923 03 23 autoavarijoje sunkiai sužeistas ir 1923 12 19 pačiam prašant paleistas į atsargą. Tarnavo Geležinkelių policijoje. Nuo 1926 10 Geležinkelių policijos Kauno nuovados v-kas. 1928 02 09 paleistas į dimisiją. Mirė 1928 04 14 Kaune. Apdovanotas II rūšies Vyties kryžiaus 1 laipsnio ordinu (1920);Rusijos kariuomenėje - Šv. Stanislavo 3 laipsnio ordinu. Žmona - Aleksandra, duktė - Regina Birutė (1919)."
+            }
+          ]
         }
       ],
       "initialCoords": {

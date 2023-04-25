@@ -8,7 +8,13 @@ export type streetData = [
                 coords: {
                     lat: number,
                     long: number
-                }
+                },
+                zmones?:[
+                    {
+                        vardas: string,
+                        tekstas: string
+                    }
+                ]
             }
         ],
         initialCoords:{
