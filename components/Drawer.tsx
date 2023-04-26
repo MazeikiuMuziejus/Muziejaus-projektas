@@ -112,27 +112,27 @@ export const Drawer = ({
                 }}
                 data={images}
                 enabled={images.length > 1}
-                renderItem={({item, index}) => (
-                  <Pressable
-                    onPress={() => {
-                      setImageViewVisible(true);
-                      setImageIndex(index);
-                    }}
-                    style={{
-                      width: '100%',
-                      height: '100%',
-                      borderRadius: 10,
-                    }}>
-                      <FastImage
-                        defaultSource={require('../assets/placeholder.jpg')}
-                        source={{uri: item}}
-                        style={{
-                          width: '100%',
-                          height: '100%',
-                        }}
-                        resizeMode={'cover'}
-                      />
-                  </Pressable>
+                renderItem={({item, index}) => (                
+                    <Pressable
+                      onPress={() => {
+                        setImageViewVisible(true);
+                        setImageIndex(index);
+                      }}
+                      style={{
+                        width: '100%',
+                        height: '100%',
+                        borderRadius: 10,
+                      }}>
+                        <FastImage
+                          defaultSource={require('../assets/placeholder.jpg')}
+                          source={{uri: item}}
+                          style={{
+                            width: '100%',
+                            height: '100%',
+                          }}
+                          resizeMode={'cover'}
+                        />
+                    </Pressable>
                 )}
               />
             )}

@@ -9,10 +9,8 @@ import Header from '../components/Header';
 
 export default function GatvesVaizdas({route, navigation}: any) {
   const {data, initialCoords, gatve, images} = route.params;
-
   const [drawerOpen, setDrawerOpen] = useState(false);
   const [drawerDataIndex, setDrawerDataIndex] = useState<number>(0);
-
   const mapView = useRef(null);
 
   const onMarkerOpen = (index: number) => {
