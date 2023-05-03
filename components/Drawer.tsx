@@ -1,39 +1,47 @@
-import {useEffect, useRef, useState} from 'react';
+import {useCallback, useEffect, useRef, useState} from 'react';
 import {
   Animated,
   Text,
   Easing,
   Dimensions,
   Pressable,
+  BackHandler,
 } from 'react-native';
 
 import {ScrollView, Gesture, GestureDetector} from 'react-native-gesture-handler';
 
 import Carousel from 'react-native-reanimated-carousel';
-import FastImage from 'react-native-fast-image';
 import ImageView from 'react-native-image-viewing';
 
 import { runOnJS } from 'react-native-reanimated';
 import { Separator } from './Separator';
+import { useFocusEffect } from '@react-navigation/native';
+
+import ImageWithBlurhash from './ImageWithBlurhash';
+
+import { houseData } from '../types/houseData';
+import { person } from '../types/person';
 
 export const Drawer = ({
   open,
   setOpen,
   data,
   images,
+  blurhash
 }: {
   open: boolean;
   setOpen: (open: boolean) => void;
-  data: any;
+  data: houseData;
   images: string[];
+  blurhash: string;
 }) => {
-  const openAnim = useRef(new Animated.Value(0)).current;
-  const w = Dimensions.get('window').width;
+  const openAnim = useRef(new Animated.Value(0)).current; // Animation value
+  const w = Dimensions.get('window').width; // Width of the screen
 
-  const [imageViewVisible, setImageViewVisible] = useState(false);
-  const [imageIndex, setImageIndex] = useState<number>(0);
+  const [imageViewVisible, setImageViewVisible] = useState(false);  // Whether the large image viewer is visible
+  const [imageIndex, setImageIndex] = useState<number>(0);  // Index of the image in the carousel
 
-  const animateClose = () => {
+  const animateClose = () => {    // Closes the drawer
     Animated.timing(openAnim, {
       toValue: 0,
       duration: 450,
@@ -43,13 +51,28 @@ export const Drawer = ({
     setOpen(false);
   }
 
-  const onSwipeDown = Gesture.Pan()
+  const onSwipeDown = Gesture.Pan()  // Closes the drawer on swipe down
     .onEnd((e) => {
       if (e.velocityY > 0)
         runOnJS(animateClose)();
     })
 
-  useEffect(() => {
+  useFocusEffect(                   // Rewrites the back button to close the drawer
+    useCallback(() => {
+      const backHandler = () => {
+        if (open) {
+          animateClose();
+          return true;
+        }
+        return false;
+      }
+
+      const sub = BackHandler.addEventListener('hardwareBackPress', backHandler);
+      return () => sub.remove();
+    }, [open])
+  )
+
+  useEffect(() => {               // Animates the drawer on open/close
     Animated.timing(openAnim, {
       toValue: open ? 400 : 0,
       duration: 450,
@@ -58,8 +81,7 @@ export const Drawer = ({
     }).start();
   }, [open]);
 
-  if (imageViewVisible && images) {
-    console.log(images);
+  if (imageViewVisible && images) {           // Renders large image viewer
     return (
       <ImageView
         images={images.map((i) => ({uri: i}))}
@@ -93,14 +115,14 @@ export const Drawer = ({
           borderTopRightRadius: 15,
           borderTopLeftRadius: 15,
         }}>
-        <Separator text={data.nr} w={w}/>
+        <Separator text={data.nr}/>
         <ScrollView
           showsVerticalScrollIndicator={false}
           showsHorizontalScrollIndicator={false}
           style={{
             flex: 1,
           }}>
-            {images?.length > 0 && (
+            {images?.length > 0 && (   // Renders carousel if there are images
               <Carousel
                 width={w}
                 height={w / 2}
@@ -112,7 +134,7 @@ export const Drawer = ({
                 }}
                 data={images}
                 enabled={images.length > 1}
-                renderItem={({item, index}) => (                
+                renderItem={({item, index}) => (        // Renders images          
                     <Pressable
                       onPress={() => {
                         setImageViewVisible(true);
@@ -123,14 +145,16 @@ export const Drawer = ({
                         height: '100%',
                         borderRadius: 10,
                       }}>
-                        <FastImage
-                          defaultSource={require('../assets/placeholder.jpg')}
-                          source={{uri: item}}
+                        <ImageWithBlurhash
+                          image={item}
                           style={{
                             width: '100%',
                             height: '100%',
                           }}
-                          resizeMode={'cover'}
+                          blurhashStyle={{
+                            zIndex: 110,
+                          }}
+                          blurhash={blurhash}
                         />
                     </Pressable>
                 )}
@@ -164,7 +188,7 @@ export const Drawer = ({
             >
               {data.tekstas}
             </Text>
-              {data.zmones && <>
+              {data.zmones && <> 
                 <Text
                   allowFontScaling={false}
                   style={{
@@ -180,7 +204,7 @@ export const Drawer = ({
                   Žymūs žmonės:
                 </Text>
                 {
-                  data.zmones.map((person: any, index: number) => (
+                  data.zmones.map((person: person, index: number) => ( // Renders famous people
                     <>
                       <Text 
                         allowFontScaling={false}

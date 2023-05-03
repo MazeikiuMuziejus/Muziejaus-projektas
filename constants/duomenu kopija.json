@@ -6,7 +6,7 @@
         {
           "nr": "6",
           "tekstas":
-            "Pračkausko namas. Prek. Juozo Laureckio kolonialinių prekių parduotuvė; Igno Galmino siuvykla.",
+            "(Buvo 2) Felikso Pračkausko namas. Sklypą gavo būdamas Mažeikių burmistru. Pirmame aukšte nuomojo komercines patalpas, čia veikė Juozo Laureckio kolonialinių prekių parduotuvė; Igno Galmino siuvykla.  Antrame aukšte buvo nuomojami butai. 1940 m. namas buvo nacionalizuotas, o pasiligojęs savininkas su žmona iškraustyti į gatvę.",
           "coords": {
             "long": 22.34927331942612,
             "lat": 56.31124961831251
@@ -14,7 +14,7 @@
         },
         {
           "nr": "5",
-          "tekstas": "Lietūkis. 1939 m. jau buvo pastatytas.",
+          "tekstas": "(Buvo 1b) Lietūkis - Lietuvos žemės ūkio kooperatyvų sąjungos Mažeikių skyrius. Šiame pastate buvo superkama žemės ūkio produkcija, veikė parduotuvė, žemės ūkiui skirtas prekes buvo galima rinktis iš katalogo. Šis pastatas buvo pastatytas 1938 - 1939 m. (Š: T.k. 1939)",
           "coords": {
             "lat": 56.31069255140454,
             "long": 22.347898298127145
@@ -41,7 +41,7 @@
         {
           "nr": "9",
           "tekstas":
-            "Bankas seniau (la) Pastatytas 1938 m. projekto autorius Mykolas Songaila (1874-1941); per karą 1944-1945 šiame name buvo įkurta Mažeikių ligoninė.",
+            "Bankas (seniau 1a) Pastatytas 1938 m., projekto autorius Mykolas Songaila (1874-1941) VDU architektūros katedros vedėjas, specializavęsis bankų projektavime ir statyboje. Banke buvo įrengti ir banko valdytojo, ir sargo butai.  Per karą 1944-1945 šiame name buvo įkurta Mažeikių ligoninė. Mažiausiai kitęs Mažeikių visuomeninio pastato interjeras. Išlikę laukiamosios salės senieji baldai, didysis seifas, raižytos lauko durys. 1988 m. Lietuvos persitvarkymo sąjūdžio Mažeikių skyrius ant šio pastato iškėlė pirmąją trispalvę.",
           "coords": {
             "lat": 56.311718987727495,
             "long": 22.346620747971773
@@ -50,7 +50,7 @@
         {
           "nr": "23",
           "tekstas":
-            "H.Lichtenšteino namas. Galanterijos ir kolonialinių prekių parduotuvė",
+            "(seniau 15) H.Lichtenšteino namas. Urmo, galanterijos ir indų parduotuvė. Verslas pradėtas 1921 m. Mūrinis pastatas  statytas apie 1930 m. 1940 m. namas nacionalizuotas. Sandėlyje, holokausto metu buvo laikomas iš žydų pagrobtas turtas. Veikė maisto prekių parduotuvė, pionierių namai. Namas nugriautas paliekant fragmentus 1974-1975m.  (Š: T. k. 1934)",
           "coords": {
             "lat": 56.31337313020708,
             "long": 22.3442713017535
@@ -84,7 +84,7 @@
         },
         {
           "nr": "31",
-          "tekstas": "",
+          "tekstas": "Dovydo Švarco namas. Pastatytas apie 1930 m. Čia įkurta P. Švarcienės „Centralinė vaistinė“. 1940 m. namas nacionalizuotas. Beveik visa šeima žuvo holokausto metu. Po karo šiame name buvo Mažeikių paštas. Namas nugriautas 1974-1975 m. paliekant fragmentą.",
           "coords":{
             "lat": 56.31437688912896, 
             "long": 22.34270355373757
@@ -117,7 +117,7 @@
         {
           "nr": "11",
           "tekstas":
-            "(Seniau 7) H.Groso namas Pastatytas 1907 m. Pirmame aukšte parduotuvės antrame nuomojama salė. 1915 m gegužės 14 d. rusų kareiviai dalį pastato padegė, ko pasėkoje sudegė visas miesto centras, 4 deš. pabaigoje H. Grosas namą ir šalia buvusį sklypą pardavė gydytojui Dakinevičiui. 1940 m. buvo nacionalizuotas ir antras aukštas perduotas gimnazijai, kaip salė, kurioje 1943 m. įvyko gimnazijos M.K.Čiurlionio dailės būrelio narių paroda. Pirmame aukšte buvo įv. Įstaigos- 1944 m. darbo inspekcija, sveikatos priežiūros tarnyba, apskrities viršininko priimamasis 1955 m. pastatas perduotas Mažeikių kultūros namams, kurie čia išbuvo iki 1996 m.",
+            "(Seniau 7) H.Groso namas. Pastatytas 1907 m. Pirmame aukšte parduotuvės, antrame nuomojama salė. 1915 m gegužės 14 d. rusų kareiviai dalį pastato padegė, ko pasėkoje sudegė visas miesto centras, 4 deš. pabaigoje H. Grosas namą ir šalia buvusį sklypą pardavė gydytojui Dakinevičiui. 1940 m. buvo nacionalizuotas ir antras aukštas perduotas gimnazijai, kaip salė, kurioje 1943 m. įvyko gimnazijos M.K.Čiurlionio dailės būrelio narių paroda. Pirmame aukšte buvo įv. Įstaigos - 1944 m. darbo inspekcija, sveikatos priežiūros tarnyba, apskrities viršininko priimamasis. 1955 m. pastatas perduotas Mažeikių kultūros namams, kurie čia išbuvo iki 1996 m.",
           "coords": {
             "lat": 56.31444384077919,
             "long": 22.342113240367503
@@ -126,7 +126,7 @@
         {
           "nr": "9",
           "tekstas":
-            "(Seniau 5) Šaulių XIII rinktinės štabas. Lietuvos bankas, 1934 m. iš Lietuvos banko išsimokėtinai įsigijo už 45 tūkst. Lt. (Š: Vakarai 1937, T. K. 1934).",
+            "(Seniau 5)  Pastatytas XX a. pradžioje.  Nepriklausomybės pradžioje  šiame name buvo prekiaujama, kepurėmis, skrybėlėmis ir kailiais, veikė L. Šlikmano manufaktūra ir gatavų rūbų parduotuvė. Vėliau Lietuvos banko Mažeikių skyrius. Namą 1934 m. už 45 tūkst. Lt. išsimokėtinai  pardavė  Šaulių XIII rinktinei (Š: Vakarai 1937, T. K. 1934). Vėlesniais laikais čia veikė daržovių parduotuvė, Mažeikių rajoniniai kultūros namai, kavinė „Vega“.",
           "coords": {
             "lat": 56.31431909049051,
             "long": 22.34193255570983
@@ -159,7 +159,7 @@
         },
         {
           "nr": "16",
-          "tekstas": "Geležinkeliečių namas.",
+          "tekstas": "Geležinkeliečių namas.  Šiame name buvo geležinkelio darbuotojų butai. Čia, geležinkelio meistro šeimoje 1920 m. gimė poetas Henrikas Nagys, 1927 m. nacionalinės premijos laureatė Zina Nagytė – Liūnė Sutema. 1953 m. Šiame name apsigyveno garvežio mašinistas Leonas Lisinas su šeima, čia augo būsimas dailininkas Vladas Lisaitis, stalo tenisininkas Helmutas Lisinas ir choreografas Edgardas Lisaitis.",
           "coords": {
             "lat": 56.312087296053654,
             "long": 22.342457471052075
@@ -178,7 +178,7 @@
         {
           "nr": "22",
           "tekstas":
-            "Konduktorių namas. 1919?- 1923 ir 1935- 1940 m. Mažeikių apskrities komendantūra",
+            "Konduktorių namas. Pastatytas apie 1903 m. Pirminė paskirtis bendrabutis atvykusiems geležinkelininkams. 1919?- 1923 ir 1935- 1940 m. šiame name buvo Mažeikių apskrities komendantūra. Vėliau vėl geležinkeliečių bendrabutis. 1990 m.  parengtas projektas pastato rekonstrukcijai pristatant antrą aukštą. Bet įsikišus Kultūros tarybos Mažeikių skyriui, rekonstrukcija buvo sustabdyta. Šalia stovi  karšto vandens kioskelis, kuriame laukiantys traukinio galėjo gauti virinto vandens.",
           "coords": {
             "lat": 56.31318654890256,
             "long": 22.339761284545386
@@ -186,7 +186,7 @@
         },
         {
           "nr": "24 a",
-          "tekstas": "Geležinkeliečių kultūros klubas.",
+          "tekstas": "Geležinkeliečių kultūros klubas. Tarpukaryje čia repetuodavo geležinkeliečių orkestras.",
           "coords": {
             "lat": 56.31333749293732,
             "long": 22.33913124221656
@@ -202,7 +202,7 @@
         },
         {
           "nr": "32",
-          "tekstas": "Geležinkeliečių namas.",
+          "tekstas": "Geležinkeliečių namas. Pastatytas 1909 m. Čia buvo butai aukštesnes pareigas užimantiems geležinkelininkams. 1919 m. šiame name buvo bolševikų būstinė, prie šio namo sovietmečiu buvo pritvirtinta memorialinė lenta apie perrinktą karinį- revoliucinį komitetą.",
           "coords": {
             "lat": 56.3139865433352,
             "long": 22.337327298038677
@@ -246,7 +246,7 @@
         {
           "nr": "4",
           "tekstas":
-            "Avalynės fabrikas (Martyno Stipeikio dirbtuvės Š: Kalendorius, adresų knyga K. 1933).",
+            "Tarpukariu šiame name buvo Martyno Stipeikio avalynės dirbtuvės (Š:  Kalendorius, adresų knyga K. 1933) Po karo šiose patalpose įkuriamas avalynės fabrikas „Tėvynės karas“. Čia veikęs metus, po to iškeltas į erdvesnes patalpas. O čia buvo įvairios parduotuvės.",
           "coords": {
             "lat": 56.310809301572235,
             "long": 22.349415898038565
@@ -314,7 +314,7 @@
         {
           "nr": "4",
           "tekstas":
-            "A. Čijunsko vaisvandeniš dirbtuvė gamina aukščiausios rūšies vaisių vandenį, Turgaus aikštėje randasi A. Čijunsko dirbtuvė, kuri savo gaminiais aptarnauja visą Žemaitiją. Gaminamas Sitro ir zeleris( gazuotas vanduo) (Š: Reklama Vakarai 1937; Verslas 1939 Nr. 20).",
+            "A. Čijunsko vaisvandenių dirbtuvė gamina aukščiausios rūšies vaisių vandenį, Turgaus aikštėje randasi A. Čijunsko dirbtuvė, kuri savo gaminiais aptarnauja visą Žemaitiją. Gaminamas Sitro ir zeleris (gazuotas vanduo) (Š: Reklama Vakarai 1937; Verslas 1939 Nr. 20).",
           "coords": {
             "lat": 56.3122485994243,
             "long": 22.351994128723252
@@ -410,7 +410,7 @@
         {
           "nr": "7",
           "tekstas":
-            "Šapiro Abraomas, Baldų dirbtuvė ( Š: telefono knyga 1935 m.) savanorių žydų gaisrininkų draugija (Š: TK 1939).",
+            "Šapiro Abraomas, Baldų dirbtuvė (Š: telefono knyga 1935 m.) savanorių žydų gaisrininkų draugija (Š: TK 1939).",
           "coords": {
             "lat": 56.31206405097363,
             "long": 22.348685469203033

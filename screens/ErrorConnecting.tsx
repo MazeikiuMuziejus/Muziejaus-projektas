@@ -1,7 +1,13 @@
 import { View, Text, Pressable, TouchableOpacity} from 'react-native';
 import FastImage from 'react-native-fast-image';
 
-export default function ErrorConnecting({forceUpdate}: {forceUpdate: () => void}){
+// Screen that is shown when the app fails to fetch data
+
+export interface IErrorConnectingProps {
+    forceUpdate: () => void;
+}
+
+export default function ErrorConnecting({forceUpdate}: IErrorConnectingProps){
         return (
             <View
                 style={{

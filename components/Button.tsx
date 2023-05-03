@@ -3,8 +3,10 @@ import { Pressable, Text } from "react-native";
 import LinearGradient from "react-native-linear-gradient";
 import FastImage from "react-native-fast-image";
 
+// Button component thats used in the main screen
+
 export function Button ({text, onPress, textStyle, left}: {text: string; onPress: () => void; textStyle?: any; left?: boolean}) {
-    const flowerLocation = {
+    const flowerLocation = {    // Location of the flower
         top: left ? -60 : -10,
         left: left ? -50 : 220,
         transform: [{

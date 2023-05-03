@@ -1,6 +1,12 @@
 import {View, Text} from 'react-native';
 
-export function Separator({text}: { style?: any, text?: string, w: number}){
+// Dotted separator component
+
+export interface ISeparatorProps {
+  text?: string;
+}
+
+export function Separator({text}: ISeparatorProps){
     return (
       <View
         style={{

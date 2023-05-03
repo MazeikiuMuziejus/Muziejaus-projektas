@@ -4,8 +4,10 @@ import { useNavigation } from '@react-navigation/native';
 
 import { Button } from '../components/Button';
 
+// Main app screen
+
 export default function Main() {
-    const navigation = useNavigation();
+    const navigation = useNavigation(); // Navigation hook
 
     return (
         <View

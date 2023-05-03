@@ -4,7 +4,14 @@ import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 
 import LinearGradient from "react-native-linear-gradient";
 
-export default function Header({navigation, text}: any){
+// Header component that gets rendered at the top of the screen
+
+export interface IHeaderProps {
+    navigation: any;
+    text: string;
+}
+
+export default function Header({navigation, text}: IHeaderProps){
     return (
     <LinearGradient
         colors={['#FCFAF9', '#E8DCCA']}

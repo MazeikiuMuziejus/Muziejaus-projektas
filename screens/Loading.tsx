@@ -2,8 +2,9 @@ import { View, Text, ActivityIndicator } from 'react-native';
 
 import FastImage from 'react-native-fast-image';
 
+// Loading screen
+
 export default function Loading(){
-    
     return (
         <View
             style={{

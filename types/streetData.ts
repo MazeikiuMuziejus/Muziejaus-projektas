@@ -1,31 +1,10 @@
-export type streetData = [
-    {
-        gatve: string,
-        data: [
-            {
-                nr: string,
-                tekstas: string,
-                coords: {
-                    lat: number,
-                    long: number
-                },
-                zmones?:[
-                    {
-                        vardas: string,
-                        tekstas: string
-                    }
-                ]
-            }
-        ],
-        initialCoords:{
-            lat: number,
-            long: number
-        },
-        images: {
-            button: string,
-            streets: {
-                [key: string]: string[]
-            }
-        }
-    } 
-]
+import type { coords } from "./coords"
+import type { streetImages } from "./streetImages"
+import type { houseData } from "./houseData"
+
+export type streetData = {
+    gatve: string,
+    data: houseData[],
+    initialCoords: coords,
+    images: streetImages,
+}
