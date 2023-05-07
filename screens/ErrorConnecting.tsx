@@ -27,7 +27,7 @@ export default function ErrorConnecting({forceUpdate}: IErrorConnectingProps){
                     }}
                 >
                     <FastImage
-                        source={require('../assets/Logo.png')}
+                        source={require('../assets/MuziejausLogo.png')}
                         style={{
                             width: 150,
                             height: 150,

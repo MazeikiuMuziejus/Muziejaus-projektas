@@ -24,7 +24,7 @@ export default function Loading(){
                 }}
             >
                 <FastImage
-                    source={require('../assets/Logo.png')}
+                    source={require('../assets/MuziejausLogo.png')}
                     style={{
                         width: 150,
                         height: 150,

@@ -1,19 +1,19 @@
-import {useCallback, useEffect, useRef, useState} from 'react';
+import {useCallback, useEffect, useState} from 'react';
 import {
-  Animated,
   Text,
-  Easing,
   Dimensions,
   Pressable,
   BackHandler,
 } from 'react-native';
+
+import Animated, { withSpring } from 'react-native-reanimated';
 
 import {ScrollView, Gesture, GestureDetector} from 'react-native-gesture-handler';
 
 import Carousel from 'react-native-reanimated-carousel';
 import ImageView from 'react-native-image-viewing';
 
-import { runOnJS } from 'react-native-reanimated';
+import { runOnJS, useAnimatedStyle, useSharedValue } from 'react-native-reanimated';
 import { Separator } from './Separator';
 import { useFocusEffect } from '@react-navigation/native';
 
@@ -35,33 +35,59 @@ export const Drawer = ({
   images: string[];
   blurhash: string;
 }) => {
-  const openAnim = useRef(new Animated.Value(0)).current; // Animation value
   const w = Dimensions.get('window').width; // Width of the screen
+  const h = Dimensions.get('window').height; // Height of the screen
+
+  const MAX_HEIGHT = h / 2;  // Max height of the drawer
 
   const [imageViewVisible, setImageViewVisible] = useState(false);  // Whether the large image viewer is visible
   const [imageIndex, setImageIndex] = useState<number>(0);  // Index of the image in the carousel
 
-  const animateClose = () => {    // Closes the drawer
-    Animated.timing(openAnim, {
-      toValue: 0,
-      duration: 450,
-      useNativeDriver: false,
-      easing: Easing.inOut(Easing.ease),
-    }).start();
-    setOpen(false);
+  const context = useSharedValue({y: 0})
+  const translateY = useSharedValue(0);
+
+  const setTranslateValue = (value: number) => {
+    translateY.value = withSpring(value, {
+      damping: 50,
+    });
   }
 
-  const onSwipeDown = Gesture.Pan()  // Closes the drawer on swipe down
-    .onEnd((e) => {
-      if (e.velocityY > 0)
-        runOnJS(animateClose)();
-    })
+  const gesture = Gesture.Pan()
+  .onStart(() => {
+    context.value = {y: translateY.value};
+  })
+  .onUpdate((e) => {
+    translateY.value = e.translationY + context.value.y;
+    translateY.value = Math.max(translateY.value, -MAX_HEIGHT); // Prevents the drawer from being dragged too far up
+  })
+  .onEnd(() => {
+      if (translateY.value < -200) { // If the drawer is dragged less than 200px, bounce it back
+        runOnJS(setTranslateValue)(-MAX_HEIGHT)
+      } else {  // Otherwise , close the drawer
+        runOnJS(setTranslateValue)(0)
+        runOnJS(setOpen)(false);
+      }
+  })
+
+  useEffect(() => {
+    runOnJS(setTranslateValue)(open ? -MAX_HEIGHT : 0)
+  }, [open])
+
+  const animatedStyle = useAnimatedStyle(() => {
+    return {
+      transform: [
+        {
+          translateY: translateY.value,
+        }
+      ]
+    }
+  })
 
   useFocusEffect(                   // Rewrites the back button to close the drawer
     useCallback(() => {
       const backHandler = () => {
         if (open) {
-          animateClose();
+          setOpen(false);
           return true;
         }
         return false;
@@ -71,15 +97,6 @@ export const Drawer = ({
       return () => sub.remove();
     }, [open])
   )
-
-  useEffect(() => {               // Animates the drawer on open/close
-    Animated.timing(openAnim, {
-      toValue: open ? 400 : 0,
-      duration: 450,
-      useNativeDriver: false,
-      easing: Easing.inOut(Easing.ease),
-    }).start();
-  }, [open]);
 
   if (imageViewVisible && images) {           // Renders large image viewer
     return (
@@ -94,34 +111,27 @@ export const Drawer = ({
   }
 
   return (
-    <GestureDetector gesture={onSwipeDown}>
+    <GestureDetector
+      gesture={gesture}
+    >
       <Animated.View
-        style={{
+        style={[{
           position: 'absolute',
           backgroundColor: '#E8DCCA',
           zIndex: 100,
-          bottom: 0,
-          width: '100%',
-          height: 400,
-          transform:[
-            {
-              translateY: openAnim.interpolate({
-                inputRange: [0, 400],
-                outputRange: [400, 0],
-                extrapolate: 'clamp',
-              })
-            }
-          ],
-          borderTopRightRadius: 15,
-          borderTopLeftRadius: 15,
-        }}>
+          height: MAX_HEIGHT,
+          top: h,
+          borderTopRightRadius: 20,
+          borderTopLeftRadius: 20,
+        }, animatedStyle]}>
         <Separator text={data.nr}/>
         <ScrollView
-          showsVerticalScrollIndicator={false}
-          showsHorizontalScrollIndicator={false}
           style={{
-            flex: 1,
-          }}>
+            maxHeight: MAX_HEIGHT - 50,
+            // Full height of the drawer - 350px for the separator and 50px for number header
+          }}
+          showsVerticalScrollIndicator={false}
+          showsHorizontalScrollIndicator={false}>
             {images?.length > 0 && (   // Renders carousel if there are images
               <Carousel
                 width={w}
@@ -235,7 +245,7 @@ export const Drawer = ({
                       >
                         {person.tekstas}
                       </Text>
-                   </>
+                  </>
                   ))
                 }
                 </>

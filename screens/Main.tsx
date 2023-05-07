@@ -1,8 +1,9 @@
-import {View, Image, BackHandler} from 'react-native';
+import {View, Image, BackHandler, Text} from 'react-native';
 
 import { useNavigation } from '@react-navigation/native';
 
 import { Button } from '../components/Button';
+import PartnerLogo from '../components/PartnerLogo';
 
 // Main app screen
 
@@ -18,40 +19,65 @@ export default function Main() {
                 justifyContent: 'center',
             }}
         >
-            <View style={{justifyContent: 'center'}}>
-                <View
-                    style={{ 
-                        justifyContent: 'center',
-                        alignItems: 'center',
-                        borderWidth: 2,
-                        borderRadius: 100,
-                        borderStyle: 'dashed'
-                    }}
-                >
-                    <Image 
-                        source={require('../assets/Logo.png')}
-                        style={{
-                            width: 150,
-                            height: 150,
-                            borderColor: '#574031',
-                            backgroundColor: '#E8DCCA',
-                            borderRadius: 100,
-                        }}
-                    />
-                </View>
-            </View>
+            <Text
+                style={{
+                    fontSize: 40,
+                    fontWeight: 'bold',
+                    color: '#574031',
+                    marginVertical: 20,
+                    textAlign: 'center',
+                }}
+            >
+                Mažeikių Istorija
+            </Text>
             <View
                 style={{
                     flexDirection: 'column',
                     justifyContent: 'center',
                     alignItems: 'center',
-                    height: 200,
                     width: '100%',
                     marginTop: 20,
                 }}
             >
-                <Button left text='Mažeikių miesto gatvės' onPress={() => navigation.navigate("StreetList" as never)}/>
-                <Button text='Iseiti' onPress={() => BackHandler.exitApp()}/>
+                <Button left text='Istorinės vietos' onPress={() => navigation.navigate("StreetList" as never)}/>
+                <Button text='Apie' onPress={() => navigation.navigate("Sources" as never)}/>
+                <Button left text='Išeiti' onPress={() => BackHandler.exitApp()}/>
+            </View>
+            <View 
+                style={{
+                    justifyContent: 'flex-start',
+                    width: '100%',
+                    paddingHorizontal: 40,
+                }}>
+                <Text
+                    allowFontScaling={false}
+                    style={{
+                        fontSize: 20,
+                        fontWeight: 'bold',
+                        color: '#574031',
+                        marginVertical: 20
+                    }}
+                >
+                    Partneriai:
+                </Text>
+            </View>
+            <View
+                style={{
+                    justifyContent: 'space-evenly',
+                    flexDirection: 'row',
+                    width: '100%',
+                }}
+            >
+                <PartnerLogo 
+                    logo={require('../assets/MuziejausLogo.png')}
+                    name={'Mažeikių muziejus'}
+                    url={'https://mazeikiumuziejus.lt/'}
+                />
+                 <PartnerLogo 
+                    logo={require('../assets/BerzunaLogo.png')}
+                    name={'Beržūna'}
+                    url={'https://berzuna.lt/'}
+                />
             </View>
         </View>
     );

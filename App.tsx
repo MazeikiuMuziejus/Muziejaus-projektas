@@ -5,6 +5,7 @@ import GatvesVaizdas from './screens/StreetView';
 import Main from './screens/Main';
 import Loading from './screens/Loading';
 import ErrorConnecting from './screens/ErrorConnecting';
+import About from './screens/About';
 
 import {createStackNavigator} from '@react-navigation/stack';
 import {NavigationContainer} from '@react-navigation/native';
@@ -56,13 +57,26 @@ function App() {
             options={{
               headerShown: true, 
               header(props) {
-                return (<Header navigation={props.navigation} text={'Mažeikių miesto gatvės'} />);
+                return (<Header navigation={props.navigation} text={'Istorinės vietos'} />);
               },
             }}
             name="StreetList"
             children={(props) => <StreetList navigation={props.navigation} data={data} />}
           />
-          <Stack.Screen name="Gatve" component={GatvesVaizdas} />
+          <Stack.Screen 
+            name="Gatve" 
+            component={GatvesVaizdas} 
+          />
+          <Stack.Screen 
+            name="Sources" 
+            component={About} 
+            options={{
+              headerShown: true, 
+              header(props) {
+                return (<Header navigation={props.navigation} text={'Apie'} />);
+              },
+            }}
+          />
       </Stack.Navigator>
     </NavigationContainer>
   );
