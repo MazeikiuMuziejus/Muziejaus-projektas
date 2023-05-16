@@ -4,25 +4,24 @@ import {
   Dimensions,
   Pressable,
   BackHandler,
+  View
 } from 'react-native';
-
-import Animated, { withSpring } from 'react-native-reanimated';
 
 import {ScrollView, Gesture, GestureDetector} from 'react-native-gesture-handler';
 
 import Carousel from 'react-native-reanimated-carousel';
 import ImageView from 'react-native-image-viewing';
 
-import { runOnJS, useAnimatedStyle, useSharedValue } from 'react-native-reanimated';
-import { Separator } from './Separator';
+import Animated, { runOnJS, useAnimatedStyle, useSharedValue, withSpring } from 'react-native-reanimated';
+
 import { useFocusEffect } from '@react-navigation/native';
 
 import ImageWithBlurhash from './ImageWithBlurhash';
+import Separator from './Separator';
 
-import { houseData } from '../types/houseData';
-import { person } from '../types/person';
+import { houseData, person } from '../types';
 
-export const Drawer = ({
+export default function Drawer ({
   open,
   setOpen,
   data,
@@ -34,7 +33,7 @@ export const Drawer = ({
   data: houseData;
   images: string[];
   blurhash: string;
-}) => {
+}) {
   const w = Dimensions.get('window').width; // Width of the screen
   const h = Dimensions.get('window').height; // Height of the screen
 
@@ -43,10 +42,10 @@ export const Drawer = ({
   const [imageViewVisible, setImageViewVisible] = useState(false);  // Whether the large image viewer is visible
   const [imageIndex, setImageIndex] = useState<number>(0);  // Index of the image in the carousel
 
-  const context = useSharedValue({y: 0})
-  const translateY = useSharedValue(0);
+  const context = useSharedValue({y: 0})  // Y context of the drawer
+  const translateY = useSharedValue(0);   // Y translation of the drawer
 
-  const setTranslateValue = (value: number) => {
+  const setTranslateValue = (value: number) => {  // Sets the Y translation of the drawer
     translateY.value = withSpring(value, {
       damping: 50,
     });
@@ -54,7 +53,7 @@ export const Drawer = ({
 
   const gesture = Gesture.Pan()
   .onStart(() => {
-    context.value = {y: translateY.value};
+    context.value = {y: translateY.value};  // Sets the context to the current translation
   })
   .onUpdate((e) => {
     translateY.value = e.translationY + context.value.y;
@@ -83,11 +82,43 @@ export const Drawer = ({
     }
   })
 
-  useFocusEffect(                   // Rewrites the back button to close the drawer
+  const renderImages = ({item, index}: {  // Renders the images in the carousel
+    item: string;
+    index: number;
+  }) => {
+    return (
+      <Pressable
+        onPress={() => {
+          setImageViewVisible(true);
+          setImageIndex(index);
+        }}
+        style={{
+          width: '100%',
+          height: '100%',
+        }}>
+          <ImageWithBlurhash
+            image={item}
+            key={index}
+            style={{
+              width: '100%',
+              height: '100%',
+              borderRadius: 10,
+            }}
+            blurhashStyle={{
+              zIndex: 120,
+            }}
+            timeout={100}
+            blurhash={blurhash}
+          />
+      </Pressable>
+    )
+  }
+
+  useFocusEffect(                   // Overwrites the back button to close the drawer
     useCallback(() => {
       const backHandler = () => {
         if (open) {
-          setOpen(false);
+          setOpen(false);   
           return true;
         }
         return false;
@@ -111,15 +142,14 @@ export const Drawer = ({
   }
 
   return (
-    <GestureDetector
-      gesture={gesture}
-    >
+    <GestureDetector gesture={gesture}>
       <Animated.View
         style={[{
           position: 'absolute',
           backgroundColor: '#E8DCCA',
           zIndex: 100,
           height: MAX_HEIGHT,
+          width: w,
           top: h,
           borderTopRightRadius: 20,
           borderTopLeftRadius: 20,
@@ -127,8 +157,7 @@ export const Drawer = ({
         <Separator text={data.nr}/>
         <ScrollView
           style={{
-            maxHeight: MAX_HEIGHT - 50,
-            // Full height of the drawer - 350px for the separator and 50px for number header
+            maxHeight: MAX_HEIGHT - 50,// Full height of the drawer - 350px for the separator and 50px for number header
           }}
           showsVerticalScrollIndicator={false}
           showsHorizontalScrollIndicator={false}>
@@ -140,34 +169,11 @@ export const Drawer = ({
                 style={{
                   marginVertical: 10,
                   borderRadius: 5,
-                  elevation: 5,
                 }}
+                loop={false}
                 data={images}
                 enabled={images.length > 1}
-                renderItem={({item, index}) => (        // Renders images          
-                    <Pressable
-                      onPress={() => {
-                        setImageViewVisible(true);
-                        setImageIndex(index);
-                      }}
-                      style={{
-                        width: '100%',
-                        height: '100%',
-                        borderRadius: 10,
-                      }}>
-                        <ImageWithBlurhash
-                          image={item}
-                          style={{
-                            width: '100%',
-                            height: '100%',
-                          }}
-                          blurhashStyle={{
-                            zIndex: 110,
-                          }}
-                          blurhash={blurhash}
-                        />
-                    </Pressable>
-                )}
+                renderItem={renderImages}
               />
             )}
             <Text
@@ -193,7 +199,6 @@ export const Drawer = ({
                 paddingHorizontal: 10,
                 paddingBottom: 15,
                 fontSize: 15,
-
               }}
             >
               {data.tekstas}
@@ -206,7 +211,7 @@ export const Drawer = ({
                     textAlign: 'left',
                     fontSize: 20,
                     paddingHorizontal: 10,
-                    marginVertical: 10,
+                    marginBottom: 10,
                     fontStyle: 'italic',
                     fontWeight: 'bold',
                   }}
@@ -215,8 +220,14 @@ export const Drawer = ({
                 </Text>
                 {
                   data.zmones.map((person: person, index: number) => ( // Renders famous people
-                    <>
-                      <Text 
+                    <View
+                      key={index}
+                      style={{
+                        width: '100%',
+                        paddingBottom: 15,
+                      }}
+                    >
+                      <Text
                         allowFontScaling={false}
                         style={{
                           color: 'black',
@@ -245,7 +256,7 @@ export const Drawer = ({
                       >
                         {person.tekstas}
                       </Text>
-                  </>
+                  </View>
                   ))
                 }
                 </>

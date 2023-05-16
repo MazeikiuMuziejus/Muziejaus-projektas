@@ -10,18 +10,18 @@ import Animated, {
 
 // Button component thats used in the main screen
 
-export function Button ({text, onPress, textStyle, left}: {text: string; onPress: () => void; textStyle?: any; left?: boolean}) {
+export default function Button ({text, onPress, textStyle, left}: {text: string; onPress: () => void; textStyle?: any; left?: boolean}) {
     const flowerLocation = {    // Location of the flower
-        top: left ? -60 : -10,
-        left: left ? -50 : 220,
+        top: left ? -60 : -5,
+        left: left ? -40 : 240,
         transform: [{
             rotate: left ? '0deg' : '160deg',
         }]
     };
 
-    const scaleVal = useSharedValue(1);
+    const scaleVal = useSharedValue(1);        // Animated values
 
-    const animatedStyle = useAnimatedStyle(() => {
+    const animatedStyle = useAnimatedStyle(() => {  // Style for onPress animation
         return {
             transform: [
                 {
@@ -35,7 +35,7 @@ export function Button ({text, onPress, textStyle, left}: {text: string; onPress
         <Animated.View style={[animatedStyle]}>
             <Pressable
                 style={{
-                    width: 300,
+                    width: '100%',
                     height: 60,
                     borderRadius: 5,
                     justifyContent: 'center',
@@ -66,7 +66,6 @@ export function Button ({text, onPress, textStyle, left}: {text: string; onPress
                     style={{
                         borderRadius: 5,
                         elevation: 5,
-                        padding: 15,
                         margin: 10,
                         width: 300,
                         height: 70,
@@ -77,9 +76,10 @@ export function Button ({text, onPress, textStyle, left}: {text: string; onPress
                         <Text
                             allowFontScaling={false}
                             style={{
-                                color: 'black',
+                                color: '#574031',
                                 fontSize: 20,
                                 textAlign: 'center',
+                                fontWeight: '600',
                                 ...textStyle,
                             }}
                         >

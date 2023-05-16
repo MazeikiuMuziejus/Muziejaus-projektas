@@ -3,10 +3,14 @@ import {View, Text} from 'react-native';
 // Dotted separator component
 
 export interface ISeparatorProps {
-  text?: string;
+  text: string;
 }
 
-export function Separator({text}: ISeparatorProps){
+// Regex for house numbers
+const houseNumberRegex = new RegExp('^[1-9]\d*(?:[ -]?(?:[a-zA-Z]|[1-9]\d*(?:\s*[/-]\s*\d+[a-z]?)?))?[^\S\r\n]*$');
+
+export default function Separator({text}: ISeparatorProps){
+    const isHouseNumber = houseNumberRegex.test(text);  // Checks if the text is a valid house number
     return (
       <View
         style={{
@@ -40,10 +44,11 @@ export function Separator({text}: ISeparatorProps){
             textAlign: 'center',
             fontSize: 30,
             position: 'absolute',
-            width: 120
+            width: 'auto',
+            paddingHorizontal: 12,
           }}
         >
-            Nr. {text}
+          {isHouseNumber ? 'Nr. ' + text : text}
         </Text>
       </View>
     )

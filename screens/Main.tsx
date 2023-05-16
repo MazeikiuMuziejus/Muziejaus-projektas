@@ -1,9 +1,8 @@
-import {View, Image, BackHandler, Text} from 'react-native';
+import {View, BackHandler, Text} from 'react-native';
 
 import { useNavigation } from '@react-navigation/native';
 
-import { Button } from '../components/Button';
-import PartnerLogo from '../components/PartnerLogo';
+import { Button, PartnerLogo } from '../components';
 
 // Main app screen
 
@@ -35,12 +34,12 @@ export default function Main() {
                     flexDirection: 'column',
                     justifyContent: 'center',
                     alignItems: 'center',
-                    width: '100%',
                     marginTop: 20,
+                    width: '100%',
                 }}
             >
                 <Button left text='Istorinės vietos' onPress={() => navigation.navigate("StreetList" as never)}/>
-                <Button text='Apie' onPress={() => navigation.navigate("Sources" as never)}/>
+                <Button text='Apie' onPress={() => navigation.navigate("About" as never)}/>
                 <Button left text='Išeiti' onPress={() => BackHandler.exitApp()}/>
             </View>
             <View 
@@ -75,7 +74,7 @@ export default function Main() {
                 />
                  <PartnerLogo 
                     logo={require('../assets/BerzunaLogo.png')}
-                    name={'Beržūna'}
+                    name={'UAB Beržūna'}
                     url={'https://berzuna.lt/'}
                 />
             </View>

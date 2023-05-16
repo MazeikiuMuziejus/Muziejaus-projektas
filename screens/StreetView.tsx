@@ -2,14 +2,12 @@ import {useRef, useState} from 'react';
 
 import MapView, {Marker} from 'react-native-maps-osmdroid';
 
-import {Drawer} from '../components/Drawer';
+import { Drawer } from '../components';
 
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import Header from '../components/Header';
 
-import { coords } from '../types/coords';
-import { houseImages } from '../types/houseImages';
-import { houseData } from '../types/houseData';
+import { coords, houseImages, houseData } from '../types';
 
 export interface IMarker {
   id: string;

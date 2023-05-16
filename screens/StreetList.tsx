@@ -1,8 +1,8 @@
 import {View, ScrollView} from 'react-native';
 
-import type { appData } from '../types/appData';
+import { appData } from '../types';
 
-import StreetCard from '../components/StreetCard';
+import { StreetCard } from '../components';
 
 // Street list screen that shows all the streets
 

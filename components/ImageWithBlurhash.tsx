@@ -6,26 +6,27 @@ export interface IImageWithBlurhashProps {
     image: string;
     blurhash: string;
     style?: any;
-    loading?: boolean;
     blurhashStyle?: any;
+    timeout?: number;
 }
 
-export default function ImageWithBlurhash({image, blurhash, style, blurhashStyle}: IImageWithBlurhashProps){
+export default function ImageWithBlurhash({image, blurhash, style, blurhashStyle, timeout = 0}: IImageWithBlurhashProps){
     const [imageLoading, setImageLoading] = useState(true);
+
     return (
         <>
-            {imageLoading && (
-                <Blurhash
-                    resizeMode="cover"
-                    style={{
-                        position: 'absolute',
-                        width: '100%',
-                        height: '100%',
-                        ...blurhashStyle,
-                    }}
-                    blurhash={blurhash}
-                />
-            )}
+            <Blurhash
+                decodeAsync
+                resizeMode="cover"
+                style={{
+                    position: 'absolute',
+                    width: '100%',
+                    height: '100%',
+                    display: imageLoading ? 'flex' : 'none',    // Only show the blurhash while the image is loading
+                    ...blurhashStyle,
+                }}
+                blurhash={blurhash}
+            />
             <FastImage
                 style={{
                     width: '100%',
@@ -34,7 +35,11 @@ export default function ImageWithBlurhash({image, blurhash, style, blurhashStyle
                 }}
                 source={{uri: image}}
                 resizeMode={FastImage.resizeMode.cover}
-                onLoadEnd={() => setImageLoading(false)}
+                onLoadEnd={() => {
+                    setTimeout(() => {   // Wait a bit before showing the image to prevent flickering
+                        setImageLoading(false);
+                    }, timeout)
+                }}
             />
         </>
     )

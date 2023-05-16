@@ -1,18 +1,20 @@
 import {useState, useEffect} from 'react';
 
-import StreetList from './screens/StreetList';
-import GatvesVaizdas from './screens/StreetView';
-import Main from './screens/Main';
-import Loading from './screens/Loading';
-import ErrorConnecting from './screens/ErrorConnecting';
-import About from './screens/About';
+import {
+  StreetList,
+  StreetView,
+  Main,
+  Loading,
+  ErrorConnecting,
+  About,
+} from './screens';
 
 import {createStackNavigator} from '@react-navigation/stack';
 import {NavigationContainer} from '@react-navigation/native';
 
-import Header from './components/Header';
+import { Header } from './components';
 
-import { appData } from './types/appData';
+import { appData } from './types';
 
 import { getData } from './API/getData';
 
@@ -65,10 +67,10 @@ function App() {
           />
           <Stack.Screen 
             name="Gatve" 
-            component={GatvesVaizdas} 
+            component={StreetView} 
           />
           <Stack.Screen 
-            name="Sources" 
+            name="About" 
             component={About} 
             options={{
               headerShown: true, 

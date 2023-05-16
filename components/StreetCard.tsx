@@ -1,4 +1,5 @@
-import { Pressable, Text } from "react-native";
+import { useEffect } from "react";
+import { Pressable } from "react-native";
 
 import { TouchableOpacity } from "react-native-gesture-handler";
 
@@ -6,10 +7,11 @@ import LinearGradient from "react-native-linear-gradient";
 
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons'
 
-import { streetData } from "../types/streetData";
+import { streetData } from "../types";
 
 import ImageWithBlurhash from "./ImageWithBlurhash";
-import Animated, { useAnimatedStyle, useSharedValue, withSpring }from "react-native-reanimated";
+
+import Animated, { useAnimatedStyle, useSharedValue, withDelay, withSpring } from "react-native-reanimated";
 
 export interface IStreetCardProps {
     item: streetData;
@@ -17,10 +19,14 @@ export interface IStreetCardProps {
     navigation: any;
 }
 
-export default function StreetCard({item, index, navigation}: IStreetCardProps){
-    const scaleVal = useSharedValue(1);
+// Street card component thats shows the street name and image
 
-    const animatedStyle = useAnimatedStyle(() => {
+export default function StreetCard({item, index, navigation}: IStreetCardProps){
+    const scaleVal = useSharedValue(1);         // Animated values
+    const opacityVal = useSharedValue(0);
+    const translateYVal = useSharedValue(20);
+
+    const animatedStyle = useAnimatedStyle(() => {  // Style for onPress animation
         return {
             transform: [
                 {
@@ -30,16 +36,36 @@ export default function StreetCard({item, index, navigation}: IStreetCardProps){
         }
     })
 
+    const animatedTextStyle = useAnimatedStyle(() => {  // Style for text animation
+        return {
+            opacity: opacityVal.value,
+            transform: [
+                {
+                    translateY: translateYVal.value
+                }
+            ]
+        }
+    })
+
+    useEffect(() => {   // Animation on mount
+        opacityVal.value = withDelay(100 * index, withSpring(1, {
+            stiffness: 100
+        }));
+        translateYVal.value = withDelay(100 * index, withSpring(0, {
+            stiffness: 100
+        }))
+    }, [])
+
     return (
         <Animated.View style={[animatedStyle]}>
             <TouchableOpacity
                 onPressIn={() => {
-                    scaleVal.value = withSpring(0.95, {
+                    scaleVal.value = withSpring(0.95, { // Animation on press
                         stiffness: 200
                     });
                 }}
                 onPressOut={() => {
-                    scaleVal.value = withSpring(1, {
+                    scaleVal.value = withSpring(1, {    // Animation on release
                         stiffness: 200
                     });
                 }}
@@ -53,10 +79,10 @@ export default function StreetCard({item, index, navigation}: IStreetCardProps){
                 <Pressable
                     onPress={() =>
                         navigation.navigate('Gatve', {
-                        data: item.data,
-                        initialCoords: item.initialCoords,
-                        gatve: item.gatve,
-                        images: item.images.houses
+                            data: item.data,
+                            initialCoords: item.initialCoords,
+                            gatve: item.gatve,
+                            images: item.images.houses
                         })
                     }
                     style={{
@@ -68,9 +94,9 @@ export default function StreetCard({item, index, navigation}: IStreetCardProps){
                         borderRadius: 5,
                     }}
                 >
-                    <Text
+                    <Animated.Text
                         allowFontScaling={false}
-                        style={{
+                        style={[{
                             width: '100%',
                             marginVertical: 10,
                             color: 'white',
@@ -78,10 +104,11 @@ export default function StreetCard({item, index, navigation}: IStreetCardProps){
                             left: 20,
                             fontSize: 21,
                             zIndex: 101,
-                        }}
+                            fontWeight: '500',
+                        }, animatedTextStyle]}
                     >
                         {item.gatve} {'g.'}
-                    </Text>
+                    </Animated.Text>
                     <LinearGradient
                         start={{x: 0, y:0}}
                         end={{x: 1, y: 0}}

@@ -1,5 +1,5 @@
 import { View, Text, Linking } from 'react-native'
-import { Button } from '../components/Button'
+import { Button } from '../components'
 
 export default function About() {
   const year = new Date().getFullYear()

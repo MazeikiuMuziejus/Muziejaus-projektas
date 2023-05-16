@@ -8,6 +8,8 @@ export interface IPartnerLogoProps {
     url?: string;
 }
 
+// Partner logo component that shows the logo and name of the partner
+
 export default function PartnerLogo({logo, name, url = ""}: IPartnerLogoProps){
     return(
         <View
