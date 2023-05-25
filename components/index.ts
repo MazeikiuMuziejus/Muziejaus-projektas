@@ -5,3 +5,6 @@ export { default as ImageWithBlurhash } from './ImageWithBlurhash';
 export { default as PartnerLogo } from './PartnerLogo';
 export { default as Separator } from './Separator';
 export { default as StreetCard } from './StreetCard';
+export { default as InformationText } from './InformationText';
+export { default as ImageCarousel } from './ImageCarousel';
+export { default as PointOfInterestInformation } from './PointOfInterestInformation';

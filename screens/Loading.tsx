@@ -1,4 +1,4 @@
-import { View, Text, ActivityIndicator } from 'react-native';
+import { View, Text, ActivityIndicator, SafeAreaView } from 'react-native';
 
 import FastImage from 'react-native-fast-image';
 
@@ -6,7 +6,7 @@ import FastImage from 'react-native-fast-image';
 
 export default function Loading(){
     return (
-        <View
+        <SafeAreaView
             style={{
                 alignItems: 'center',
                 justifyContent: 'center',
@@ -45,6 +45,6 @@ export default function Loading(){
             >
                 Kraunama...
             </Text>
-        </View>
+        </SafeAreaView>
     );
 }

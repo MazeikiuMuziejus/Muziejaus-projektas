@@ -7,11 +7,10 @@ export interface IImageWithBlurhashProps {
     blurhash: string;
     style?: any;
     blurhashStyle?: any;
-    timeout?: number;
 }
 
-export default function ImageWithBlurhash({image, blurhash, style, blurhashStyle, timeout = 0}: IImageWithBlurhashProps){
-    const [imageLoading, setImageLoading] = useState(true);
+export default function ImageWithBlurhash({image, blurhash, style, blurhashStyle}: IImageWithBlurhashProps){
+    const [imageLoading, setImageLoading] = useState<boolean>(true);    // Ensures that the blurhash is only shown while the image is loading
 
     return (
         <>
@@ -35,11 +34,7 @@ export default function ImageWithBlurhash({image, blurhash, style, blurhashStyle
                 }}
                 source={{uri: image}}
                 resizeMode={FastImage.resizeMode.cover}
-                onLoadEnd={() => {
-                    setTimeout(() => {   // Wait a bit before showing the image to prevent flickering
-                        setImageLoading(false);
-                    }, timeout)
-                }}
+                onLoadEnd={() => {setImageLoading(false);}}
             />
         </>
     )

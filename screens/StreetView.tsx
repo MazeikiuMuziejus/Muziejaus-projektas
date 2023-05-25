@@ -1,3 +1,5 @@
+import { SafeAreaView } from 'react-native';
+
 import {useRef, useState} from 'react';
 
 import MapView, {Marker} from 'react-native-maps-osmdroid';
@@ -53,27 +55,81 @@ export default function StreetView({route, navigation}: IStreetViewProps) {
     };
   });
 
+  if (drawerOpen && mapView.current) {
+      mapView.current.animateCamera({  // Animates the camera to the marker
+      center: {
+        latitude: data[drawerDataIndex].coords.lat - 0.0005,
+        longitude: data[drawerDataIndex].coords.long,
+      },
+      zoom: 18,
+    }, {duration: 1000});
+  } else if (!drawerOpen && mapView.current && markers.length > 2) {  // Fits the map to the markers
+    mapView.current.fitToCoordinates(markers.map((marker: IMarker) => marker.coordinate), {
+      edgePadding: {
+        top: 200,
+        right: 200,
+        bottom: 200,
+        left: 200,
+      },
+      animated: true,
+    })
+  } else if (!drawerOpen && mapView.current && markers.length <= 2) {
+    mapView.current.animateCamera({  // Animates the camera to the marker
+      center: {
+        latitude: initialCoords.lat + 0.0005,
+        longitude: initialCoords.long,
+      },
+      zoom: 16,
+    }, {duration: 1000})
+  }
+
   return (
-    <>
+    <SafeAreaView
+      style={{
+        flex: 1,
+      }}
+    >
       <Header navigation={navigation} text={`${gatve} g.`} />
       <Drawer blurhash={images[data[drawerDataIndex].nr].blurhash} setOpen={setDrawerOpen} open={drawerOpen} data={data[drawerDataIndex]} images={images[data[drawerDataIndex].nr].src || []}/>
       <MapView
         ref={mapView}
+        showsUserLocation={true}
+        showsMyLocationButton={true}
+        onLayout={() => {
+          if (mapView.current && markers.length > 2) {
+            mapView.current.fitToCoordinates(markers.map((marker: IMarker) => marker.coordinate), {
+              edgePadding: {
+                top: 200,
+                right: 200,
+                bottom: 200,
+                left: 200,
+              },
+              animated: true,
+            })
+          } else if (mapView.current && markers.length <= 2) {
+            mapView.current.animateCamera({  // Animates the camera to the marker
+              center: {
+                latitude: initialCoords.lat + 0.0005,
+                longitude: initialCoords.long,
+              },
+              zoom: 16,
+            }, {duration: 1000})
+          }
+        }}
         onPress={() => setDrawerOpen(false)}
         moveOnMarkerPress={false}
         loadingEnabled
         maxZoomLevel={20}
         style={{
-          height: '100%',
-          aspectRatio: 1 / 1,
+          flex: 1
         }}
         initialRegion={{
-          latitude: initialCoords.lat + 0.001,
-          longitude: initialCoords.long + 0.011,
-          latitudeDelta: 0.022,
-          longitudeDelta: 0.022,
+          latitude: initialCoords.lat,
+          longitude: initialCoords.long,
+          latitudeDelta: 0.02,
+          longitudeDelta: 0.02,
         }}>
-        {markers?.map((marker: IMarker, index: number) => ( // Renders the markers on the map
+        {markers.map((marker: IMarker, index: number) => ( // Renders the markers on the map
           <Marker
             accessibilityRole="button"
             accessibilityLabel={`${gatve} g. ${data[index].nr}`}
@@ -90,6 +146,6 @@ export default function StreetView({route, navigation}: IStreetViewProps) {
           </Marker>
         ))}
       </MapView>
-    </>
+    </SafeAreaView>
   );
 }

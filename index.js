@@ -5,10 +5,13 @@ import App from './App';
 import {name as appName} from './app.json';
 
 import {GestureHandlerRootView} from 'react-native-gesture-handler';
+import {DataProvider} from './contexts/dataContext';
 
 const AppWithGestureHandler = () => (
     <GestureHandlerRootView style={{flex: 1}}>
-        <App />
+        <DataProvider>
+            <App />
+        </DataProvider>
     </GestureHandlerRootView>
 )
 

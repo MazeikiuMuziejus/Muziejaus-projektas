@@ -1,19 +1,25 @@
-import {View, ScrollView} from 'react-native';
+import {ScrollView, SafeAreaView} from 'react-native';
 
 import { appData } from '../types';
 
 import { StreetCard } from '../components';
+import {useDataContext} from '../contexts/dataContext';
 
 // Street list screen that shows all the streets
 
 export interface IStreetListProps {
   navigation?: any;
-  data: appData;
 }
 
-export default function StreetList({navigation, data}: IStreetListProps) {
+export default function StreetList({navigation}: IStreetListProps) {
+  const context = useDataContext();
+  
+  if (!context) return null; // If the data is not loaded, return null (this will show the loading screen
+
+  const data: appData =  context.data;
+
   return (
-    <View
+    <SafeAreaView
       style={{
         alignItems: 'center',
         justifyContent: 'center',
@@ -31,6 +37,6 @@ export default function StreetList({navigation, data}: IStreetListProps) {
           <StreetCard key={index} item={item} index={index} navigation={navigation} />
         ))}
       </ScrollView>
-    </View>
+    </SafeAreaView>
   );
 }

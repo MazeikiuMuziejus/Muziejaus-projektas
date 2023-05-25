@@ -1,5 +1,3 @@
-import {useState, useEffect} from 'react';
-
 import {
   StreetList,
   StreetView,
@@ -14,34 +12,15 @@ import {NavigationContainer} from '@react-navigation/native';
 
 import { Header } from './components';
 
-import { appData } from './types';
-
-import { getData } from './API/getData';
+import { useDataContext } from './contexts/dataContext';
 
 const Stack = createStackNavigator();
 
 function App() {
-  const [data, setData] = useState<appData | null>(null);  // Data from the API
-  const [loading, setLoading] = useState<boolean>(true);  // Whether the data is loading
-
-  const [up, forceUpdate] = useState(0); // Used to force the component to rerender
-  
-  const update = () => {  // Forces the component to rerender and update the data
-    forceUpdate(up + 1);
-  }
-
-  useEffect(() => {
-    setLoading(true);
-    getData() // Gets the data from the API
-    .then((data) => {
-      if (data)
-        setData(data)
-      setLoading(false);
-    })
-  }, [up])
+  const {updateData, loading, error} = useDataContext();
 
   if (loading) return <Loading />;  // If the data is loading, show the loading screen
-  if (!data) return <ErrorConnecting forceUpdate={update} />;   // If the data is not loaded, show the error screen
+  if (error) return <ErrorConnecting forceUpdate={updateData} />;   // If the data is not loaded, show the error screen
 
   return (
     <NavigationContainer>
@@ -63,7 +42,7 @@ function App() {
               },
             }}
             name="StreetList"
-            children={(props) => <StreetList navigation={props.navigation} data={data} />}
+            children={(props) => <StreetList navigation={props.navigation}/>}
           />
           <Stack.Screen 
             name="Gatve" 

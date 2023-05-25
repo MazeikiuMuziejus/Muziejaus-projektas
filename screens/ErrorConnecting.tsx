@@ -1,4 +1,4 @@
-import { View, Text, Pressable, TouchableOpacity} from 'react-native';
+import { View, Text, Pressable, TouchableOpacity, SafeAreaView} from 'react-native';
 import FastImage from 'react-native-fast-image';
 
 // Screen that is shown when the app fails to fetch data
@@ -9,7 +9,7 @@ export interface IErrorConnectingProps {
 
 export default function ErrorConnecting({forceUpdate}: IErrorConnectingProps){
         return (
-            <View
+            <SafeAreaView
                 style={{
                     alignItems: 'center',
                     justifyContent: 'center',
@@ -74,6 +74,6 @@ export default function ErrorConnecting({forceUpdate}: IErrorConnectingProps){
                         </Text>
                     </Pressable>
                 </TouchableOpacity>
-            </View>
+            </SafeAreaView>
         );
 }

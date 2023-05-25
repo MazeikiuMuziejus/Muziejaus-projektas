@@ -1,63 +1,100 @@
-import { View, Text, Linking } from 'react-native'
-import { Button } from '../components'
+import { View, Text, Linking, SafeAreaView, Pressable, ScrollView } from 'react-native'
+
+import { Button, InformationText } from '../components'
+
+import { useDataContext } from '../contexts/dataContext'
+
+import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 
 export default function About() {
-  const year = new Date().getFullYear()
+  const context = useDataContext()
+  const { updateData } = context; // get the function to update data
 
   return (
-    <View
+    <SafeAreaView
       style={{
         flex: 1,
         backgroundColor: '#C3D3A4',
       }}
     >
-      <View
+      <ScrollView
         style={{
-          width: '100%',
-          paddingHorizontal: 40,
-          paddingVertical: 20,
-          justifyContent: 'flex-start',
+          flex: 1,
+          backgroundColor: '#C3D3A4',
         }}
       >
-        <Text
-          allowFontScaling={false}
+        <View
           style={{
-            fontSize: 20,
-            fontWeight: 'bold',
-            color: '#574031',
-            marginVertical: 20,
+            width: '100%',
+            paddingHorizontal: 40,
+            paddingVertical: 20,
+            justifyContent: 'flex-start',
           }}
         >
-          Šaltiniai:
-        </Text>
-      </View>
-      <View
-        style={{
-          width: '100%',
-          paddingHorizontal: 40,
-          paddingVertical: 20,
-          justifyContent: 'center',
-          alignItems: 'center',
-        }}
-      >
-        <Button
-          left
-          text='Įvertinti programėlę'
-          onPress={() => {}/*Linking.openURL(programėlės URL)*/}
-        />
-      </View>
-      <Text
-      allowFontScaling={false}
-        style={{
-          fontSize: 20,
-          color: '#574031',
-          position: 'absolute',
-          bottom: 10,
-          alignSelf: 'center',
-        }}
-      >
-        {year}
-      </Text>
-    </View>
+          <InformationText 
+            headerText='Šaltiniai:'
+            text={[]}
+          />
+          <InformationText
+            headerText='Nuotraukos:'
+            text={['Tadas Dabulskis', 'Gintarė Jonaitytė']}
+          />
+          <InformationText
+            headerText='Dizainas:'
+            text={['Oksana Iščenko']}
+          />
+          <InformationText
+            headerText='Programavimas:'
+            text={['Redas Domkus']}
+          />
+        </View>
+        <View
+          style={{
+            width: '100%',
+            paddingHorizontal: 40,
+            paddingBottom: 20,
+            justifyContent: 'center',
+            alignItems: 'center',
+          }}
+        >
+          <Pressable
+            style={{
+              width: '100%',
+              borderWidth: 1,
+              borderColor: '#574031',
+              borderRadius: 10,
+              paddingVertical: 10,
+              paddingHorizontal: 20,
+              marginBottom: 20,
+              flexDirection: 'row',
+              justifyContent: 'space-between',
+              alignItems: 'center',
+            }}
+            onPress={() => updateData()}
+          >
+            <Text  
+              style={{
+                fontSize: 20,
+                fontWeight: 'bold',
+                color: '#574031',
+                textAlign: 'center',
+              }}
+            >
+              Gauti naujausius duomenis
+            </Text>
+            <Icon 
+              name='refresh'
+              size={25}
+              color='#574031'
+            />
+          </Pressable>
+          <Button
+            left
+            text='Įvertinti programėlę'
+            onPress={() => {/*Linking.openURL(programėlės URL)*/}}
+          />
+        </View>
+      </ScrollView>
+    </SafeAreaView>
   )
 }
