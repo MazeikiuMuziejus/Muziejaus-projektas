@@ -37,15 +37,15 @@ export default function About() {
           />
           <InformationText
             headerText='Nuotraukos:'
-            text={['Tadas Dabulskis', 'Gintarė Jonaitytė']}
+            text={['Tadas Dabulskis (MMRG mokinys)', 'Gintarė Jonaitytė (MMRG mokinė)']}
           />
           <InformationText
             headerText='Dizainas:'
-            text={['Oksana Iščenko']}
+            text={['Oksana Iščenko (MMRG mokinė)']}
           />
           <InformationText
             headerText='Programavimas:'
-            text={['Redas Domkus']}
+            text={['Redas Domkus (MMRG mokinys)']}
           />
         </View>
         <View
@@ -91,7 +91,7 @@ export default function About() {
           <Button
             left
             text='Įvertinti programėlę'
-            onPress={() => {/*Linking.openURL(programėlės URL)*/}}
+            onPress={() => {Linking.openURL('https://play.google.com/store/apps/details?id=com.mazekiu_muziejus')}}
           />
         </View>
       </ScrollView>

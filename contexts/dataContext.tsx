@@ -14,7 +14,7 @@ interface DataContextProps {
 const DataContext = createContext<DataContextProps>({} as DataContextProps);
 
 export function DataProvider({children}: any){
-    const [data, setData] = useState<appData>([]);  // data is an array of objects
+    const [data, setData] = useState<appData>([]);  // street data
     const [loading, setLoading] = useState<boolean>(true);  // loading state
     const [error, setError] = useState<boolean>(false); // error state
 

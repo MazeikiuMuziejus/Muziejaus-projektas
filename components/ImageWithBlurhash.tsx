@@ -22,9 +22,10 @@ export default function ImageWithBlurhash({image, blurhash, style, blurhashStyle
                     width: '100%',
                     height: '100%',
                     display: imageLoading ? 'flex' : 'none',    // Only show the blurhash while the image is loading
+                    borderRadius: 5,
                     ...blurhashStyle,
                 }}
-                blurhash={blurhash}
+                blurhash={blurhash || 'L5H2EC=PM+yV0g-mq.wG9c010J}I'}   // Show image blurhash or default blurhash
             />
             <FastImage
                 style={{

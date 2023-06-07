@@ -1,8 +1,6 @@
 apply plugin: "com.android.application"
 apply plugin: "com.facebook.react"
 
-apply plugin: 'com.google.gms.google-services'   // For Firebase
-
 project.ext.vectoricons = [                                             //
     iconFontNames: [ 'MaterialCommunityIcons.ttf' ]                     // https://github.com/oblador/react-native-vector-icons
 ]                                                                       //
