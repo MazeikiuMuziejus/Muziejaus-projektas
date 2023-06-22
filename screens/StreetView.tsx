@@ -1,150 +1,139 @@
-import { SafeAreaView } from 'react-native';
+import {BackHandler, SafeAreaView} from 'react-native';
 
-import {useRef, useState} from 'react';
+import {useCallback, useRef, useState} from 'react';
 
-import MapView, {Marker} from 'react-native-maps-osmdroid';
+import MapView from 'react-native-maps-osmdroid';
 
-import { Drawer } from '../components';
+import {
+  Drawer,
+  SideDrawer,
+  Header,
+  MapMarkers,
+  CornerButton,
+} from '../components';
 
-import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
-import Header from '../components/Header';
+import {useDataContext} from '../contexts/dataContext';
 
-import { coords, houseImages, houseData } from '../types';
+import {useFocusEffect} from '@react-navigation/native';
 
-export interface IMarker {
-  id: string;
-  coordinate: {
-    latitude: number;
-    longitude: number;
-  };
-}
+// Street view screen
 
-export interface IRouteData {
-  data: houseData[];
-  initialCoords: coords;
-  gatve: string;
-  images: houseImages
-}
-
-export interface IStreetViewProps {
-  route: any;
-  navigation: any;
-}
-
-export default function StreetView({route, navigation}: IStreetViewProps) {
-  const {data, initialCoords, gatve, images}: IRouteData = route.params;  // Data passed from the previous screen
-  const [drawerOpen, setDrawerOpen] = useState<boolean>(false);  // Whether the drawer is open
-  const [drawerDataIndex, setDrawerDataIndex] = useState<number>(0);  // Index of the data in the drawer
+export default function StreetView() {
+  const {data: markers} = useDataContext(); // Gets the data from the context
+  const [markerIndex, setMarkerIndex] = useState<number>(0); // The index of the marker that is currently open
+  const [drawerOpen, setDrawerOpen] = useState<boolean>(false); // Whether the drawer is open
+  const [sideDrawerOpen, setSideDrawerOpen] = useState<boolean>(false); // Whether the side drawer is open
   const mapView = useRef(null); // Reference to the map view
 
-  const onMarkerOpen = (index: number) => { // Opens the drawer on marker press
-      if (drawerOpen) setDrawerDataIndex(index);
-      else {
-        setDrawerOpen(true);
-        setDrawerDataIndex(index);
-      }
-  }
+  const fitToCoordinates = () => {
+    // Fits the map to the markers
+    if (mapView.current) {
+      mapView.current.fitToCoordinates(markers.map(marker => marker.coords)),
+        {
+          animated: true,
+        };
+    }
+  };
 
-  const markers: IMarker[] = data.map((house: houseData, index: number) => {  // Creates the markers
-    return {
-      id: `${index}`,
-      coordinate: {
-        latitude: house.coords.lat,
-        longitude: house.coords.long,
-      },
-    };
-  });
+  const onMarkerOpen = (index: number) => {
+    // Opens the drawer on marker press
+    if (drawerOpen) {
+      setMarkerIndex(index); // If the drawer is already open, just change the marker index
+    } else {
+      setDrawerOpen(true); // Otherwise, open the drawer and change the marker index
+      setMarkerIndex(index);
+    }
+    if (mapView.current) {
+      mapView.current.animateCamera(
+        {
+          center: {
+            latitude: markers[index].coords.latitude - 0.0005,
+            longitude: markers[index].coords.longitude,
+          },
+          zoom: 18,
+          heading: 0,
+        },
+        {duration: 1000},
+      );
+    }
+  };
 
-  if (drawerOpen && mapView.current) {
-      mapView.current.animateCamera({  // Animates the camera to the marker
-      center: {
-        latitude: data[drawerDataIndex].coords.lat - 0.0005,
-        longitude: data[drawerDataIndex].coords.long,
-      },
-      zoom: 18,
-    }, {duration: 1000});
-  } else if (!drawerOpen && mapView.current && markers.length > 2) {  // Fits the map to the markers
-    mapView.current.fitToCoordinates(markers.map((marker: IMarker) => marker.coordinate), {
-      edgePadding: {
-        top: 200,
-        right: 200,
-        bottom: 200,
-        left: 200,
-      },
-      animated: true,
-    })
-  } else if (!drawerOpen && mapView.current && markers.length <= 2) {
-    mapView.current.animateCamera({  // Animates the camera to the marker
-      center: {
-        latitude: initialCoords.lat + 0.0005,
-        longitude: initialCoords.long,
-      },
-      zoom: 16,
-    }, {duration: 1000})
-  }
+  const onDrawerClose = () => {
+    fitToCoordinates();
+    setDrawerOpen(false);
+  };
+
+  useFocusEffect(
+    // Overwrites the back button to close the drawer
+    useCallback(() => {
+      const backHandler = () => {
+        if (drawerOpen || sideDrawerOpen) {
+          setDrawerOpen(false);
+          setSideDrawerOpen(false);
+          fitToCoordinates();
+          return true;
+        }
+        return false;
+      };
+
+      const sub = BackHandler.addEventListener(
+        'hardwareBackPress',
+        backHandler,
+      );
+      return () => sub.remove();
+    }, [drawerOpen, sideDrawerOpen]),
+  );
 
   return (
     <SafeAreaView
       style={{
         flex: 1,
-      }}
-    >
-      <Header navigation={navigation} text={`${gatve} g.`} />
-      <Drawer blurhash={images[data[drawerDataIndex].nr].blurhash} setOpen={setDrawerOpen} open={drawerOpen} data={data[drawerDataIndex]} images={images[data[drawerDataIndex].nr].src || []}/>
+      }}>
+      <Header
+        text={'Žemėlapis'}
+        right
+        onMenuOpen={() => setSideDrawerOpen(prev => !prev)}
+      />
+      {markers[markerIndex] && (
+        <Drawer
+          blurhash={markers[markerIndex].blurhash}
+          onClose={onDrawerClose}
+          setOpen={setDrawerOpen}
+          open={drawerOpen}
+          data={{
+            nr: `${markers[markerIndex].gatve} g. ${markers[markerIndex].nr}`,
+            tekstas: markers[markerIndex].tekstas,
+            coords: {
+              lat: markers[markerIndex].coords.latitude,
+              long: markers[markerIndex].coords.longitude,
+            },
+            zmones: markers[markerIndex].zmones,
+          }}
+          images={markers[markerIndex].src}
+        />
+      )}
+      <SideDrawer open={sideDrawerOpen} setOpen={setSideDrawerOpen} />
+      <CornerButton onPress={() => fitToCoordinates()} />
       <MapView
         ref={mapView}
-        showsUserLocation={true}
-        showsMyLocationButton={true}
-        onLayout={() => {
-          if (mapView.current && markers.length > 2) {
-            mapView.current.fitToCoordinates(markers.map((marker: IMarker) => marker.coordinate), {
-              edgePadding: {
-                top: 200,
-                right: 200,
-                bottom: 200,
-                left: 200,
-              },
-              animated: true,
-            })
-          } else if (mapView.current && markers.length <= 2) {
-            mapView.current.animateCamera({  // Animates the camera to the marker
-              center: {
-                latitude: initialCoords.lat + 0.0005,
-                longitude: initialCoords.long,
-              },
-              zoom: 16,
-            }, {duration: 1000})
-          }
+        onLayout={() => fitToCoordinates()}
+        onPress={() => {
+          onDrawerClose();
+          setSideDrawerOpen(false);
         }}
-        onPress={() => setDrawerOpen(false)}
         moveOnMarkerPress={false}
         loadingEnabled
-        maxZoomLevel={20}
+        minZoomLevel={10}
         style={{
-          flex: 1
+          flex: 1,
         }}
         initialRegion={{
-          latitude: initialCoords.lat,
-          longitude: initialCoords.long,
-          latitudeDelta: 0.02,
-          longitudeDelta: 0.02,
+          latitude: 56.315716,
+          longitude: 22.341388,
+          latitudeDelta: 0.05,
+          longitudeDelta: 0.05,
         }}>
-        {markers.map((marker: IMarker, index: number) => ( // Renders the markers on the map
-          <Marker
-            accessibilityRole="button"
-            accessibilityLabel={`${gatve} g. ${data[index].nr}`}
-            style={{
-              elevation: 5
-            }}
-            id={marker.id}
-            onPress={() => onMarkerOpen(index)}
-            coordinate={{
-              ...marker.coordinate,
-            }}
-            key={index}>
-            <Icon size={40} name={'map-marker'} color={'crimson'} />
-          </Marker>
-        ))}
+        <MapMarkers markers={markers} onMarkerOpen={onMarkerOpen} />
       </MapView>
     </SafeAreaView>
   );

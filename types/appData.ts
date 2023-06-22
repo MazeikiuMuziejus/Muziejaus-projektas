@@ -1,3 +1,3 @@
-import { streetData } from "./streetData"
+import {streetData} from './streetData';
 
 export type appData = streetData[];

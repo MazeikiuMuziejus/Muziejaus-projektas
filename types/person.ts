@@ -1,4 +1,4 @@
 export type person = {
-    vardas: string,
-    tekstas: string
-}
+  vardas: string;
+  tekstas: string;
+};

@@ -1,51 +1,66 @@
-import { View, Text, Linking, SafeAreaView, Pressable, ScrollView } from 'react-native'
+import {View, Text, SafeAreaView, Pressable, ScrollView} from 'react-native';
 
-import { Button, InformationText } from '../components'
+import {InformationText} from '../components';
 
-import { useDataContext } from '../contexts/dataContext'
+import {useDataContext} from '../contexts/dataContext';
 
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 
+// About screen
+
 export default function About() {
-  const context = useDataContext()
-  const { updateData } = context; // get the function to update data
+  const context = useDataContext();
+  const {updateData} = context; // get the function to update data
 
   return (
     <SafeAreaView
       style={{
         flex: 1,
         backgroundColor: '#C3D3A4',
-      }}
-    >
+      }}>
       <ScrollView
         style={{
           flex: 1,
           backgroundColor: '#C3D3A4',
-        }}
-      >
+        }}>
         <View
           style={{
             width: '100%',
-            paddingHorizontal: 40,
-            paddingVertical: 20,
+            paddingHorizontal: 20,
+            paddingVertical: 10,
             justifyContent: 'flex-start',
-          }}
-        >
-          <InformationText 
-            headerText='Šaltiniai:'
-            text={[]}
+          }}>
+          <InformationText
+            headerText="Šaltiniai:"
+            text={['Mažeikių muziejaus archyvai']}
+            img={[]}
           />
           <InformationText
-            headerText='Nuotraukos:'
-            text={['Tadas Dabulskis (MMRG mokinys)', 'Gintarė Jonaitytė (MMRG mokinė)']}
+            headerText="Nuotraukos:"
+            text={[
+              'Jonas Glodenis',
+              'Vytautas Ramanauskas',
+              'Tadas Dabulskis',
+              'Gintarė Jonaitytė',
+              'Redas Domkus',
+            ]}
+            img={[
+              require('../assets/VizijaOptika.png'),
+              require('../assets/MuziejausLogo.png'),
+              require('../assets/MMRG.png'),
+              require('../assets/MMRG.png'),
+              require('../assets/MMRG.png'),
+            ]}
           />
           <InformationText
-            headerText='Dizainas:'
-            text={['Oksana Iščenko (MMRG mokinė)']}
+            headerText="Dizainas:"
+            text={['Oksana Iščenko']}
+            img={[require('../assets/MMRG.png')]}
           />
           <InformationText
-            headerText='Programavimas:'
-            text={['Redas Domkus (MMRG mokinys)']}
+            headerText="Programavimas:"
+            text={['Redas Domkus']}
+            img={[require('../assets/MMRG.png')]}
           />
         </View>
         <View
@@ -55,8 +70,7 @@ export default function About() {
             paddingBottom: 20,
             justifyContent: 'center',
             alignItems: 'center',
-          }}
-        >
+          }}>
           <Pressable
             style={{
               width: '100%',
@@ -70,31 +84,20 @@ export default function About() {
               justifyContent: 'space-between',
               alignItems: 'center',
             }}
-            onPress={() => updateData()}
-          >
-            <Text  
+            onPress={() => updateData()}>
+            <Text
               style={{
                 fontSize: 20,
                 fontWeight: 'bold',
                 color: '#574031',
                 textAlign: 'center',
-              }}
-            >
+              }}>
               Gauti naujausius duomenis
             </Text>
-            <Icon 
-              name='refresh'
-              size={25}
-              color='#574031'
-            />
+            <Icon name="refresh" size={25} color="#574031" />
           </Pressable>
-          <Button
-            left
-            text='Įvertinti programėlę'
-            onPress={() => {Linking.openURL('https://play.google.com/store/apps/details?id=com.mazekiu_muziejus')}}
-          />
         </View>
       </ScrollView>
     </SafeAreaView>
-  )
+  );
 }
