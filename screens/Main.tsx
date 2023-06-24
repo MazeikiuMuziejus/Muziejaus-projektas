@@ -30,10 +30,19 @@ export default function Main() {
           style={{
             width: 100,
             height: 100,
-            marginHorizontal: 20,
           }}
           resizeMode={FastImage.resizeMode.contain}
           source={require('../assets/Herbas.png')}
+        />
+        <View
+          style={{
+            justifyContent: 'center',
+            alignItems: 'center',
+            height: '100%',
+            borderWidth: 1,
+            borderColor: '#574031',
+            marginHorizontal: 10,
+          }}
         />
         <Text
           allowFontScaling={false}
@@ -42,7 +51,7 @@ export default function Main() {
             fontWeight: 'bold',
             color: '#574031',
             marginVertical: 20,
-            textAlign: 'center',
+            textAlign: 'auto',
             maxWidth: 200,
           }}>
           Interaktyvus Mažeikių istorijos žemėlapis

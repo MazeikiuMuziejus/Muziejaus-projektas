@@ -11,7 +11,6 @@ import {ImageWithBlurhash} from './';
 import Animated, {
   useAnimatedStyle,
   useSharedValue,
-  withDelay,
   withSpring,
 } from 'react-native-reanimated';
 

@@ -25,7 +25,7 @@ export default function StreetView() {
   const [sideDrawerOpen, setSideDrawerOpen] = useState<boolean>(false); // Whether the side drawer is open
   const mapView = useRef(null); // Reference to the map view
 
-  const fitToCoordinates = () => {
+  const fitToCoordinates = useCallback(() => {
     // Fits the map to the markers
     if (mapView.current) {
       mapView.current.fitToCoordinates(markers.map(marker => marker.coords)),
@@ -33,7 +33,7 @@ export default function StreetView() {
           animated: true,
         };
     }
-  };
+  }, [markers]);
 
   const onMarkerOpen = (index: number) => {
     // Opens the drawer on marker press
@@ -81,7 +81,7 @@ export default function StreetView() {
         backHandler,
       );
       return () => sub.remove();
-    }, [drawerOpen, sideDrawerOpen]),
+    }, [drawerOpen, sideDrawerOpen, fitToCoordinates]),
   );
 
   return (
@@ -98,7 +98,6 @@ export default function StreetView() {
         <Drawer
           blurhash={markers[markerIndex].blurhash}
           onClose={onDrawerClose}
-          setOpen={setDrawerOpen}
           open={drawerOpen}
           data={{
             nr: `${markers[markerIndex].gatve} g. ${markers[markerIndex].nr}`,

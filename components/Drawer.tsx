@@ -29,7 +29,6 @@ import {
 
 export interface IDrawer {
   open: boolean;
-  setOpen: (open: boolean) => void;
   data: {
     nr: string;
     tekstas: string;
@@ -46,7 +45,6 @@ export interface IDrawer {
 
 export default function Drawer({
   open,
-  setOpen,
   data,
   images,
   onClose,
