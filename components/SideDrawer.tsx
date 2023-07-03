@@ -128,7 +128,9 @@ export default function SideDrawer({open, setOpen}: ISideDrawer) {
             Paspauskite ant atitinkamos gatvės, kad išjungtumėte/įjungtumėte jos
             rodymą.
           </Text>
-          <ScrollView>
+          <ScrollView
+            showsVerticalScrollIndicator={false}
+            showsHorizontalScrollIndicator={false}>
             {streets.map((street, index) => (
               <StreetCard
                 key={index}
