@@ -39,7 +39,7 @@ export default function Main() {
             justifyContent: 'center',
             alignItems: 'center',
             height: '100%',
-            borderWidth: 1,
+            borderWidth: 2,
             borderColor: '#574031',
             marginHorizontal: 10,
           }}
