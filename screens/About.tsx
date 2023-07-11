@@ -73,7 +73,6 @@ export default function About() {
           }}>
           <Pressable
             style={{
-              width: '100%',
               borderWidth: 1,
               borderColor: '#574031',
               borderRadius: 10,
@@ -86,11 +85,13 @@ export default function About() {
             }}
             onPress={() => updateData()}>
             <Text
+              allowFontScaling={false}
               style={{
                 fontSize: 20,
                 fontWeight: 'bold',
                 color: '#574031',
                 textAlign: 'center',
+                marginRight: 10,
               }}>
               Gauti naujausius duomenis
             </Text>

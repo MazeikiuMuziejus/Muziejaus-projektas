@@ -47,7 +47,6 @@ export default function PartnerLogo({logo, name, url = ''}: IPartnerLogoProps) {
           color: '#574031',
           marginVertical: 5,
           fontWeight: 'bold',
-          fontStyle: 'italic',
           maxWidth: 100,
         }}>
         {name}

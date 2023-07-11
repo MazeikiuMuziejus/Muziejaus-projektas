@@ -2,8 +2,6 @@ import {Pressable, Text} from 'react-native';
 
 import LinearGradient from 'react-native-linear-gradient';
 
-import FastImage from 'react-native-fast-image';
-
 import Animated, {
   useAnimatedStyle,
   useSharedValue,
@@ -16,24 +14,11 @@ export default function Button({
   text,
   onPress,
   textStyle,
-  left,
 }: {
   text: string;
   onPress: () => void;
   textStyle?: any;
-  left?: boolean;
 }) {
-  const flowerLocation = {
-    // Location of the flower
-    top: left ? -60 : -5, // Places flower either on top or bottom side
-    left: left ? -40 : 240, // Places the flower either on the left or right side
-    transform: [
-      {
-        rotate: left ? '0deg' : '160deg', // Rotates the flower to face the button
-      },
-    ],
-  };
-
   const scaleVal = useSharedValue(1); // Animated values
 
   const animatedStyle = useAnimatedStyle(() => {
@@ -65,17 +50,6 @@ export default function Button({
           scaleVal.value = withSpring(1);
         }}
         onPress={onPress}>
-        <FastImage
-          source={require('../assets/flower.png')}
-          style={{
-            position: 'absolute',
-            width: 120,
-            height: 120,
-            zIndex: 100,
-            ...flowerLocation,
-          }}
-          resizeMode="contain"
-        />
         <LinearGradient
           colors={['#FCFAF9', '#C5A87F']}
           style={{

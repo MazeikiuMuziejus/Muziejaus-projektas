@@ -3,7 +3,6 @@ import {View, Text, SafeAreaView} from 'react-native';
 import {useNavigation} from '@react-navigation/native';
 
 import {Button, PartnerLogo} from '../components';
-import FastImage from 'react-native-fast-image';
 
 // Main app screen
 
@@ -18,45 +17,17 @@ export default function Main() {
         backgroundColor: '#C3D3A4',
         justifyContent: 'center',
       }}>
-      <View
+      <Text
+        allowFontScaling={false}
         style={{
-          justifyContent: 'center',
-          alignItems: 'center',
-          width: '100%',
-          flexDirection: 'row',
-          marginBottom: 20,
+          fontSize: 30,
+          fontWeight: 'bold',
+          color: '#574031',
+          marginBottom: 50,
+          textAlign: 'center',
         }}>
-        <FastImage
-          style={{
-            width: 100,
-            height: 100,
-          }}
-          resizeMode={FastImage.resizeMode.contain}
-          source={require('../assets/Herbas.png')}
-        />
-        <View
-          style={{
-            justifyContent: 'center',
-            alignItems: 'center',
-            height: '100%',
-            borderWidth: 2,
-            borderColor: '#574031',
-            marginHorizontal: 10,
-          }}
-        />
-        <Text
-          allowFontScaling={false}
-          style={{
-            fontSize: 23,
-            fontWeight: 'bold',
-            color: '#574031',
-            marginVertical: 20,
-            textAlign: 'auto',
-            maxWidth: 200,
-          }}>
-          Interaktyvus Mažeikių istorijos žemėlapis
-        </Text>
-      </View>
+        Interaktyvus Mažeikių istorijos žemėlapis
+      </Text>
       <View
         style={{
           flexDirection: 'column',
@@ -66,7 +37,6 @@ export default function Main() {
           width: '100%',
         }}>
         <Button
-          left
           text="Žemėlapis"
           onPress={() => navigation.navigate('Map' as never)}
         />
