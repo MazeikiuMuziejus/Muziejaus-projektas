@@ -30,7 +30,7 @@ function App() {
           component={About}
           options={{
             headerShown: true,
-            header() {
+            header: () => {
               return <Header text={'Apie'} />;
             },
           }}

@@ -59,14 +59,14 @@ export function DataProvider({children}: any) {
     // function to get data
     setLoading(true);
     setStreets([]); // reset streets
-    getData().then(data => {
+    getData().then(d => {
       // get data from API
-      if (data) {
-        const formattedData: marker[] = data
+      if (d) {
+        const formattedData: marker[] = d
           .map(gatve => {
             // format data
-            setStreets(streets => [
-              ...streets,
+            setStreets(s => [
+              ...s,
               {
                 gatve: gatve.gatve,
                 button: {
