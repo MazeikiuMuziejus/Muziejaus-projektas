@@ -40,6 +40,7 @@ export default function InformationText({
                   marginBottom: 5,
                 }}>
                 <Text
+                  allowFontScaling={false}
                   style={{
                     fontSize: 15,
                     color: '#574031',
@@ -67,6 +68,7 @@ export default function InformationText({
               marginBottom: 5,
             }}>
             <Text
+              allowFontScaling={false}
               style={{
                 fontSize: 15,
                 color: '#574031',
