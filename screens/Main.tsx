@@ -3,6 +3,7 @@ import {View, Text, SafeAreaView} from 'react-native';
 import {useNavigation} from '@react-navigation/native';
 
 import {Button, PartnerLogo} from '../components';
+import FastImage from 'react-native-fast-image';
 
 // Main app screen
 
@@ -14,20 +15,39 @@ export default function Main() {
       style={{
         flex: 1,
         alignItems: 'center',
-        backgroundColor: '#C3D3A4',
+        backgroundColor: '#9AABC4',
         justifyContent: 'center',
       }}>
-      <Text
-        allowFontScaling={false}
+      <View
         style={{
-          fontSize: 30,
-          fontWeight: 'bold',
-          color: '#574031',
-          marginBottom: 50,
-          textAlign: 'center',
+          flexDirection: 'row',
+          justifyContent: 'center',
+          alignItems: 'center',
+          marginBottom: 30,
         }}>
-        Interaktyvus Mažeikių istorijos žemėlapis
-      </Text>
+        <FastImage
+          source={require('../assets/Herbas.png')}
+          style={{
+            width: 100,
+            height: 100,
+          }}
+          resizeMode={FastImage.resizeMode.center}
+        />
+        <Text
+          allowFontScaling={false}
+          style={{
+            fontSize: 25,
+            fontWeight: 'bold',
+            color: '#574031',
+            textAlign: 'left',
+            maxWidth: 250,
+            borderLeftWidth: 3,
+            borderLeftColor: '#574031',
+            paddingLeft: 10,
+          }}>
+          Interaktyvus Mažeikių istorijos žemėlapis
+        </Text>
+      </View>
       <View
         style={{
           flexDirection: 'column',

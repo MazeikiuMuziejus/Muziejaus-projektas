@@ -16,12 +16,12 @@ export default function About() {
     <SafeAreaView
       style={{
         flex: 1,
-        backgroundColor: '#C3D3A4',
+        backgroundColor: '#9AABC4',
       }}>
       <ScrollView
         style={{
           flex: 1,
-          backgroundColor: '#C3D3A4',
+          backgroundColor: '#9AABC4',
         }}>
         <View
           style={{
@@ -80,7 +80,6 @@ export default function About() {
               paddingHorizontal: 20,
               marginBottom: 20,
               flexDirection: 'row',
-              justifyContent: 'space-between',
               alignItems: 'center',
             }}
             onPress={() => updateData()}>

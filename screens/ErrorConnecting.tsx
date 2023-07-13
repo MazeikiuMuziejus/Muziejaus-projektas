@@ -19,28 +19,38 @@ export default function ErrorConnecting({forceUpdate}: IErrorConnectingProps) {
       style={{
         alignItems: 'center',
         justifyContent: 'center',
-        backgroundColor: '#C3D3A4',
+        backgroundColor: '#9AABC4',
         flex: 1,
       }}>
       <View
         style={{
+          flexDirection: 'row',
+          justifyContent: 'center',
           alignItems: 'center',
-          borderWidth: 2,
-          borderRadius: 100,
-          borderStyle: 'dashed',
-          marginBottom: 40,
+          marginBottom: 100,
         }}>
         <FastImage
-          source={require('../assets/MuziejausLogo.png')}
+          source={require('../assets/Herbas.png')}
           style={{
-            width: 150,
-            height: 150,
-            borderColor: '#574031',
-            backgroundColor: '#E8DCCA',
-            borderRadius: 100,
+            width: 100,
+            height: 100,
           }}
-          resizeMode={FastImage.resizeMode.cover}
+          resizeMode={FastImage.resizeMode.center}
         />
+        <Text
+          allowFontScaling={false}
+          style={{
+            fontSize: 25,
+            fontWeight: 'bold',
+            color: '#574031',
+            textAlign: 'left',
+            maxWidth: 250,
+            borderLeftWidth: 2,
+            borderLeftColor: '#574031',
+            paddingLeft: 10,
+          }}>
+          Interaktyvus Mažeikių istorijos žemėlapis
+        </Text>
       </View>
       <Text
         allowFontScaling={false}
