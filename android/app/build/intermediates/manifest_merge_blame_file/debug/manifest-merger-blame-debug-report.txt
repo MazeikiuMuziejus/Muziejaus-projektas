@@ -1,0 +1,240 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.mazeikiu_muziejus"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="21"
+9        android:targetSdkVersion="33" />
+10
+11    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+11-->E:\CodeStuff\MUZIEJUS\Muziejaus-projektas\android\app\src\debug\AndroidManifest.xml:5:5-77
+11-->E:\CodeStuff\MUZIEJUS\Muziejaus-projektas\android\app\src\debug\AndroidManifest.xml:5:22-75
+12    <uses-permission android:name="android.permission.INTERNET" />
+12-->E:\CodeStuff\MUZIEJUS\Muziejaus-projektas\android\app\src\main\AndroidManifest.xml:3:5-67
+12-->E:\CodeStuff\MUZIEJUS\Muziejaus-projektas\android\app\src\main\AndroidManifest.xml:3:22-64
+13    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+13-->[com.facebook.flipper:flipper:0.125.0] C:\Users\redas\.gradle\caches\transforms-3\8cc0924a47827cc7c86d86059c15f35c\transformed\jetified-flipper-0.125.0\AndroidManifest.xml:16:5-76
+13-->[com.facebook.flipper:flipper:0.125.0] C:\Users\redas\.gradle\caches\transforms-3\8cc0924a47827cc7c86d86059c15f35c\transformed\jetified-flipper-0.125.0\AndroidManifest.xml:16:22-73
+14    <uses-permission android:name="android.permission.WAKE_LOCK" />
+14-->[:react-native-firebase_database] E:\CodeStuff\MUZIEJUS\Muziejaus-projektas\node_modules\@react-native-firebase\database\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:10:5-68
+14-->[:react-native-firebase_database] E:\CodeStuff\MUZIEJUS\Muziejaus-projektas\node_modules\@react-native-firebase\database\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:10:22-65
+15    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+15-->[:react-native-firebase_database] E:\CodeStuff\MUZIEJUS\Muziejaus-projektas\node_modules\@react-native-firebase\database\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:11:5-79
+15-->[:react-native-firebase_database] E:\CodeStuff\MUZIEJUS\Muziejaus-projektas\node_modules\@react-native-firebase\database\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:11:22-76
+16    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+16-->[:react-native-maps-osmdroid] E:\CodeStuff\MUZIEJUS\Muziejaus-projektas\node_modules\react-native-maps-osmdroid\lib\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:10:5-81
+16-->[:react-native-maps-osmdroid] E:\CodeStuff\MUZIEJUS\Muziejaus-projektas\node_modules\react-native-maps-osmdroid\lib\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:10:22-78
+17
+18    <supports-screens
+18-->[org.osmdroid:osmdroid-android:6.1.5] C:\Users\redas\.gradle\caches\transforms-3\64f202fa1aecb11787b55e5a1d7eaa80\transformed\jetified-osmdroid-android-6.1.5\AndroidManifest.xml:11:5-14:40
+19        android:anyDensity="true"
+19-->[org.osmdroid:osmdroid-android:6.1.5] C:\Users\redas\.gradle\caches\transforms-3\64f202fa1aecb11787b55e5a1d7eaa80\transformed\jetified-osmdroid-android-6.1.5\AndroidManifest.xml:12:9-34
+20        android:largeScreens="true"
+20-->[org.osmdroid:osmdroid-android:6.1.5] C:\Users\redas\.gradle\caches\transforms-3\64f202fa1aecb11787b55e5a1d7eaa80\transformed\jetified-osmdroid-android-6.1.5\AndroidManifest.xml:13:9-36
+21        android:normalScreens="true" />
+21-->[org.osmdroid:osmdroid-android:6.1.5] C:\Users\redas\.gradle\caches\transforms-3\64f202fa1aecb11787b55e5a1d7eaa80\transformed\jetified-osmdroid-android-6.1.5\AndroidManifest.xml:14:9-37
+22
+23    <uses-feature
+23-->[org.osmdroid:osmdroid-android:6.1.5] C:\Users\redas\.gradle\caches\transforms-3\64f202fa1aecb11787b55e5a1d7eaa80\transformed\jetified-osmdroid-android-6.1.5\AndroidManifest.xml:16:5-18:36
+24        android:name="android.hardware.location.network"
+24-->[org.osmdroid:osmdroid-android:6.1.5] C:\Users\redas\.gradle\caches\transforms-3\64f202fa1aecb11787b55e5a1d7eaa80\transformed\jetified-osmdroid-android-6.1.5\AndroidManifest.xml:17:9-57
+25        android:required="false" />
+25-->[org.osmdroid:osmdroid-android:6.1.5] C:\Users\redas\.gradle\caches\transforms-3\64f202fa1aecb11787b55e5a1d7eaa80\transformed\jetified-osmdroid-android-6.1.5\AndroidManifest.xml:18:9-33
+26    <uses-feature
+26-->[org.osmdroid:osmdroid-android:6.1.5] C:\Users\redas\.gradle\caches\transforms-3\64f202fa1aecb11787b55e5a1d7eaa80\transformed\jetified-osmdroid-android-6.1.5\AndroidManifest.xml:19:5-21:36
+27        android:name="android.hardware.location.gps"
+27-->[org.osmdroid:osmdroid-android:6.1.5] C:\Users\redas\.gradle\caches\transforms-3\64f202fa1aecb11787b55e5a1d7eaa80\transformed\jetified-osmdroid-android-6.1.5\AndroidManifest.xml:20:9-53
+28        android:required="false" />
+28-->[org.osmdroid:osmdroid-android:6.1.5] C:\Users\redas\.gradle\caches\transforms-3\64f202fa1aecb11787b55e5a1d7eaa80\transformed\jetified-osmdroid-android-6.1.5\AndroidManifest.xml:21:9-33
+29    <uses-feature
+29-->[org.osmdroid:osmdroid-android:6.1.5] C:\Users\redas\.gradle\caches\transforms-3\64f202fa1aecb11787b55e5a1d7eaa80\transformed\jetified-osmdroid-android-6.1.5\AndroidManifest.xml:22:5-24:36
+30        android:name="android.hardware.telephony"
+30-->[org.osmdroid:osmdroid-android:6.1.5] C:\Users\redas\.gradle\caches\transforms-3\64f202fa1aecb11787b55e5a1d7eaa80\transformed\jetified-osmdroid-android-6.1.5\AndroidManifest.xml:23:9-50
+31        android:required="false" />
+31-->[org.osmdroid:osmdroid-android:6.1.5] C:\Users\redas\.gradle\caches\transforms-3\64f202fa1aecb11787b55e5a1d7eaa80\transformed\jetified-osmdroid-android-6.1.5\AndroidManifest.xml:24:9-33
+32    <uses-feature
+32-->[org.osmdroid:osmdroid-android:6.1.5] C:\Users\redas\.gradle\caches\transforms-3\64f202fa1aecb11787b55e5a1d7eaa80\transformed\jetified-osmdroid-android-6.1.5\AndroidManifest.xml:25:5-27:36
+33        android:name="android.hardware.wifi"
+33-->[org.osmdroid:osmdroid-android:6.1.5] C:\Users\redas\.gradle\caches\transforms-3\64f202fa1aecb11787b55e5a1d7eaa80\transformed\jetified-osmdroid-android-6.1.5\AndroidManifest.xml:26:9-45
+34        android:required="false" />
+34-->[org.osmdroid:osmdroid-android:6.1.5] C:\Users\redas\.gradle\caches\transforms-3\64f202fa1aecb11787b55e5a1d7eaa80\transformed\jetified-osmdroid-android-6.1.5\AndroidManifest.xml:27:9-33
+35
+36    <application
+36-->E:\CodeStuff\MUZIEJUS\Muziejaus-projektas\android\app\src\main\AndroidManifest.xml:5:5-26:19
+37        android:name="com.mazeikiu_muziejus.MainApplication"
+37-->E:\CodeStuff\MUZIEJUS\Muziejaus-projektas\android\app\src\main\AndroidManifest.xml:6:7-38
+38        android:allowBackup="false"
+38-->E:\CodeStuff\MUZIEJUS\Muziejaus-projektas\android\app\src\main\AndroidManifest.xml:11:7-34
+39        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+39-->[androidx.core:core:1.7.0] C:\Users\redas\.gradle\caches\transforms-3\8891a72d19f4fbd5a9d3b9df64a57a47\transformed\core-1.7.0\AndroidManifest.xml:24:18-86
+40        android:debuggable="true"
+41        android:icon="@mipmap/ic_launcher"
+41-->E:\CodeStuff\MUZIEJUS\Muziejaus-projektas\android\app\src\main\AndroidManifest.xml:8:7-41
+42        android:label="@string/app_name"
+42-->E:\CodeStuff\MUZIEJUS\Muziejaus-projektas\android\app\src\main\AndroidManifest.xml:7:7-39
+43        android:roundIcon="@mipmap/ic_launcher_round"
+43-->E:\CodeStuff\MUZIEJUS\Muziejaus-projektas\android\app\src\main\AndroidManifest.xml:9:7-52
+44        android:theme="@style/AppTheme"
+44-->E:\CodeStuff\MUZIEJUS\Muziejaus-projektas\android\app\src\main\AndroidManifest.xml:12:7-38
+45        android:usesCleartextTraffic="true" >
+45-->E:\CodeStuff\MUZIEJUS\Muziejaus-projektas\android\app\src\main\AndroidManifest.xml:10:7-42
+46        <activity
+46-->E:\CodeStuff\MUZIEJUS\Muziejaus-projektas\android\app\src\debug\AndroidManifest.xml:11:9-111
+47            android:name="com.facebook.react.devsupport.DevSettingsActivity"
+47-->E:\CodeStuff\MUZIEJUS\Muziejaus-projektas\android\app\src\debug\AndroidManifest.xml:11:19-83
+48            android:exported="false" />
+48-->E:\CodeStuff\MUZIEJUS\Muziejaus-projektas\android\app\src\debug\AndroidManifest.xml:11:84-108
+49        <activity
+49-->E:\CodeStuff\MUZIEJUS\Muziejaus-projektas\android\app\src\main\AndroidManifest.xml:13:7-25:18
+50            android:name="com.mazeikiu_muziejus.MainActivity"
+50-->E:\CodeStuff\MUZIEJUS\Muziejaus-projektas\android\app\src\main\AndroidManifest.xml:14:9-37
+51            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|smallestScreenSize|uiMode"
+51-->E:\CodeStuff\MUZIEJUS\Muziejaus-projektas\android\app\src\main\AndroidManifest.xml:17:9-106
+52            android:exported="true"
+52-->E:\CodeStuff\MUZIEJUS\Muziejaus-projektas\android\app\src\main\AndroidManifest.xml:20:9-32
+53            android:label="@string/app_name"
+53-->E:\CodeStuff\MUZIEJUS\Muziejaus-projektas\android\app\src\main\AndroidManifest.xml:15:9-41
+54            android:launchMode="singleTask"
+54-->E:\CodeStuff\MUZIEJUS\Muziejaus-projektas\android\app\src\main\AndroidManifest.xml:18:9-40
+55            android:screenOrientation="portrait"
+55-->E:\CodeStuff\MUZIEJUS\Muziejaus-projektas\android\app\src\main\AndroidManifest.xml:16:9-45
+56            android:windowSoftInputMode="adjustResize" >
+56-->E:\CodeStuff\MUZIEJUS\Muziejaus-projektas\android\app\src\main\AndroidManifest.xml:19:9-51
+57            <intent-filter>
+57-->E:\CodeStuff\MUZIEJUS\Muziejaus-projektas\android\app\src\main\AndroidManifest.xml:21:9-24:25
+58                <action android:name="android.intent.action.MAIN" />
+58-->E:\CodeStuff\MUZIEJUS\Muziejaus-projektas\android\app\src\main\AndroidManifest.xml:22:13-65
+58-->E:\CodeStuff\MUZIEJUS\Muziejaus-projektas\android\app\src\main\AndroidManifest.xml:22:21-62
+59
+60                <category android:name="android.intent.category.LAUNCHER" />
+60-->E:\CodeStuff\MUZIEJUS\Muziejaus-projektas\android\app\src\main\AndroidManifest.xml:23:13-73
+60-->E:\CodeStuff\MUZIEJUS\Muziejaus-projektas\android\app\src\main\AndroidManifest.xml:23:23-70
+61            </intent-filter>
+62        </activity>
+63
+64        <meta-data
+64-->[:react-native-firebase_app] E:\CodeStuff\MUZIEJUS\Muziejaus-projektas\node_modules\@react-native-firebase\app\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:11:9-13:36
+65            android:name="app_data_collection_default_enabled"
+65-->[:react-native-firebase_app] E:\CodeStuff\MUZIEJUS\Muziejaus-projektas\node_modules\@react-native-firebase\app\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:12:13-63
+66            android:value="true" />
+66-->[:react-native-firebase_app] E:\CodeStuff\MUZIEJUS\Muziejaus-projektas\node_modules\@react-native-firebase\app\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:13:13-33
+67
+68        <service
+68-->[:react-native-firebase_app] E:\CodeStuff\MUZIEJUS\Muziejaus-projektas\node_modules\@react-native-firebase\app\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:15:9-23:19
+69            android:name="com.google.firebase.components.ComponentDiscoveryService"
+69-->[:react-native-firebase_app] E:\CodeStuff\MUZIEJUS\Muziejaus-projektas\node_modules\@react-native-firebase\app\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:16:13-84
+70            android:directBootAware="true"
+70-->[:react-native-firebase_app] E:\CodeStuff\MUZIEJUS\Muziejaus-projektas\node_modules\@react-native-firebase\app\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:17:13-43
+71            android:exported="false" >
+71-->[:react-native-firebase_app] E:\CodeStuff\MUZIEJUS\Muziejaus-projektas\node_modules\@react-native-firebase\app\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:18:13-37
+72            <meta-data
+72-->[:react-native-firebase_app] E:\CodeStuff\MUZIEJUS\Muziejaus-projektas\node_modules\@react-native-firebase\app\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:20:13-22:85
+73                android:name="com.google.firebase.components:io.invertase.firebase.app.ReactNativeFirebaseAppRegistrar"
+73-->[:react-native-firebase_app] E:\CodeStuff\MUZIEJUS\Muziejaus-projektas\node_modules\@react-native-firebase\app\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:21:17-120
+74                android:value="com.google.firebase.components.ComponentRegistrar" />
+74-->[:react-native-firebase_app] E:\CodeStuff\MUZIEJUS\Muziejaus-projektas\node_modules\@react-native-firebase\app\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:22:17-82
+75            <meta-data
+75-->[com.google.firebase:firebase-database:20.1.0] C:\Users\redas\.gradle\caches\transforms-3\ceb69948930b17ba244fe0dc1de435ee\transformed\jetified-firebase-database-20.1.0\AndroidManifest.xml:31:13-33:85
+76                android:name="com.google.firebase.components:com.google.firebase.database.DatabaseRegistrar"
+76-->[com.google.firebase:firebase-database:20.1.0] C:\Users\redas\.gradle\caches\transforms-3\ceb69948930b17ba244fe0dc1de435ee\transformed\jetified-firebase-database-20.1.0\AndroidManifest.xml:32:17-109
+77                android:value="com.google.firebase.components.ComponentRegistrar" />
+77-->[com.google.firebase:firebase-database:20.1.0] C:\Users\redas\.gradle\caches\transforms-3\ceb69948930b17ba244fe0dc1de435ee\transformed\jetified-firebase-database-20.1.0\AndroidManifest.xml:33:17-82
+78        </service>
+79
+80        <provider
+80-->[:react-native-firebase_app] E:\CodeStuff\MUZIEJUS\Muziejaus-projektas\node_modules\@react-native-firebase\app\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:25:9-29:38
+81            android:name="io.invertase.firebase.app.ReactNativeFirebaseAppInitProvider"
+81-->[:react-native-firebase_app] E:\CodeStuff\MUZIEJUS\Muziejaus-projektas\node_modules\@react-native-firebase\app\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:26:13-88
+82            android:authorities="com.mazeikiu_muziejus.reactnativefirebaseappinitprovider"
+82-->[:react-native-firebase_app] E:\CodeStuff\MUZIEJUS\Muziejaus-projektas\node_modules\@react-native-firebase\app\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:27:13-86
+83            android:exported="false"
+83-->[:react-native-firebase_app] E:\CodeStuff\MUZIEJUS\Muziejaus-projektas\node_modules\@react-native-firebase\app\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:28:13-37
+84            android:initOrder="99" />
+84-->[:react-native-firebase_app] E:\CodeStuff\MUZIEJUS\Muziejaus-projektas\node_modules\@react-native-firebase\app\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:29:13-35
+85        <provider
+85-->[com.google.firebase:firebase-common:20.3.2] C:\Users\redas\.gradle\caches\transforms-3\4f3788471cf2311e43b7ceb1951bfb58\transformed\jetified-firebase-common-20.3.2\AndroidManifest.xml:25:9-30:39
+86            android:name="com.google.firebase.provider.FirebaseInitProvider"
+86-->[com.google.firebase:firebase-common:20.3.2] C:\Users\redas\.gradle\caches\transforms-3\4f3788471cf2311e43b7ceb1951bfb58\transformed\jetified-firebase-common-20.3.2\AndroidManifest.xml:26:13-77
+87            android:authorities="com.mazeikiu_muziejus.firebaseinitprovider"
+87-->[com.google.firebase:firebase-common:20.3.2] C:\Users\redas\.gradle\caches\transforms-3\4f3788471cf2311e43b7ceb1951bfb58\transformed\jetified-firebase-common-20.3.2\AndroidManifest.xml:27:13-72
+88            android:directBootAware="true"
+88-->[com.google.firebase:firebase-common:20.3.2] C:\Users\redas\.gradle\caches\transforms-3\4f3788471cf2311e43b7ceb1951bfb58\transformed\jetified-firebase-common-20.3.2\AndroidManifest.xml:28:13-43
+89            android:exported="false"
+89-->[com.google.firebase:firebase-common:20.3.2] C:\Users\redas\.gradle\caches\transforms-3\4f3788471cf2311e43b7ceb1951bfb58\transformed\jetified-firebase-common-20.3.2\AndroidManifest.xml:29:13-37
+90            android:initOrder="100" />
+90-->[com.google.firebase:firebase-common:20.3.2] C:\Users\redas\.gradle\caches\transforms-3\4f3788471cf2311e43b7ceb1951bfb58\transformed\jetified-firebase-common-20.3.2\AndroidManifest.xml:30:13-36
+91
+92        <activity
+92-->[com.google.android.gms:play-services-auth:20.3.0] C:\Users\redas\.gradle\caches\transforms-3\db6d84f438dc6a6f0918ad6bd831c82c\transformed\jetified-play-services-auth-20.3.0\AndroidManifest.xml:23:9-27:75
+93            android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity"
+93-->[com.google.android.gms:play-services-auth:20.3.0] C:\Users\redas\.gradle\caches\transforms-3\db6d84f438dc6a6f0918ad6bd831c82c\transformed\jetified-play-services-auth-20.3.0\AndroidManifest.xml:24:13-93
+94            android:excludeFromRecents="true"
+94-->[com.google.android.gms:play-services-auth:20.3.0] C:\Users\redas\.gradle\caches\transforms-3\db6d84f438dc6a6f0918ad6bd831c82c\transformed\jetified-play-services-auth-20.3.0\AndroidManifest.xml:25:13-46
+95            android:exported="false"
+95-->[com.google.android.gms:play-services-auth:20.3.0] C:\Users\redas\.gradle\caches\transforms-3\db6d84f438dc6a6f0918ad6bd831c82c\transformed\jetified-play-services-auth-20.3.0\AndroidManifest.xml:26:13-37
+96            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+96-->[com.google.android.gms:play-services-auth:20.3.0] C:\Users\redas\.gradle\caches\transforms-3\db6d84f438dc6a6f0918ad6bd831c82c\transformed\jetified-play-services-auth-20.3.0\AndroidManifest.xml:27:13-72
+97        <!--
+98            Service handling Google Sign-In user revocation. For apps that do not integrate with
+99            Google Sign-In, this service will never be started.
+100        -->
+101        <service
+101-->[com.google.android.gms:play-services-auth:20.3.0] C:\Users\redas\.gradle\caches\transforms-3\db6d84f438dc6a6f0918ad6bd831c82c\transformed\jetified-play-services-auth-20.3.0\AndroidManifest.xml:33:9-37:51
+102            android:name="com.google.android.gms.auth.api.signin.RevocationBoundService"
+102-->[com.google.android.gms:play-services-auth:20.3.0] C:\Users\redas\.gradle\caches\transforms-3\db6d84f438dc6a6f0918ad6bd831c82c\transformed\jetified-play-services-auth-20.3.0\AndroidManifest.xml:34:13-89
+103            android:exported="true"
+103-->[com.google.android.gms:play-services-auth:20.3.0] C:\Users\redas\.gradle\caches\transforms-3\db6d84f438dc6a6f0918ad6bd831c82c\transformed\jetified-play-services-auth-20.3.0\AndroidManifest.xml:35:13-36
+104            android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION"
+104-->[com.google.android.gms:play-services-auth:20.3.0] C:\Users\redas\.gradle\caches\transforms-3\db6d84f438dc6a6f0918ad6bd831c82c\transformed\jetified-play-services-auth-20.3.0\AndroidManifest.xml:36:13-107
+105            android:visibleToInstantApps="true" />
+105-->[com.google.android.gms:play-services-auth:20.3.0] C:\Users\redas\.gradle\caches\transforms-3\db6d84f438dc6a6f0918ad6bd831c82c\transformed\jetified-play-services-auth-20.3.0\AndroidManifest.xml:37:13-48
+106
+107        <meta-data
+107-->[com.github.bumptech.glide:okhttp3-integration:4.12.0] C:\Users\redas\.gradle\caches\transforms-3\956f8a6406974948a47f5309aa7516b5\transformed\jetified-okhttp3-integration-4.12.0\AndroidManifest.xml:11:9-13:43
+108            android:name="com.bumptech.glide.integration.okhttp3.OkHttpGlideModule"
+108-->[com.github.bumptech.glide:okhttp3-integration:4.12.0] C:\Users\redas\.gradle\caches\transforms-3\956f8a6406974948a47f5309aa7516b5\transformed\jetified-okhttp3-integration-4.12.0\AndroidManifest.xml:12:13-84
+109            android:value="GlideModule" />
+109-->[com.github.bumptech.glide:okhttp3-integration:4.12.0] C:\Users\redas\.gradle\caches\transforms-3\956f8a6406974948a47f5309aa7516b5\transformed\jetified-okhttp3-integration-4.12.0\AndroidManifest.xml:13:13-40
+110
+111        <activity
+111-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\redas\.gradle\caches\transforms-3\95121c0a2365bf0e250c61f104880152\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:20:9-22:45
+112            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+112-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\redas\.gradle\caches\transforms-3\95121c0a2365bf0e250c61f104880152\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:20:19-85
+113            android:exported="false"
+113-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\redas\.gradle\caches\transforms-3\95121c0a2365bf0e250c61f104880152\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:22:19-43
+114            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+114-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\redas\.gradle\caches\transforms-3\95121c0a2365bf0e250c61f104880152\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:21:19-78
+115
+116        <meta-data
+116-->[com.google.android.gms:play-services-basement:18.1.0] C:\Users\redas\.gradle\caches\transforms-3\e003c37793043d0cc8dcdf3dfffd959d\transformed\jetified-play-services-basement-18.1.0\AndroidManifest.xml:21:9-23:69
+117            android:name="com.google.android.gms.version"
+117-->[com.google.android.gms:play-services-basement:18.1.0] C:\Users\redas\.gradle\caches\transforms-3\e003c37793043d0cc8dcdf3dfffd959d\transformed\jetified-play-services-basement-18.1.0\AndroidManifest.xml:22:13-58
+118            android:value="@integer/google_play_services_version" />
+118-->[com.google.android.gms:play-services-basement:18.1.0] C:\Users\redas\.gradle\caches\transforms-3\e003c37793043d0cc8dcdf3dfffd959d\transformed\jetified-play-services-basement-18.1.0\AndroidManifest.xml:23:13-66
+119
+120        <provider
+120-->[androidx.emoji2:emoji2:1.0.0] C:\Users\redas\.gradle\caches\transforms-3\3da1d3c5cc90a23f9aaeb528c7a36177\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:26:9-34:20
+121            android:name="androidx.startup.InitializationProvider"
+121-->[androidx.emoji2:emoji2:1.0.0] C:\Users\redas\.gradle\caches\transforms-3\3da1d3c5cc90a23f9aaeb528c7a36177\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:27:13-67
+122            android:authorities="com.mazeikiu_muziejus.androidx-startup"
+122-->[androidx.emoji2:emoji2:1.0.0] C:\Users\redas\.gradle\caches\transforms-3\3da1d3c5cc90a23f9aaeb528c7a36177\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:28:13-68
+123            android:exported="false" >
+123-->[androidx.emoji2:emoji2:1.0.0] C:\Users\redas\.gradle\caches\transforms-3\3da1d3c5cc90a23f9aaeb528c7a36177\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:29:13-37
+124            <meta-data
+124-->[androidx.emoji2:emoji2:1.0.0] C:\Users\redas\.gradle\caches\transforms-3\3da1d3c5cc90a23f9aaeb528c7a36177\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:31:13-33:52
+125                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+125-->[androidx.emoji2:emoji2:1.0.0] C:\Users\redas\.gradle\caches\transforms-3\3da1d3c5cc90a23f9aaeb528c7a36177\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:32:17-75
+126                android:value="androidx.startup" />
+126-->[androidx.emoji2:emoji2:1.0.0] C:\Users\redas\.gradle\caches\transforms-3\3da1d3c5cc90a23f9aaeb528c7a36177\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:33:17-49
+127            <meta-data
+127-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\redas\.gradle\caches\transforms-3\a241a0a0925b196256e8ea1d2f17eb5b\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:31:13-33:52
+128                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+128-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\redas\.gradle\caches\transforms-3\a241a0a0925b196256e8ea1d2f17eb5b\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:32:17-78
+129                android:value="androidx.startup" />
+129-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\redas\.gradle\caches\transforms-3\a241a0a0925b196256e8ea1d2f17eb5b\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:33:17-49
+130        </provider>
+131    </application>
+132
+133</manifest>
